@@ -1,0 +1,69 @@
+/* ==== Globals ==== */
+:root {
+  font-family: iransansx;
+  --green: #16ae74;
+  --yellow: #ffcc29;
+  --black: #000000;
+  --lightgreen1: #e8ffd6;
+  --lightgreen2: #f4faee;
+  --lightyellow: #1e3163;
+  --silver: #f0f0f0;
+  --white70: rgba(255, 255, 255, 0.5);
+  --shadow: rgb(0 0 0 / 26%) 0px 2px 12px 1px;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+select,
+input {
+  background: unset;
+  outline: none;
+}
+select {
+  cursor: pointer;
+}
+
+/* ==== Individuals ==== */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  text-align: center;
+  overflow: hidden;
+}
+.menu li {
+  position: relative;
+  transition: 0.5s;
+}
+.menu li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  margin-top: 2px;
+  position: absolute;
+  transition: 0.5s;
+}
+.menu li:hover:after,
+.menu li.current::after {
+  width: 70%;
+}
+
+.bf-btn {
+  background-color: var(--green);
+  padding: 7px;
+  color: white;
+  border-radius: 4px;
+  transition: .5s;
+  font-size: 14px;
+}
+.bf-btn:hover{
+    box-shadow: var(--shadow);
+}

@@ -61,9 +61,10 @@ select {
   padding: 7px;
   color: white;
   border-radius: 4px;
-  transition: .5s;
+  transition: 0.5s;
   font-size: 14px;
+  cursor: pointer;
 }
-.bf-btn:hover{
-    box-shadow: var(--shadow);
+.bf-btn:hover {
+  box-shadow: var(--shadow);
 }

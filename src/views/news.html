@@ -21,6 +21,7 @@
   </head>
   <body class="">
     <!-- Nav Bar -->
+    <!-- Mobile Menu Toggler -->
     <button
       class="hidden fixed z-[99999] top-5 right-5 max-sm:flex items-center justify-center bg-green fill-white hover:bg-white hover:fill-navy w-10 h-10 font-black border-2 rounded-lg"
       onclick="$('.navbar-div').toggleClass('max-sm:hidden');$('.close-icon, .menu-icon').toggleClass('hidden');$(this).toggleClass('bg-white fill-navy')"
@@ -38,11 +39,12 @@
         </svg>
       </span>
     </button>
+
     <div
       class="navbar-div z-10 shadow-sm sticky top-0 bg-white p-6 max-sm:fixed max-sm:w-full max-sm:top-0 max-sm:left-0 max-sm:h-full max-sm:bg-navy max-sm:text-yellow max-sm:hidden"
     >
       <nav
-        class="xl:container flex flex-row max-sm:flex-col max-sm:absolute max-sm:top-[calc(50%_-_250px)] max-sm:left-[calc(50%_-_130px)] justify-between items-start max-sm:items-center sm:px-10 pt-3"
+        class="xl:container flex flex-row max-sm:flex-col max-sm:absolute max-sm:top-[calc(50%_-_250px)] max-sm:left-[calc(50%_-_130px)] justify-between items-start items-center sm:px-10 pt-3"
       >
         <ul class="menu flex flex-row max-sm:flex-col items-center">
           <li class="navbar-logo max-sm:w-[95%]">
@@ -58,43 +60,49 @@
           <li class="px-1">
             <a href="" class="bf-btn">سامانه تامین مالی</a>
           </li>
-          <li class="px-1 relative group w-[40%] bg-lightgreen2 rounded-md p-2">
-            <span class="absolute left-2 top-[calc(50%_-_7px)]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12.971"
-                height="13.429"
-                viewBox="0 0 12.971 13.429"
+          <li class="px-1 relative">
+            <a href="">
+              <span
+                class="absolute duration-500 left-3 left-32 top-[5px] p-2 rounded-md stroke-green hover:bg-green hover:stroke-white"
+                id="search_icon"
               >
-                <ellipse
-                  id="Ellipse_739"
-                  cx="5.635"
-                  cy="5.715"
-                  rx="5.635"
-                  ry="5.715"
-                  transform="translate(0.5 0.5)"
-                  fill="none"
-                  stroke="#16ae74"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  stroke-width="1"
-                />
-                <path
-                  id="Line_181"
-                  d="M0,0,2.209,2.235"
-                  transform="translate(10.055 10.487)"
-                  fill="none"
-                  stroke="#16ae74"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  stroke-width="1"
-                />
-              </svg>
-            </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12.971"
+                  height="13.429"
+                  viewBox="0 0 12.971 13.429"
+                >
+                  <ellipse
+                    id="Ellipse_739"
+                    cx="5.635"
+                    cy="5.715"
+                    rx="5.635"
+                    ry="5.715"
+                    transform="translate(0.5 0.5)"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                  />
+                  <path
+                    id="Line_181"
+                    d="M0,0,2.209,2.235"
+                    transform="translate(10.055 10.487)"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                  />
+                </svg>
+              </span>
+            </a>
+
             <input
-              class="duration-500 group-focus:w-full"
+              class="duration-500 w-[50%] bg-lightgreen2 rounded-md p-2 pl-10 focus:w-full placeholder:text-green"
+              onfocus="$('#search_icon').toggleClass('left-32')"
+              onfocusout="$('#search_icon').toggleClass('left-32')"
               type="text"
               name="search_inp"
               id="search_inp"
@@ -104,59 +112,247 @@
         </ul>
       </nav>
     </div>
-    <div class="wrapper xl:container grid grid-cols-12">
+    <!-- Wrapper -->
+    <div class="wrapper xl:container grid grid-cols-12 mt-5">
       <aside
-        class="relative col-start-1 col-end-12 md:col-end-5 lg:col-end-4 md:pl-4 gap-y-6 flex flex-col"
+        class="relative col-start-1 col-end-12 md:col-end-5 lg:col-end-4 md:pl-4 gap-y-6 flex flex-col text-right"
       >
-        <div class="aside-card">
-          <h5 class="text-sm">جستجو</h5>
+        <div class="">
+          <h1 class="text-[24px] font-bold">لیست اخبار</h1>
           <span class="bg-gray-200 h-px block mx-auto my-4"></span>
-          <div class="flex justify-between">
-            <input
-              type="text"
-              class="w-10/12 border-b border-white focus:border-b-slate-400"
-              placeholder="نام دوره مورد نظر را وارد  کنید..."
-            />
-            <button class="btn-blue-light">بگرد</button>
+          <div class="p-4 shadow-md rounded-md">
+            <div class="relative rounded-lg bg-[#FAFAFA]">
+              <span
+                class="absolute duration-500 left-3 top-[5px] p-2 rounded-md stroke-black"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12.971"
+                  height="13.429"
+                  viewBox="0 0 12.971 13.429"
+                >
+                  <ellipse
+                    id="Ellipse_739"
+                    cx="5.635"
+                    cy="5.715"
+                    rx="5.635"
+                    ry="5.715"
+                    transform="translate(0.5 0.5)"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                  />
+                  <path
+                    id="Line_181"
+                    d="M0,0,2.209,2.235"
+                    transform="translate(10.055 10.487)"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                  />
+                </svg>
+              </span>
+              <input
+                class="duration-500 w-full rounded-md p-2 pl-10"
+                type="text"
+                name="search_inp"
+                id="search_inp"
+                placeholder="جستجو"
+              />
+            </div>
           </div>
         </div>
-        <div class="aside-card">
-          <h5 class="text-sm tracking-tight text-gray-00">دسته بندی ها</h5>
+        <div class="shadow-md rounded-md p-4">
+          <div class="flex justify-between">
+            <h5 class="text-sm tracking-tight text-gray-00">دسته بندی اخبار</h5>
+            <span class="stroke-green">
+              <svg
+                id="Iconly_Light-outline_Category"
+                data-name="Iconly/Light-outline/Category"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+              >
+                <g id="Category">
+                  <path
+                    id="Category-2"
+                    data-name="Category"
+                    d="M13.986,20a2.989,2.989,0,0,1-2.975-3V13.941a2.989,2.989,0,0,1,2.975-3h3.039a2.988,2.988,0,0,1,2.974,3V17a2.988,2.988,0,0,1-2.974,3Zm-1.58-6.059V17a1.593,1.593,0,0,0,1.58,1.6h3.039A1.592,1.592,0,0,0,18.6,17V13.941a1.592,1.592,0,0,0-1.58-1.6H13.986A1.593,1.593,0,0,0,12.406,13.941ZM2.975,20A2.989,2.989,0,0,1,0,17V13.941a2.989,2.989,0,0,1,2.975-3H6.014a2.989,2.989,0,0,1,2.975,3V17a2.989,2.989,0,0,1-2.975,3Zm-1.58-6.059V17a1.593,1.593,0,0,0,1.58,1.6H6.014A1.593,1.593,0,0,0,7.594,17V13.941a1.593,1.593,0,0,0-1.58-1.6H2.975A1.593,1.593,0,0,0,1.395,13.941ZM13.986,9.055a2.989,2.989,0,0,1-2.975-3V3a2.989,2.989,0,0,1,2.975-3h3.039A2.988,2.988,0,0,1,20,3V6.06a2.988,2.988,0,0,1-2.974,3ZM12.406,3V6.06a1.593,1.593,0,0,0,1.58,1.6h3.039a1.592,1.592,0,0,0,1.58-1.6V3a1.592,1.592,0,0,0-1.58-1.6H13.986A1.593,1.593,0,0,0,12.406,3Zm-9.43,6.06A2.989,2.989,0,0,1,0,6.06V3A2.989,2.989,0,0,1,2.975,0H6.014A2.989,2.989,0,0,1,8.989,3V6.06a2.989,2.989,0,0,1-2.975,3ZM1.395,3V6.06a1.593,1.593,0,0,0,1.58,1.6H6.014a1.593,1.593,0,0,0,1.58-1.6V3a1.593,1.593,0,0,0-1.58-1.6H2.975A1.593,1.593,0,0,0,1.395,3Z"
+                  />
+                </g>
+              </svg>
+            </span>
+          </div>
           <span class="bg-gray-200 h-px block mx-auto my-4"></span>
-          <div class="flex justify-between" id="accordian">
-            <ul class="show-dropdown">
-              <li>
-                <a href="javascript:void(0);">دسته 1</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">دسته 2</a>
-                <ul>
-                  <li><a href="javascript:void(0);">دسته فرزند</a></li>
+          <div class="">
+            <ul class="parent-cats">
+              <li class="select-none text-[12px]">
+                <div
+                  class="cat-item cursor-pointer flex items-center"
+                  cat-data="5315163"
+                >
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="4.292"
+                      height="7.584"
+                      viewBox="0 0 4.292 7.584"
+                    >
+                      <path
+                        id="Icon_feather-chevron-down"
+                        data-name="Icon feather-chevron-down"
+                        d="M0,0,3.085,3.085,6.17,0"
+                        transform="translate(3.585 0.707) rotate(90)"
+                        fill="none"
+                        stroke="#16ae74"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1"
+                      />
+                    </svg>
+                  </span>
+                  <span class="mr-3">دسته بندی مادر</span>
+                </div>
+                <ul class="child-cats mr-8 hidden" cat-data="5315163">
+                  <li>
+                    <div
+                      class="cat-item cursor-pointer flex items-center"
+                      cat-data="65183561"
+                    >
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="4.292"
+                          height="7.584"
+                          viewBox="0 0 4.292 7.584"
+                        >
+                          <path
+                            id="Icon_feather-chevron-down"
+                            data-name="Icon feather-chevron-down"
+                            d="M0,0,3.085,3.085,6.17,0"
+                            transform="translate(3.585 0.707) rotate(90)"
+                            fill="none"
+                            stroke="#16ae74"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                          />
+                        </svg> </span
+                      ><span class="mr-3">دسته بندی فرزند</span>
+                    </div>
+                    <ul class="child-cats mr-12 hidden" cat-data="65183561">
+                      <li>
+                        <div class="flex items-center">
+                          <span class="">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="4.292"
+                              height="7.584"
+                              viewBox="0 0 4.292 7.584"
+                            >
+                              <path
+                                id="Icon_feather-chevron-down"
+                                data-name="Icon feather-chevron-down"
+                                d="M0,0,3.085,3.085,6.17,0"
+                                transform="translate(3.585 0.707) rotate(90)"
+                                fill="none"
+                                stroke="#16ae74"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1"
+                              />
+                            </svg> </span
+                          ><span class="mr-3">دسته بندی فرزند کوچکتر</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
-              <li>
-                <a href="javascript:void(0);">دسته 3</a>
-                <ul class="show-dropdown">
-                  <li><a href="javascript:void(0);">دسته فرزند 1</a></li>
-                  <li>
-                    <a href="javascript:void(0);">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        class="w-5 h-5"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      دسته فرزند 2</a
+              <li class="select-none text-[12px]">
+                <div
+                  class="cat-item cursor-pointer flex items-center"
+                  cat-data="8416532"
+                >
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="4.292"
+                      height="7.584"
+                      viewBox="0 0 4.292 7.584"
                     >
-                    <ul class="show-dropdown">
-                      <li><a href="javascript:void(0);">فرزند کوچیکتر</a></li>
-                      <li><a href="javascript:void(0);">فرزند کوچیکتر</a></li>
+                      <path
+                        id="Icon_feather-chevron-down"
+                        data-name="Icon feather-chevron-down"
+                        d="M0,0,3.085,3.085,6.17,0"
+                        transform="translate(3.585 0.707) rotate(90)"
+                        fill="none"
+                        stroke="#16ae74"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1"
+                      />
+                    </svg>
+                  </span>
+                  <span class="mr-3">دسته بندی مادر</span>
+                </div>
+                <ul class="child-cats mr-8 hidden" cat-data="8416532">
+                  <li>
+                    <div
+                      class="cat-item cursor-pointer flex items-center"
+                      cat-data="5428278373"
+                    >
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="4.292"
+                          height="7.584"
+                          viewBox="0 0 4.292 7.584"
+                        >
+                          <path
+                            id="Icon_feather-chevron-down"
+                            data-name="Icon feather-chevron-down"
+                            d="M0,0,3.085,3.085,6.17,0"
+                            transform="translate(3.585 0.707) rotate(90)"
+                            fill="none"
+                            stroke="#16ae74"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1"
+                          />
+                        </svg> </span
+                      ><span class="mr-3">دسته بندی فرزند</span>
+                    </div>
+                    <ul class="child-cats mr-12 hidden" cat-data="5428278373">
+                      <li>
+                        <div class="flex items-center">
+                          <span class="">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="4.292"
+                              height="7.584"
+                              viewBox="0 0 4.292 7.584"
+                            >
+                              <path
+                                id="Icon_feather-chevron-down"
+                                data-name="Icon feather-chevron-down"
+                                d="M0,0,3.085,3.085,6.17,0"
+                                transform="translate(3.585 0.707) rotate(90)"
+                                fill="none"
+                                stroke="#16ae74"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1"
+                              />
+                            </svg> </span
+                          ><span class="mr-3">دسته بندی فرزند کوچکتر</span>
+                        </div>
+                      </li>
                     </ul>
                   </li>
                 </ul>
@@ -164,14 +360,15 @@
             </ul>
           </div>
         </div>
-        <div class="aside-card">
+        <div class="shadow-md rounded-md p-4">
           <div class="flex justify-between items-center">
-            <h5 class="text-sm tracking-tight text-gray-00">فیلتر</h5>
+            <h5 class="text-sm tracking-tight text-sm">فیلتر اخبار</h5>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="15.754"
               height="15.754"
               viewBox="0 0 14.754 14.754"
+              class="stroke-green"
             >
               <path
                 id="Filter_2"
@@ -185,7 +382,7 @@
           <div class="flex flex-col gap-y-6">
             <div class="inline-block relative">
               <select id="default" class="select-options appearance-none">
-                <option selected>انتخاب کنید</option>
+                <option selected>زیست فناوری</option>
                 <option value="US">نرم افزار</option>
                 <option value="CA">سخت افزار</option>
                 <option value="FR">طراحی</option>
@@ -255,11 +452,37 @@
             </div>
           </div>
         </div>
-
-        <!-- circles -->
-        <div class="newslist-aside-circle-top bg-green-blur"></div>
-        <div class="newslist-aside-circle-center bg-[#FFF6DE]"></div>
-        <div class="newslist-aside-circle-bottom bg-purple-blur"></div>
+        <div class="shadow-md rounded-md p-4">
+          <div class="flex justify-between items-center">
+            <h5 class="tracking-tight text-sm">عضویت در خبرنامه</h5>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="19.795"
+              viewBox="0 0 20 19.795"
+              class="stroke-green"
+            >
+              <g id="Add_User" data-name="Add User" transform="translate(0 0)">
+                <path
+                  id="Add_User-2"
+                  data-name="Add User"
+                  d="M2.056,18.97a3,3,0,0,1,0-5.7,15.466,15.466,0,0,1,5.825-.815l.324,0a14.406,14.406,0,0,1,5.583.861,2.93,2.93,0,0,1,1.97,2.817A2.888,2.888,0,0,1,13.873,18.9a13.622,13.622,0,0,1-5.352.886l-.643.005A15.309,15.309,0,0,1,2.056,18.97ZM7.54,13.957c-4.008.04-6.04.765-6.04,2.158,0,.716.543,1.264,1.613,1.63a15.681,15.681,0,0,0,4.764.55c4.232,0,6.377-.726,6.377-2.159,0-.716-.543-1.265-1.613-1.63a15.717,15.717,0,0,0-4.765-.55Zm8.92-3.176-.006-.1V9.424H15.16a.75.75,0,0,1-.1-1.493l.1-.006h1.294V6.669a.75.75,0,0,1,1.493-.1l.007.1V7.924h1.3a.75.75,0,0,1,.1,1.493l-.1.006h-1.3v1.255a.751.751,0,0,1-1.494.1ZM4.112,9.083A5.318,5.318,0,0,1,7.877,0a5.3,5.3,0,0,1,5.318,5.318A5.324,5.324,0,0,1,4.112,9.083Zm1.06-6.469A3.842,3.842,0,1,0,7.877,1.5,3.8,3.8,0,0,0,5.172,2.614Z"
+                  transform="translate(0 0)"
+                />
+              </g>
+            </svg>
+          </div>
+          <span class="bg-gray-200 h-px block mx-auto my-4"></span>
+          <div>
+            <input
+              class="w-full bg-silver invalid:border-2 invalid:border-red-500 rounded-md p-2 pl-10"
+              type="email"
+              name="search_inp"
+              placeholder="ایمیل خود را وارد کنید"
+            />
+            <a class="bf-btn text-center block mt-2">عضویت</a>
+          </div>
+        </div>
       </aside>
       <section
         class="relative col-start-1 col-end-12 md:col-start-5 lg:col-start-4 md:col-end-12 md:pr-6 mt-8 md:mt-0"
@@ -564,7 +787,7 @@
         <nav class="page-navigation" aria-label="Page navigation">
           <ul>
             <li>
-              <a href="#" class="py-2 px-3 hover:text-blue-900">
+              <a href="" class="py-2 px-3 hover:text-blue-900">
                 <span class="sr-only">next</span>
                 <svg
                   aria-hidden="true"
@@ -582,19 +805,19 @@
               </a>
             </li>
             <!-- start page numbers -->
-            <li class="nav-item"><a href="#">۱</a></li>
-            <li class="nav-item"><a href="#">۲</a></li>
-            <li class="nav-item"><a href="#">۳</a></li>
-            <li class="nav-item hidden md:block"><a href="#">۴</a></li>
+            <li class="nav-item"><a href="">۱</a></li>
+            <li class="nav-item"><a href="">۲</a></li>
+            <li class="nav-item"><a href="">۳</a></li>
+            <li class="nav-item hidden md:block"><a href="">۴</a></li>
             <!--start points -->
             <li>
               <span class="select-none py-2 leading-3 text-4xl">...</span>
             </li>
             <!--end points -->
-            <li class="nav-item"><a href="#">۱۰</a></li>
+            <li class="nav-item"><a href="">۱۰</a></li>
             <!-- end page numbers -->
             <li>
-              <a href="#" class="py-2 px-3 hover:text-blue-900">
+              <a href="" class="py-2 px-3 hover:text-blue-900">
                 <span class="sr-only">previous</span>
                 <svg
                   aria-hidden="true"
@@ -615,6 +838,7 @@
         </nav>
       </section>
     </div>
+    <!-- Footer -->
     <footer class="bg-lightgreen2">
       <section class="xl:container">
         <section class="footer-part-one">
@@ -676,55 +900,55 @@
           <ul class="footer-list">
             <li class="footer-list-item">دسترسی سریع</li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
-            </li>
-          </ul>
-          <ul class="footer-list">
-            <li class="footer-list-item">دسترسی سریع</li>
-            <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
-            </li>
-            <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
           </ul>
           <ul class="footer-list">
             <li class="footer-list-item">دسترسی سریع</li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">لورم ایپسوم</a>
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+          <ul class="footer-list">
+            <li class="footer-list-item">دسترسی سریع</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
             </li>
           </ul>
         </section>
@@ -732,7 +956,7 @@
           <!-- social networks links -->
           <h3 class="font-bold text-lg">شبکه های اجتماعی</h3>
           <nav class="flex justify-around mt-8">
-            <a href="#">
+            <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18.247"
@@ -751,7 +975,7 @@
                 </g>
               </svg>
             </a>
-            <a href="#">
+            <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21.711"
@@ -784,7 +1008,7 @@
                 </g>
               </svg>
             </a>
-            <a href="#">
+            <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18.788"
@@ -797,7 +1021,7 @@
                 ></path>
               </svg>
             </a>
-            <a href="#">
+            <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21.431"
@@ -810,7 +1034,7 @@
                 ></path>
               </svg>
             </a>
-            <a href="#">
+            <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="19.114"
@@ -822,7 +1046,7 @@
                 ></path>
               </svg>
             </a>
-            <a href="#">
+            <a href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16.991"
@@ -838,13 +1062,13 @@
           <!-- boxes -->
           <div class="flex justify-around mt-10">
             <div class="footer-box">
-              <a href="#"></a>
+              <a href=""></a>
             </div>
             <div class="footer-box">
-              <a href="#"></a>
+              <a href=""></a>
             </div>
             <div class="footer-box">
-              <a href="#"></a>
+              <a href=""></a>
             </div>
           </div>
         </section>
@@ -857,5 +1081,19 @@
         محفوظ می باشد
       </p>
     </footer>
+    <!-- Js files -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script>
+      $("document").ready(
+        $(".cat-item").click((e) => {
+          let cat_data = $(e.currentTarget).attr("cat-data");
+          $(".child-cats").each((i, ch) => {
+            if ($(ch).attr("cat-data") == cat_data) {
+              $(ch).slideToggle();
+            }
+          });
+        })
+      );
+    </script>
   </body>
 </html>

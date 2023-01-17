@@ -11,6 +11,10 @@
   --white70: rgba(255, 255, 255, 0.5);
   --shadow: rgb(0 0 0 / 26%) 0px 2px 12px 1px;
 }
+@font-face {
+  font-family: iransans;
+  src: url("../fonts/IRANSans\(FaNum\).ttf");
+}
 
 body,
 h1,
@@ -26,6 +30,26 @@ input {
 select {
   cursor: pointer;
 }
+
+/* cusom scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--tertiary);
+  float: right;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  cursor: pointer;
+}
+
 
 /* ==== Individuals ==== */
 .wrapper {
@@ -68,3 +92,4 @@ select {
 .bf-btn:hover {
   box-shadow: var(--shadow);
 }
+

@@ -19,6 +19,13 @@ module.exports = {
       screens: {
         "2xl": "1366px",
       },
+      boxShadow:{
+        card_shadow:"0px 0px 5px 0px rgba(0,0,0,.2)",
+        card_shadow_hover:"0px 0px 30px 0px rgba(0,0,0,.2)",
+      },
+      fontFamily:{
+        iransans:"iransans"
+      }
     },
   },
   plugins: [],

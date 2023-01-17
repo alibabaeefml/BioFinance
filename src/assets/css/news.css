@@ -8,3 +8,6 @@
 .menu li.current,.menu li:hover{
     color: var(--green);
 }
+.news-card ::-webkit-scrollbar {
+  width: 2px; 
+}

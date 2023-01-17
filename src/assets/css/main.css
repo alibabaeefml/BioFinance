@@ -50,7 +50,6 @@ select {
   cursor: pointer;
 }
 
-
 /* ==== Individuals ==== */
 .wrapper {
   display: flex;
@@ -93,3 +92,15 @@ select {
   box-shadow: var(--shadow);
 }
 
+.selected-page-number {
+  background-color: var(--green) !important;
+  color: white !important;
+}
+.next-page-btn.disabled,
+.prev-page-btn.disabled {
+  background-color: white;
+  color: var(--green);
+  stroke: var(--green);
+  border: solid var(--green) 1px;
+  cursor:not-allowed;
+}

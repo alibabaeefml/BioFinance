@@ -2,12 +2,13 @@
 .wrapper {
   background-image: url("../images/bg_0.png");
 }
-.menu li::after{
-    background-color: var(--green);
+.menu li::after {
+  background-color: var(--green);
 }
-.menu li.current,.menu li:hover{
-    color: var(--green);
+.menu li.current,
+.menu li:hover {
+  color: var(--green);
 }
 .news-card ::-webkit-scrollbar {
-  width: 2px; 
+  width: 2px;
 }

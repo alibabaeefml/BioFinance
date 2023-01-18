@@ -36,6 +36,7 @@ select {
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
+  padding: 5px;
 }
 
 /* Track */
@@ -50,6 +51,9 @@ select {
   cursor: pointer;
 }
 
+.scrollbar-2px ::-webkit-scrollbar {
+  width: 2px!important;
+}
 /* ==== Individuals ==== */
 .wrapper {
   display: flex;
@@ -61,11 +65,20 @@ select {
   text-align: center;
   overflow: hidden;
 }
+.navbar-div.scrolled {
+  background-image: url("../images/bg_0.png");
+  background-position: center;
+  background-color: white;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .menu li {
   position: relative;
   transition: 0.5s;
 }
-.menu li::after {
+.menu li:not(.navbar-logo):after {
   content: "";
   display: block;
   width: 0;
@@ -103,4 +116,15 @@ select {
   stroke: var(--green);
   border: solid var(--green) 1px;
   cursor:not-allowed;
+}
+
+.menu li::after {
+  background-color: var(--green);
+}
+.menu li.current,
+.menu li:hover {
+  color: var(--green);
+}
+.footer-list-link{
+  font-size: 14px;
 }

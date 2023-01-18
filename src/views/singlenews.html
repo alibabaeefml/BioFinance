@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بایوفایننس</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/news.css" />
+    <link rel="stylesheet" href="../../dist/output.css" />
+  </head>
+  <body class="font-iransans scroll-smooth">
+    <!-- Nav Bar -->
+    <!-- Mobile Menu Toggler -->
+    <button
+      class="hidden fixed z-[99999] top-5 left-5 max-sm:flex items-center justify-center bg-green fill-white hover:bg-white hover:fill-green w-10 h-10 font-black border-2 rounded-lg"
+      onclick="$('.navbar-div').toggleClass('max-sm:hidden');$('.close-icon, .menu-icon').toggleClass('hidden');$(this).toggleClass('bg-white fill-green')"
+    >
+      <span class="close-icon hidden duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+          <path
+            d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z"
+          />
+        </svg>
+      </span>
+      <span class="menu-icon duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+          <path d="M3 14.5V13h14v1.5Zm0-3.75v-1.5h14v1.5ZM3 7V5.5h14V7Z" />
+        </svg>
+      </span>
+    </button>
+
+    <div
+      class="navbar-div max-sm:bg-white z-10 sticky top-0 p-[0px_1.5rem_13px_1.5rem] max-sm:fixed max-sm:w-full max-sm:top-0 max-sm:left-0 max-sm:h-full max-sm:bg-navy max-sm:text-yellow max-sm:hidden"
+    >
+      <nav
+        class="xl:container flex max-md:flex-col max-sm:flex-col max-sm:fixed max-sm:top-[calc(50%_-_218px)] max-sm:left-[calc(50%_-_60px)] justify-between items-start items-center pt-3"
+      >
+        <ul class="menu flex flex-row max-sm:flex-col items-center">
+          <li>
+            <a href="./index.html">
+              <img src="../assets/images/logo_theme_1.png" />
+            </a>
+          </li>
+          <li class="p-3"><a href="./index.html">صفحه اصلی</a></li>
+          <li class="p-3 current"><a href="./news.html">اخبار</a></li>
+          <li class="p-3"><a href="./index.html">فراخوان</a></li>
+          <li class="p-3"><a href="./faq.html">سوالات متداول</a></li>
+          <li class="p-3"><a href="./aboutus">درباره ما</a></li>
+          <li class="p-3"><a href="./coontactus">تماس با ما</a></li>
+        </ul>
+        <ul
+          class="nav-options flex max-sm:flex-col justify-center items-center"
+        >
+          <li class="p-1 max-sm:mt-4">
+            <a href="" class="bf-btn">سامانه تامین مالی</a>
+          </li>
+          <li
+            class="p-1 relative duration-300 max-sm:mt-4"
+            style="width: 120px"
+            id="search_div"
+          >
+            <form action="">
+              <button
+                id="search_submit"
+                class="absolute duration-500 left-3 top-[9px] p-2 rounded-md stroke-green hover:bg-green hover:stroke-white"
+                type="submit"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12.971"
+                    height="13.429"
+                    viewBox="0 0 12.971 13.429"
+                  >
+                    <ellipse
+                      id="Ellipse_739"
+                      cx="5.635"
+                      cy="5.715"
+                      rx="5.635"
+                      ry="5.715"
+                      transform="translate(0.5 0.5)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1"
+                    />
+                    <path
+                      id="Line_181"
+                      d="M0,0,2.209,2.235"
+                      transform="translate(10.055 10.487)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <input
+                class="duration-500 bg-lightgreen2 rounded-md p-2 pl-10 placeholder:text-green border-[1px] w-full focus:border-green"
+                onfocus="innerWidth > 640 ? $('#search_div').width(200) :null"
+                onfocusout="innerWidth > 640 ? $('#search_div').width(120) : null"
+                type="text"
+                name="search_inp"
+                id="search_inp"
+                placeholder="جستجو"
+              />
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Wrapper -->
+    <div
+      class="wrapper xl:container grid grid-cols-12 mt-16 items-start stroke-green fill-green"
+    >
+      <section
+        class="relative p-1 col-span-12 md:col-span-9 md:pr-6 mt-8 md:mt-0"
+      >
+        <div
+          class="relative p-8 bg-white shadow-card_shadow rounded-lg text-right"
+        >
+          <h1 class="text-[24px] font-bold">
+            عوامل موثر بر حوزه زیست فناوری در ایران
+          </h1>
+          <div class="flex mt-4">
+            <div class="flex items-center">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="15"
+                  viewBox="0 0 13 15"
+                >
+                  <g
+                    id="Iconly_Light_Calendar"
+                    data-name="Iconly/Light/Calendar"
+                    transform="translate(0.5 0.5)"
+                  >
+                    <g id="Calendar">
+                      <path
+                        id="Line_200"
+                        d="M0,.473H11.883"
+                        transform="translate(0.062 4.71)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Line_201"
+                        d="M.459.473H.465"
+                        transform="translate(8.503 7.444)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Line_202"
+                        d="M.459.473H.465"
+                        transform="translate(5.545 7.444)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Line_203"
+                        d="M.459.473H.465"
+                        transform="translate(2.58 7.444)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Line_204"
+                        d="M.459.473H.465"
+                        transform="translate(8.503 10.165)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Line_205"
+                        d="M.459.473H.465"
+                        transform="translate(5.545 10.165)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Line_206"
+                        d="M.459.473H.465"
+                        transform="translate(2.58 10.165)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Line_207"
+                        d="M.463,0V2.3"
+                        transform="translate(8.233)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Line_208"
+                        d="M.463,0V2.3"
+                        transform="translate(2.847)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                      <path
+                        id="Path"
+                        d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
+                        transform="translate(0 1.105)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2 text-[10px] text-[#6B6B6B]"
+                >13 دی ۱۴۰۱ - ۱۲:۱۱</span
+              >
+            </div>
+            <div class="flex mr-8 items-center">
+              <span class="stroke-none">
+                <svg
+                  id="Iconly_Light-outline_Time_Circle"
+                  data-name="Iconly/Light-outline/Time Circle"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                >
+                  <g id="Time_Circle" data-name="Time Circle">
+                    <path
+                      id="Time_Circle-2"
+                      data-name="Time Circle"
+                      d="M0,7a7,7,0,1,1,7,7A7.008,7.008,0,0,1,0,7ZM1.05,7A5.95,5.95,0,1,0,7,1.05,5.957,5.957,0,0,0,1.05,7ZM9.2,9.543l-.064-.033L6.494,7.936a.526.526,0,0,1-.25-.372l-.006-.078V4.093a.525.525,0,0,1,1.045-.071l0,.071V7.186L9.671,8.609a.525.525,0,0,1,.214.656l-.032.064a.525.525,0,0,1-.656.215Z"
+                    />
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2 text-[10px] text-[#6B6B6B]"
+                >5 دقیقه زمان مطالعه</span
+              >
+            </div>
+            <div class="flex mr-8 items-center">
+              <span class="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                >
+                  <g
+                    id="Iconly_Light_Chat"
+                    data-name="Iconly/Light/Chat"
+                    transform="translate(0.5 0.5)"
+                  >
+                    <g id="Chat">
+                      <path
+                        id="Combined_Shape"
+                        data-name="Combined Shape"
+                        d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
+                        transform="translate(3.169 6.339)"
+                      />
+                      <path
+                        id="Stroke_7"
+                        data-name="Stroke 7"
+                        d="M7.014,0A7,7,0,0,0,0,7.011a7.409,7.409,0,0,0,.945,3.5.735.735,0,0,1,.049.632L.525,12.71a.437.437,0,0,0,.574.546l1.414-.42a1.188,1.188,0,0,1,1.043.252A7,7,0,1,0,7.014,0Z"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2 text-[10px] text-[#6B6B6B]">12 دیدگاه</span>
+            </div>
+            <div class="flex mr-8 items-center">
+              <span class="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15.5"
+                  height="12.552"
+                  viewBox="0 0 15.5 12.552"
+                >
+                  <g
+                    id="Iconly_Light_Show"
+                    data-name="Iconly/Light/Show"
+                    transform="translate(0.75 0.75)"
+                  >
+                    <g id="Show">
+                      <path
+                        id="Stroke_1"
+                        data-name="Stroke 1"
+                        d="M4.785,2.393A2.392,2.392,0,1,1,2.392,0,2.393,2.393,0,0,1,4.785,2.393Z"
+                        transform="translate(4.608 3.133)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                      <path
+                        id="Stroke_3"
+                        data-name="Stroke 3"
+                        d="M7,11.052c2.882,0,5.518-2.072,7-5.526C12.516,2.072,9.88,0,7,0H7C4.12,0,1.484,2.072,0,5.526c1.484,3.454,4.12,5.526,7,5.526Z"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2 text-[10px] text-[#6B6B6B]">77 بازدید</span>
+            </div>
+          </div>
+          <div class="w-full h-max mt-5 relative">
+            <span
+              class="absolute top-10 left-10 text-[12px] py-1 px-2 rounded-lg bg-white70"
+              >زیست فناوری</span
+            >
+            <img
+              class="w-full h-full object-cover rounded-xl"
+              src="../assets/images/e6db638a712313891ed504572e328519dvksdv.png"
+              alt=""
+            />
+          </div>
+          <div class="mt-5 scrollbar-2px overflow-auto h-[300px]">
+            <p class="text-[14px] text-justify">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد لورم ایپسوم متن
+              ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان
+              گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+              که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
+              متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
+              و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+              طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+              الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
+              صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
+              شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی
+              دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
+              اساسا مورد استفاده قرار گیرد لورم ایپسوم متن ساختگی با تولید سادگی
+              نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و
+              متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای
+              شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود
+              ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال
+              و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم
+              افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان
+              خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان
+              امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت
+              تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی،
+              و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+              قرار گیرد...
+            </p>
+          </div>
+          <hr class="my-5" />
+          <div class="flex justify-between items-center">
+            <div class="flex items-center">
+              <span>
+                <img
+                  class="w-[30px] h-[30px] rounded-full"
+                  src="../assets/images/istockphoto-1344327532-170667a.jpg"
+                  alt=""
+                />
+              </span>
+              <span class="text-[14px] mr-2">کوثر حیدری</span>
+            </div>
+            <div class="text-[12px]">
+              <span class="bg-silver p-1 ml-3 rounded-md">
+                <a href=""> کشاورزی# </a>
+              </span>
+              <span class="bg-silver p-1 ml-3 rounded-md">
+                <a href=""> زیست فناوری# </a>
+              </span>
+              <span class="bg-silver p-1 ml-3 rounded-md">
+                <a href=""> بیوتکنولوژی# </a>
+              </span>
+            </div>
+          </div>
+          <div dir="ltr">
+            <div>
+              <input type="text" readonly />
+            </div>
+            <div>
+              <span>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17.912"
+                    height="14.996"
+                    viewBox="0 0 17.912 14.996"
+                  >
+                    <path
+                      id="Icon_feather-twitter"
+                      data-name="Icon feather-twitter"
+                      d="M18.112,4.492a8.23,8.23,0,0,1-2.371,1.155A3.383,3.383,0,0,0,9.806,7.913v.755a8.049,8.049,0,0,1-6.8-3.421s-3.02,6.8,3.775,9.816A8.789,8.789,0,0,1,1.5,16.574c6.8,3.775,15.1,0,15.1-8.683a3.4,3.4,0,0,0-.06-.627,5.829,5.829,0,0,0,1.571-2.771Z"
+                      transform="translate(-0.85 -3.777)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.3"
+                    />
+                  </svg>
+                </a>
+              </span>
+              <span>
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16.821"
+                    height="16.59"
+                    viewBox="0 0 16.821 16.59"
+                  >
+                    <g id="Send" transform="translate(0.502 0.5)">
+                      <path
+                        id="Send-2"
+                        data-name="Send"
+                        d="M10.48,15.59a1.531,1.531,0,0,1-1.255-.637l-.072-.106L6,9.686.745,6.5A1.507,1.507,0,0,1,.008,5.039,1.529,1.529,0,0,1,1,3.744l.123-.04L13.821.062A1.6,1.6,0,0,1,14.26,0a1.554,1.554,0,0,1,1.208.579,1.511,1.511,0,0,1,.306,1.293l-.029.112-3.766,12.5A1.551,1.551,0,0,1,10.48,15.59Zm.552-11.5a.608.608,0,0,1,.36.116l.069.058a.6.6,0,0,1,.061.781l-.058.068L7.2,9.343,10.2,14.226a.334.334,0,0,0,.29.164.339.339,0,0,0,.3-.183l.025-.061,3.766-12.5a.339.339,0,0,0-.054-.306.344.344,0,0,0-.272-.137l-.035,0-.059.012L1.465,4.856a.337.337,0,0,0-.238.25.342.342,0,0,0,.1.334l.053.04L6.348,8.492,10.6,4.271A.61.61,0,0,1,11.033,4.095Z"
+                        transform="translate(0 0)"
+                        stroke-width="1"
+                      />
+                    </g>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside class="relative p-3 col-span-12 md:col-span-3">
+        <h2 class="text-right text-[18px] font-bold tracking-tight">
+          اخبار مرتبط
+        </h2>
+        <ul class="grid grid-cols-1 mt-5 gap-y-5">
+          <li
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
+          >
+            <div class="rounded-xl h-1/2">
+              <img
+                class="rounded-xl object-cover w-full h-full"
+                src="../assets/images/e6db638a712313891ed504572e328519.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
+            >
+              <span
+                class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
+                >زیست فناوری</span
+              >
+              <div class="flex">
+                <div class="flex items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="15"
+                      viewBox="0 0 13 15"
+                    >
+                      <g
+                        id="Iconly_Light_Calendar"
+                        data-name="Iconly/Light/Calendar"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Calendar">
+                          <path
+                            id="Line_200"
+                            d="M0,.473H11.883"
+                            transform="translate(0.062 4.71)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_201"
+                            d="M.459.473H.465"
+                            transform="translate(8.503 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_202"
+                            d="M.459.473H.465"
+                            transform="translate(5.545 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_203"
+                            d="M.459.473H.465"
+                            transform="translate(2.58 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_204"
+                            d="M.459.473H.465"
+                            transform="translate(8.503 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_205"
+                            d="M.459.473H.465"
+                            transform="translate(5.545 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_206"
+                            d="M.459.473H.465"
+                            transform="translate(2.58 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_207"
+                            d="M.463,0V2.3"
+                            transform="translate(8.233)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_208"
+                            d="M.463,0V2.3"
+                            transform="translate(2.847)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Path"
+                            d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
+                            transform="translate(0 1.105)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[10px] text-[#6B6B6B]"
+                    >۱۴۰۱/۰۱/۰۱</span
+                  >
+                </div>
+                <div class="flex mr-2 items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                    >
+                      <g
+                        id="Iconly_Light_Chat"
+                        data-name="Iconly/Light/Chat"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Chat">
+                          <path
+                            id="Combined_Shape"
+                            data-name="Combined Shape"
+                            d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
+                            transform="translate(3.169 6.339)"
+                          />
+                          <path
+                            id="Stroke_7"
+                            data-name="Stroke 7"
+                            d="M7.014,0A7,7,0,0,0,0,7.011a7.409,7.409,0,0,0,.945,3.5.735.735,0,0,1,.049.632L.525,12.71a.437.437,0,0,0,.574.546l1.414-.42a1.188,1.188,0,0,1,1.043.252A7,7,0,1,0,7.014,0Z"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[10px] text-[#6B6B6B]"
+                    >بدون دیدگاه</span
+                  >
+                </div>
+              </div>
+              <p class="text-[18px] font-bold">
+                عوامل موثر برحوزه زیست فناوری در ایران
+              </p>
+              <p class="text-justify text-[12px] max-h-11 overflow-y-auto">
+                زیست‌فناوری از جمله واژه‌های پر سرو صدای سال‌های گذشته‌است. این
+                واژه را درست یا نادرست به مفهوم همه‌چیز برای مردم به‌کار
+                می‌برند. بیوتکنولوژی را در یک تعریف کلی به‌کارگیری ریزاندامگان
+                یا جانداران یا فرایندهای زیستی در صنایع تولیدی یا خدماتی
+                دانسته‌اند. تعریف ساده این پدیدهٔ نوین عبارت است از دانشی که
+                کاربرد یکپارچه علوم پایه‌ای مانند ژنتیک، زیست‌شیمی، زیست‌شناسی
+                سلولی، بافت‌شناسی، میکروب‌شناسی و فناوری‌های تولید را در
+                سامانه‌های زیستی به دلیل استفاده‌ای که در سرشت میان‌رشته‌ای علوم
+                دارد مطالعه می‌کنند. در تعریف دیگر زیست‌فناوری را چنین تشریح
+                کرده‌اند
+              </p>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                    >
+                      <g
+                        id="Iconly_Light_Time_Circle"
+                        data-name="Iconly/Light/Time Circle"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Time_Circle" data-name="Time Circle">
+                          <path
+                            id="Stroke_1"
+                            data-name="Stroke 1"
+                            d="M14,7A7,7,0,1,1,7,0,7,7,0,0,1,14,7Z"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Stroke_3"
+                            data-name="Stroke 3"
+                            d="M2.853,5.37,0,3.668V0"
+                            transform="translate(6.744 3.857)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[12px]"
+                    ><span>5</span> دقیقه زمان مطالعه</span
+                  >
+                </div>
+                <div class="flex">
+                  <a
+                    class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
+                    href="/singlenews.html"
+                  >
+                    <span class="text-[12px]">ادامه مطلب</span>
+                    <span class="mr-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="11.464"
+                        viewBox="0 0 14 11.464"
+                      >
+                        <g
+                          id="Iconly_Light_Arrow_-_Left"
+                          data-name="Iconly/Light/Arrow - Left"
+                          transform="translate(0.5 0.707)"
+                        >
+                          <g
+                            id="Arrow_-_Left"
+                            data-name="Arrow - Left"
+                            transform="translate(13) rotate(90)"
+                          >
+                            <path
+                              id="Stroke_1"
+                              data-name="Stroke 1"
+                              d="M0,13V0"
+                              transform="translate(5.025)"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                              stroke-width="1"
+                            />
+                            <path
+                              id="Stroke_3"
+                              data-name="Stroke 3"
+                              d="M10.05,0,5.025,5.243,0,0"
+                              transform="translate(0 7.757)"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                              stroke-width="1"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
+          >
+            <div class="rounded-xl h-1/2">
+              <img
+                class="rounded-xl object-cover w-full h-full"
+                src="../assets/images/e6db638a712313891ed504572e328519.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
+            >
+              <span
+                class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
+                >زیست فناوری</span
+              >
+              <div class="flex">
+                <div class="flex items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="15"
+                      viewBox="0 0 13 15"
+                    >
+                      <g
+                        id="Iconly_Light_Calendar"
+                        data-name="Iconly/Light/Calendar"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Calendar">
+                          <path
+                            id="Line_200"
+                            d="M0,.473H11.883"
+                            transform="translate(0.062 4.71)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_201"
+                            d="M.459.473H.465"
+                            transform="translate(8.503 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_202"
+                            d="M.459.473H.465"
+                            transform="translate(5.545 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_203"
+                            d="M.459.473H.465"
+                            transform="translate(2.58 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_204"
+                            d="M.459.473H.465"
+                            transform="translate(8.503 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_205"
+                            d="M.459.473H.465"
+                            transform="translate(5.545 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_206"
+                            d="M.459.473H.465"
+                            transform="translate(2.58 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_207"
+                            d="M.463,0V2.3"
+                            transform="translate(8.233)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_208"
+                            d="M.463,0V2.3"
+                            transform="translate(2.847)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Path"
+                            d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
+                            transform="translate(0 1.105)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[10px] text-[#6B6B6B]"
+                    >۱۴۰۱/۰۱/۰۱</span
+                  >
+                </div>
+                <div class="flex mr-2 items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                    >
+                      <g
+                        id="Iconly_Light_Chat"
+                        data-name="Iconly/Light/Chat"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Chat">
+                          <path
+                            id="Combined_Shape"
+                            data-name="Combined Shape"
+                            d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
+                            transform="translate(3.169 6.339)"
+                          />
+                          <path
+                            id="Stroke_7"
+                            data-name="Stroke 7"
+                            d="M7.014,0A7,7,0,0,0,0,7.011a7.409,7.409,0,0,0,.945,3.5.735.735,0,0,1,.049.632L.525,12.71a.437.437,0,0,0,.574.546l1.414-.42a1.188,1.188,0,0,1,1.043.252A7,7,0,1,0,7.014,0Z"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[10px] text-[#6B6B6B]"
+                    >بدون دیدگاه</span
+                  >
+                </div>
+              </div>
+              <p class="text-[18px] font-bold">
+                عوامل موثر برحوزه زیست فناوری در ایران
+              </p>
+              <p class="text-justify text-[12px] max-h-11 overflow-y-auto">
+                زیست‌فناوری از جمله واژه‌های پر سرو صدای سال‌های گذشته‌است. این
+                واژه را درست یا نادرست به مفهوم همه‌چیز برای مردم به‌کار
+                می‌برند. بیوتکنولوژی را در یک تعریف کلی به‌کارگیری ریزاندامگان
+                یا جانداران یا فرایندهای زیستی در صنایع تولیدی یا خدماتی
+                دانسته‌اند. تعریف ساده این پدیدهٔ نوین عبارت است از دانشی که
+                کاربرد یکپارچه علوم پایه‌ای مانند ژنتیک، زیست‌شیمی، زیست‌شناسی
+                سلولی، بافت‌شناسی، میکروب‌شناسی و فناوری‌های تولید را در
+                سامانه‌های زیستی به دلیل استفاده‌ای که در سرشت میان‌رشته‌ای علوم
+                دارد مطالعه می‌کنند. در تعریف دیگر زیست‌فناوری را چنین تشریح
+                کرده‌اند
+              </p>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                    >
+                      <g
+                        id="Iconly_Light_Time_Circle"
+                        data-name="Iconly/Light/Time Circle"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Time_Circle" data-name="Time Circle">
+                          <path
+                            id="Stroke_1"
+                            data-name="Stroke 1"
+                            d="M14,7A7,7,0,1,1,7,0,7,7,0,0,1,14,7Z"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Stroke_3"
+                            data-name="Stroke 3"
+                            d="M2.853,5.37,0,3.668V0"
+                            transform="translate(6.744 3.857)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[12px]"
+                    ><span>5</span> دقیقه زمان مطالعه</span
+                  >
+                </div>
+                <div class="flex">
+                  <a
+                    class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
+                    href="/singlenews.html"
+                  >
+                    <span class="text-[12px]">ادامه مطلب</span>
+                    <span class="mr-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="11.464"
+                        viewBox="0 0 14 11.464"
+                      >
+                        <g
+                          id="Iconly_Light_Arrow_-_Left"
+                          data-name="Iconly/Light/Arrow - Left"
+                          transform="translate(0.5 0.707)"
+                        >
+                          <g
+                            id="Arrow_-_Left"
+                            data-name="Arrow - Left"
+                            transform="translate(13) rotate(90)"
+                          >
+                            <path
+                              id="Stroke_1"
+                              data-name="Stroke 1"
+                              d="M0,13V0"
+                              transform="translate(5.025)"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                              stroke-width="1"
+                            />
+                            <path
+                              id="Stroke_3"
+                              data-name="Stroke 3"
+                              d="M10.05,0,5.025,5.243,0,0"
+                              transform="translate(0 7.757)"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                              stroke-width="1"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
+          >
+            <div class="rounded-xl h-1/2">
+              <img
+                class="rounded-xl object-cover w-full h-full"
+                src="../assets/images/e6db638a712313891ed504572e328519.png"
+                alt=""
+              />
+            </div>
+            <div
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
+            >
+              <span
+                class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
+                >زیست فناوری</span
+              >
+              <div class="flex">
+                <div class="flex items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="15"
+                      viewBox="0 0 13 15"
+                    >
+                      <g
+                        id="Iconly_Light_Calendar"
+                        data-name="Iconly/Light/Calendar"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Calendar">
+                          <path
+                            id="Line_200"
+                            d="M0,.473H11.883"
+                            transform="translate(0.062 4.71)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_201"
+                            d="M.459.473H.465"
+                            transform="translate(8.503 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_202"
+                            d="M.459.473H.465"
+                            transform="translate(5.545 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_203"
+                            d="M.459.473H.465"
+                            transform="translate(2.58 7.444)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_204"
+                            d="M.459.473H.465"
+                            transform="translate(8.503 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_205"
+                            d="M.459.473H.465"
+                            transform="translate(5.545 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_206"
+                            d="M.459.473H.465"
+                            transform="translate(2.58 10.165)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_207"
+                            d="M.463,0V2.3"
+                            transform="translate(8.233)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Line_208"
+                            d="M.463,0V2.3"
+                            transform="translate(2.847)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Path"
+                            d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
+                            transform="translate(0 1.105)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[10px] text-[#6B6B6B]"
+                    >۱۴۰۱/۰۱/۰۱</span
+                  >
+                </div>
+                <div class="flex mr-2 items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                    >
+                      <g
+                        id="Iconly_Light_Chat"
+                        data-name="Iconly/Light/Chat"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Chat">
+                          <path
+                            id="Combined_Shape"
+                            data-name="Combined Shape"
+                            d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
+                            transform="translate(3.169 6.339)"
+                          />
+                          <path
+                            id="Stroke_7"
+                            data-name="Stroke 7"
+                            d="M7.014,0A7,7,0,0,0,0,7.011a7.409,7.409,0,0,0,.945,3.5.735.735,0,0,1,.049.632L.525,12.71a.437.437,0,0,0,.574.546l1.414-.42a1.188,1.188,0,0,1,1.043.252A7,7,0,1,0,7.014,0Z"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[10px] text-[#6B6B6B]"
+                    >بدون دیدگاه</span
+                  >
+                </div>
+              </div>
+              <p class="text-[18px] font-bold">
+                عوامل موثر برحوزه زیست فناوری در ایران
+              </p>
+              <p class="text-justify text-[12px] max-h-11 overflow-y-auto">
+                زیست‌فناوری از جمله واژه‌های پر سرو صدای سال‌های گذشته‌است. این
+                واژه را درست یا نادرست به مفهوم همه‌چیز برای مردم به‌کار
+                می‌برند. بیوتکنولوژی را در یک تعریف کلی به‌کارگیری ریزاندامگان
+                یا جانداران یا فرایندهای زیستی در صنایع تولیدی یا خدماتی
+                دانسته‌اند. تعریف ساده این پدیدهٔ نوین عبارت است از دانشی که
+                کاربرد یکپارچه علوم پایه‌ای مانند ژنتیک، زیست‌شیمی، زیست‌شناسی
+                سلولی، بافت‌شناسی، میکروب‌شناسی و فناوری‌های تولید را در
+                سامانه‌های زیستی به دلیل استفاده‌ای که در سرشت میان‌رشته‌ای علوم
+                دارد مطالعه می‌کنند. در تعریف دیگر زیست‌فناوری را چنین تشریح
+                کرده‌اند
+              </p>
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 15 15"
+                    >
+                      <g
+                        id="Iconly_Light_Time_Circle"
+                        data-name="Iconly/Light/Time Circle"
+                        transform="translate(0.5 0.5)"
+                      >
+                        <g id="Time_Circle" data-name="Time Circle">
+                          <path
+                            id="Stroke_1"
+                            data-name="Stroke 1"
+                            d="M14,7A7,7,0,1,1,7,0,7,7,0,0,1,14,7Z"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                          <path
+                            id="Stroke_3"
+                            data-name="Stroke 3"
+                            d="M2.853,5.37,0,3.668V0"
+                            transform="translate(6.744 3.857)"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            stroke-width="1"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="mr-2 text-[12px]"
+                    ><span>5</span> دقیقه زمان مطالعه</span
+                  >
+                </div>
+                <div class="flex">
+                  <a
+                    class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
+                    href="/singlenews.html"
+                  >
+                    <span class="text-[12px]">ادامه مطلب</span>
+                    <span class="mr-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="14"
+                        height="11.464"
+                        viewBox="0 0 14 11.464"
+                      >
+                        <g
+                          id="Iconly_Light_Arrow_-_Left"
+                          data-name="Iconly/Light/Arrow - Left"
+                          transform="translate(0.5 0.707)"
+                        >
+                          <g
+                            id="Arrow_-_Left"
+                            data-name="Arrow - Left"
+                            transform="translate(13) rotate(90)"
+                          >
+                            <path
+                              id="Stroke_1"
+                              data-name="Stroke 1"
+                              d="M0,13V0"
+                              transform="translate(5.025)"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                              stroke-width="1"
+                            />
+                            <path
+                              id="Stroke_3"
+                              data-name="Stroke 3"
+                              d="M10.05,0,5.025,5.243,0,0"
+                              transform="translate(0 7.757)"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-miterlimit="10"
+                              stroke-width="1"
+                            />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-lightgreen2">
+      <section
+        class="xl:container grid grid-cols-12 max-md:gap-y-8 py-8 max-xl:px-6"
+      >
+        <section
+          class="col-span-12 md:col-span-3 flex flex-col max-sm:items-center justify-evenly text-[12px] scrollbar-2px"
+        >
+          <div>
+            <a class="inline-block" href="./index.html"
+              ><img src="../assets/images/logo_theme_4.png" alt=""
+            /></a>
+          </div>
+          <p
+            class="max-h-[70px] text-justify overflow-x-hidden overflow-y-auto"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+            رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد
+            کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+            راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+            طراحی اساسا مورد استفاده قرار گیرد.
+          </p>
+          <div class="flex flex-col justify-evenly">
+            <div class="flex items-center mt-2">
+              <span
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16.857"
+                  height="19.836"
+                  viewBox="0 0 16.857 19.836"
+                >
+                  <g
+                    id="Iconly_Light_Location"
+                    data-name="Iconly/Light/Location"
+                    transform="translate(0.75 0.75)"
+                  >
+                    <g id="Location">
+                      <path
+                        id="Path_33958"
+                        d="M0,7.652A7.678,7.678,0,1,1,15.357,7.7v.087a11.338,11.338,0,0,1-3.478,7.3,20.183,20.183,0,0,1-3.591,2.957.93.93,0,0,1-1.217,0,19.817,19.817,0,0,1-5.052-4.73A9.826,9.826,0,0,1,0,7.678Z"
+                        transform="translate(0 0)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                      <circle
+                        id="Ellipse_740"
+                        cx="2.461"
+                        cy="2.461"
+                        r="2.461"
+                        transform="translate(5.217 5.339)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2"
+                >آدرس: تهران . خیابان ملاصدرا . خیابان شیخ بهایی شمالی</span
+              >
+            </div>
+            <div class="flex items-center mt-2">
+              <span
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.505"
+                  height="20.508"
+                  viewBox="0 0 20.505 20.508"
+                >
+                  <g
+                    id="Iconly_Light_Call"
+                    data-name="Iconly/Light/Call"
+                    transform="translate(0.754 0.752)"
+                  >
+                    <g id="Call">
+                      <path
+                        id="Call-2"
+                        data-name="Call"
+                        d="M.49,2.373C.807,1.849,2.549-.056,3.793,0a1.636,1.636,0,0,1,.967.517,16.863,16.863,0,0,1,2.468,3.34C7.471,5.026,6.078,5.7,6.5,6.878a9.873,9.873,0,0,0,5.619,5.616c1.177.426,1.851-.966,3.019-.723a16.894,16.894,0,0,1,3.34,2.468,1.639,1.639,0,0,1,.517.967c.046,1.309-1.977,3.077-2.371,3.3-.93.665-2.144.654-3.624-.034C8.874,16.757,2.274,10.282.524,6-.145,4.525-.192,3.3.49,2.373Z"
+                        transform="translate(0)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2"
+                >تلفن: 88610997 . 88610747 . 41098400 . 41098410</span
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          class="col-span-12 md:col-span-6 flex justify-evenly max-md:text-center"
+        >
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">لینک های دسترسی</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">پیوند های مفید</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">پیوند های مفید</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+        </section>
+        <section class="col-span-12 md:col-span-3">
+          <!-- social networks links -->
+          <p class="text-[18px] font-bold text-center">
+            برگزیده خلاق معاونت علمی<br />
+            فناوری ریاست جمهوری
+          </p>
+          <div class="flex justify-center">
+            <div
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]"
+            >
+              <img class="object-cover w-full h-full" src="" alt="" />
+            </div>
+            <div
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]"
+            >
+              <img class="object-cover w-full h-full" src="" alt="" />
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- footer copy right text -->
+      <div class="bg-green py-4">
+        <div
+          class="xl:container max-xl:px-6 flex max-sm:flex-col justify-between items-center"
+        >
+          <p class="text-white max-sm:text-center">
+            تمامی حقوق متعلق به این سایت و برای معاونت علمی و فناوری ریاست
+            جمهوری محفوظ می باشد.
+          </p>
+          <ul class="flex justify-between max-sm:mt-2">
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
+                href=""
+              >
+                <span>
+                  <svg
+                    class="fill-green"
+                    id="Iconly_Light-outline_Send"
+                    data-name="Iconly/Light-outline/Send"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16.991"
+                    height="16.991"
+                    viewBox="0 0 16.991 16.991"
+                  >
+                    <g id="Send" transform="translate(0)">
+                      <path
+                        id="Send-2"
+                        data-name="Send"
+                        d="M11.261,16.991A1.638,1.638,0,0,1,9.913,16.3l-.077-.116L6.442,10.557.8,7.085a1.684,1.684,0,0,1,.278-3l.132-.043L14.851.068A1.7,1.7,0,0,1,15.323,0a1.681,1.681,0,0,1,1.628,2.041l-.031.122L12.872,15.791A1.67,1.67,0,0,1,11.261,16.991Zm.594-12.528a.647.647,0,0,1,.387.127l.074.063a.658.658,0,0,1,.066.851l-.063.074L7.742,10.183l3.214,5.322a.358.358,0,0,0,.312.179.363.363,0,0,0,.326-.2l.027-.067L15.666,1.791a.373.373,0,0,0-.058-.333.368.368,0,0,0-.293-.15l-.038,0-.064.013L1.574,5.292a.365.365,0,0,0-.256.272.376.376,0,0,0,.109.364l.057.043L6.821,9.255l4.57-4.6A.651.651,0,0,1,11.855,4.463Z"
+                        transform="translate(0)"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
+                href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.114"
+                  height="19.114"
+                  viewBox="0 0 19.114 19.114"
+                >
+                  <path
+                    id="Icon_simple-instagram"
+                    data-name="Icon simple-instagram"
+                    d="M9.557,0c-2.6,0-2.92.012-3.94.057A7.047,7.047,0,0,0,3.3.5,4.68,4.68,0,0,0,1.6,1.6,4.663,4.663,0,0,0,.5,3.3a7.027,7.027,0,0,0-.444,2.32C.01,6.637,0,6.961,0,9.557s.012,2.92.057,3.94A7.052,7.052,0,0,0,.5,15.817,4.687,4.687,0,0,0,1.6,17.51a4.673,4.673,0,0,0,1.693,1.1,7.056,7.056,0,0,0,2.32.444c1.019.048,1.344.057,3.94.057s2.92-.012,3.94-.057a7.072,7.072,0,0,0,2.32-.444,4.884,4.884,0,0,0,2.8-2.8,7.052,7.052,0,0,0,.444-2.32c.048-1.019.057-1.344.057-3.94s-.012-2.92-.057-3.94a7.068,7.068,0,0,0-.444-2.32A4.691,4.691,0,0,0,17.51,1.6,4.657,4.657,0,0,0,15.817.5,7.031,7.031,0,0,0,13.5.057C12.478.01,12.153,0,9.557,0Zm0,1.72c2.551,0,2.855.013,3.863.057a5.266,5.266,0,0,1,1.774.331,3.145,3.145,0,0,1,1.814,1.813,5.277,5.277,0,0,1,.329,1.774c.045,1.008.056,1.311.056,3.863s-.012,2.855-.059,3.863A5.378,5.378,0,0,1,17,15.193a3.035,3.035,0,0,1-.716,1.1,2.982,2.982,0,0,1-1.1.714,5.315,5.315,0,0,1-1.78.329c-1.015.045-1.313.056-3.87.056s-2.856-.012-3.87-.059A5.419,5.419,0,0,1,3.883,17a2.96,2.96,0,0,1-1.1-.716,2.9,2.9,0,0,1-.717-1.1,5.424,5.424,0,0,1-.334-1.78c-.036-1-.049-1.313-.049-3.858s.013-2.856.049-3.871a5.418,5.418,0,0,1,.334-1.779,2.833,2.833,0,0,1,.717-1.1,2.827,2.827,0,0,1,1.1-.715,5.29,5.29,0,0,1,1.769-.335C6.667,1.708,6.966,1.7,9.521,1.7l.036.024Zm0,2.929a4.908,4.908,0,1,0,4.908,4.908A4.907,4.907,0,0,0,9.557,4.65Zm0,8.093a3.186,3.186,0,1,1,3.186-3.186A3.185,3.185,0,0,1,9.557,12.743Zm6.249-8.287A1.147,1.147,0,1,1,14.659,3.31,1.148,1.148,0,0,1,15.806,4.456Z"
+                  /></svg
+              ></a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
+                href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21.385"
+                  height="15.354"
+                  viewBox="0 0 21.385 15.354"
+                >
+                  <g
+                    id="Icon_feather-youtube"
+                    data-name="Icon feather-youtube"
+                    transform="translate(0.55 0.55)"
+                  >
+                    <path
+                      id="Path_79"
+                      data-name="Path 79"
+                      d="M21.359,8.231a2.563,2.563,0,0,0-1.789-1.844A66.4,66.4,0,0,0,11.642,6S5.3,6,3.712,6.424A2.563,2.563,0,0,0,1.924,8.268,26.738,26.738,0,0,0,1.5,13.145a26.738,26.738,0,0,0,.424,4.914,2.563,2.563,0,0,0,1.789,1.77c1.586.424,7.929.424,7.929.424s6.343,0,7.929-.424a2.563,2.563,0,0,0,1.789-1.844,26.738,26.738,0,0,0,.424-4.84,26.737,26.737,0,0,0-.424-4.914Z"
+                      transform="translate(-1.499 -6)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.1"
+                    />
+                    <path
+                      id="Path_80"
+                      data-name="Path 80"
+                      d="M14.625,18.75l5.3-3.015-5.3-3.015Z"
+                      transform="translate(-6.557 -8.589)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.1"
+                    />
+                  </g></svg
+              ></a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
+                href=""
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18.247"
+                  height="18.247"
+                  viewBox="0 0 18.247 18.247"
+                >
+                  <g
+                    id="_1860492_whatsapp_social_media_icon"
+                    data-name="1860492_whatsapp_social media_icon"
+                    transform="translate(0.625 0.625)"
+                  >
+                    <path
+                      id="Path_100"
+                      data-name="Path 100"
+                      d="M5.966,17.438c-.5-.315-2.959,1.511-3.336,1.07-.378-.378,1.259-2.959.944-3.4A8.306,8.306,0,0,1,2,10.2a8.5,8.5,0,1,1,8.5,8.5,7.964,7.964,0,0,1-1.763-.189"
+                      transform="translate(-2 -1.7)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.25"
+                    />
+                    <path
+                      id="Path_101"
+                      data-name="Path 101"
+                      d="M11.445,8.3l.755,1.889a.23.23,0,0,1-.126.315.826.826,0,0,0-.252,1.322c.63.881,2.329,3.085,3.714,1.637a.277.277,0,0,1,.315-.063l2.014.881a.3.3,0,0,1,.126.378c-.441.881-2.14,3.211-6.358-.441-4.281-3.714-1.511-5.54-.567-5.98C11.193,8.044,11.382,8.107,11.445,8.3Z"
+                      transform="translate(-4.709 -4.078)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.25"
+                    />
+                  </g></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Js files -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+      $("document").ready(() => {
+        $(".cat-item").click((e) => {
+          let cat_data = $(e.currentTarget).attr("cat-data");
+          $(".child-cats").each((i, ch) => {
+            if ($(ch).attr("cat-data") == cat_data) {
+              $(ch).slideToggle();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

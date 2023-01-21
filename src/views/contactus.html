@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بایوفایننس | ارتباط با ما</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/news.css" />
+    <link rel="stylesheet" href="../../dist/output.css" />
+    <style>
+      tr:nth-child(2n + 2) {
+        background-color: var(--lightgreen2);
+      }
+    </style>
+  </head>
+  <body class="font-iransans scroll-smooth">
+    <!-- Nav Bar -->
+    <!-- Mobile Menu Toggler -->
+    <button
+      class="duration-200 hidden fixed z-[99999] top-5 left-5 max-sm:flex items-center justify-center bg-green fill-white hover:bg-white hover:fill-green w-10 h-10 font-black border-2 rounded-lg"
+      onclick="$('.navbar-div').toggleClass('max-sm:hidden');$('.close-icon, .menu-icon').toggleClass('hidden');"
+    >
+      <span class="close-icon hidden duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+          <path
+            d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z"
+          />
+        </svg>
+      </span>
+      <span class="menu-icon duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+          <path d="M3 14.5V13h14v1.5Zm0-3.75v-1.5h14v1.5ZM3 7V5.5h14V7Z" />
+        </svg>
+      </span>
+    </button>
+
+    <div
+      class="navbar-div max-sm:bg-white z-10 sticky top-0 p-[0px_1.5rem_13px_1.5rem] max-sm:fixed max-sm:w-full max-sm:top-0 max-sm:left-0 max-sm:h-full max-sm:bg-navy max-sm:text-yellow max-sm:hidden"
+    >
+      <nav
+        class="xl:container flex max-md:flex-col max-sm:flex-col max-sm:fixed max-sm:top-[calc(50%_-_218px)] max-sm:left-[calc(50%_-_60px)] justify-between items-start items-center pt-3"
+      >
+        <ul class="menu flex flex-row max-sm:flex-col items-center">
+          <li class="navbar-logo">
+            <a href="./index.html">
+              <img src="../assets/images/logo_theme_1.png" />
+            </a>
+          </li>
+          <li class="p-3"><a href="./index.html">صفحه اصلی</a></li>
+          <li class="p-3"><a href="./news.html">اخبار</a></li>
+          <li class="p-3"><a href="./index.html">فراخوان</a></li>
+          <li class="p-3"><a href="./faq.html">سوالات متداول</a></li>
+          <li class="p-3"><a href="./aboutus.html">درباره ما</a></li>
+          <li class="p-3 current"><a href="./contactus.html">تماس با ما</a></li>
+        </ul>
+        <ul
+          class="nav-options flex max-sm:flex-col justify-center items-center"
+        >
+          <li class="p-1 max-sm:mt-4">
+            <a href="" class="bf-btn">سامانه تامین مالی</a>
+          </li>
+          <li
+            class="p-1 relative duration-300 max-sm:mt-4"
+            style="width: 120px"
+            id="search_div"
+          >
+            <form action="">
+              <button
+                id="search_submit"
+                class="absolute duration-500 left-3 top-[9px] p-2 rounded-md stroke-green hover:bg-green hover:stroke-white"
+                type="submit"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12.971"
+                    height="13.429"
+                    viewBox="0 0 12.971 13.429"
+                  >
+                    <ellipse
+                      id="Ellipse_739"
+                      cx="5.635"
+                      cy="5.715"
+                      rx="5.635"
+                      ry="5.715"
+                      transform="translate(0.5 0.5)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1"
+                    />
+                    <path
+                      id="Line_181"
+                      d="M0,0,2.209,2.235"
+                      transform="translate(10.055 10.487)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <input
+                class="duration-500 bg-lightgreen2 rounded-md p-2 pl-10 placeholder:text-green border-[1px] w-full focus:border-green"
+                onfocus="innerWidth > 640 ? $('#search_div').width(200) :null"
+                onfocusout="innerWidth > 640 ? $('#search_div').width(120) : null"
+                type="text"
+                name="search_inp"
+                id="search_inp"
+                placeholder="جستجو"
+              />
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Wrapper -->
+    <div
+      class="wrapper xl:container grid grid-cols-12 mt-16 items-start stroke-green fill-green relative"
+    >
+      <!-- Send Message -->
+      <div class="col-span-12 md:col-span-5">
+        <div class="bg-lightgreen2 rounded-lg p-5">
+          <h2 class="text-[24px] text-green">تماس با ما</h2>
+          <p class="text-[14px]">از طریق فرم زیر با ما در ارتباط باشید</p>
+          <form
+            action=""
+            class="text-[14px] placeholder:text-[#CACACA] fill-[#CACACA] stroke-[#CACACA] mt-3 scroll-silver"
+          >
+            <!-- name -->
+            <label
+              class="bg-white rounded-lg p-2 flex my-2 border-lightgreen2 duration-200 border-2 focus-within:border-green"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16.665"
+                  height="20.723"
+                  viewBox="0 0 16.665 20.723"
+                >
+                  <g
+                    id="Iconly_Light_Profile"
+                    data-name="Iconly/Light/Profile"
+                    transform="translate(0.75 0.75)"
+                  >
+                    <g id="Profile">
+                      <circle
+                        id="Ellipse_736"
+                        cx="4.778"
+                        cy="4.778"
+                        r="4.778"
+                        transform="translate(2.801)"
+                        fill="none"
+                        stroke-width="2"
+                      />
+                      <path
+                        id="Path_33945"
+                        d="M0,3.016a2.215,2.215,0,0,1,.22-.97A4.042,4.042,0,0,1,3.039.426,16.787,16.787,0,0,1,5.382.1,25.053,25.053,0,0,1,9.767.1a16.979,16.979,0,0,1,2.343.33c1.071.22,2.362.659,2.819,1.62a2.27,2.27,0,0,1,0,1.95c-.458.961-1.748,1.4-2.819,1.611a15.716,15.716,0,0,1-2.343.339A25.822,25.822,0,0,1,6.2,6a4.066,4.066,0,0,1-.815-.055,15.423,15.423,0,0,1-2.334-.339C1.968,5.4.687,4.957.22,4A2.279,2.279,0,0,1,0,3.016Z"
+                        transform="translate(0 13.185)"
+                        fill="none"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <input
+                class="w-full mr-2 duration-300 group"
+                type="text"
+                name="name"
+                required
+                placeholder="نام و نام خانوادگی"
+              />
+            </label>
+            <div class="flex justify-between w-full my-2">
+              <!-- Email -->
+              <label
+                class="bg-white rounded-lg w-[49%] p-2 flex duration-200 border-lightgreen2 border-2 focus-within:border-green"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17.889"
+                    height="17.889"
+                    viewBox="0 0 17.889 17.889"
+                  >
+                    <path
+                      stroke="none"
+                      id="icons8_At_sign"
+                      d="M10.945,2a8.945,8.945,0,0,0,0,17.889h4.472V18.1H10.945A7.156,7.156,0,1,1,18.1,10.945v1.342a1.342,1.342,0,1,1-2.683,0V10.945a4.507,4.507,0,1,0-1.253,3.083,3.126,3.126,0,0,0,5.725-1.742V10.945A8.958,8.958,0,0,0,10.945,2Zm0,6.261a2.683,2.683,0,1,1-2.683,2.683A2.67,2.67,0,0,1,10.945,8.261Z"
+                      transform="translate(-2 -2)"
+                    />
+                  </svg>
+                </span>
+                <input
+                  name="email"
+                  required
+                  class="mr-2"
+                  type="email"
+                  placeholder="ایمیل"
+                />
+              </label>
+              <!-- Phone Number -->
+              <label
+                class="bg-white rounded-lg p-2 w-[49%] flex duration-200 border-lightgreen2 border-2 focus-within:border-green"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14.5"
+                    height="14.504"
+                    viewBox="0 0 14.5 14.504"
+                  >
+                    <g
+                      id="Iconly_Light-outline_Call"
+                      data-name="Iconly/Light-outline/Call"
+                      transform="translate(0.25 14.251) rotate(-90)"
+                    >
+                      <g id="Call" transform="translate(0 -0.002)">
+                        <path
+                          id="Call-2"
+                          data-name="Call"
+                          d="M10.794,14h0a3.824,3.824,0,0,1-1.6-.4A17.92,17.92,0,0,1,4.139,9.864,17.236,17.236,0,0,1,.41,4.819L.337,4.652A2.725,2.725,0,0,1,.414,1.867,4.1,4.1,0,0,1,3.078,0H3.15a1.573,1.573,0,0,1,.976.5A10.628,10.628,0,0,1,5.954,3.042,1.7,1.7,0,0,1,5.631,4.38l-.077.135c-.141.258-.168.37-.122.5A6.253,6.253,0,0,0,8.968,8.562a.38.38,0,0,0,.132.025A1.049,1.049,0,0,0,9.58,8.4l.174-.1a1.757,1.757,0,0,1,.883-.284,1.58,1.58,0,0,1,.324.036A10.62,10.62,0,0,1,13.5,9.878a1.573,1.573,0,0,1,.5,1,4,4,0,0,1-1.832,2.689A2.31,2.31,0,0,1,10.794,14ZM3.066,1.023h.009l-.062,0A3.756,3.756,0,0,0,1.266,2.435l-.055.081a2,2,0,0,0,.139,1.9l.073.171a17.153,17.153,0,0,0,3.54,4.652,16.784,16.784,0,0,0,4.648,3.428l.149.066a2.621,2.621,0,0,0,1.016.241,1.4,1.4,0,0,0,.839-.264l.035-.023a5.317,5.317,0,0,0,.755-.719,2,2,0,0,0,.573-1.028.651.651,0,0,0-.209-.345,13.747,13.747,0,0,0-2.018-1.542.421.421,0,0,0-.088-.01,1.164,1.164,0,0,0-.532.217l-.172.1a1.756,1.756,0,0,1-.845.263,1.5,1.5,0,0,1-.514-.1A7.286,7.286,0,0,1,4.477,5.383,1.563,1.563,0,0,1,4.72,3.911L4.8,3.773c.148-.267.182-.384.154-.522A13.812,13.812,0,0,0,3.41,1.232.654.654,0,0,0,3.066,1.023Z"
+                          transform="translate(0 0.002)"
+                          fill="none"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <input
+                  name="phone"
+                  required
+                  class="mr-2"
+                  type="text"
+                  placeholder="تلفن همراه"
+                />
+              </label>
+            </div>
+
+            <!-- Subject -->
+            <label
+              class="bg-white rounded-lg p-2 flex my-2 border-lightgreen2 duration-200 border-2 focus-within:border-green"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="16"
+                  viewBox="0 0 22 16"
+                >
+                  <path
+                    id="icons8_new_letter_1"
+                    d="M22,4a2,2,0,0,1,2,2V18a2,2,0,0,1-2,2H14V18h8V9l-8,5L6,9v7H4V6A2,2,0,0,1,6,4Zm0,2H6V7l8,5,8-5ZM12,18v2H10V18ZM8,18v2H6V18ZM4,18v2H2V18Z"
+                    transform="translate(-2 -4)"
+                    stroke="none"
+                  />
+                </svg>
+              </span>
+              <input class="mr-2" type="text" placeholder="موضوع" />
+            </label>
+            <!-- message -->
+            <label
+              class="bg-white rounded-lg p-2 flex my-2 border-lightgreen2 duration-200 border-2 focus-within:border-green"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25.223"
+                  height="17.526"
+                  viewBox="0 0 25.223 17.526"
+                >
+                  <g
+                    id="Iconly_Light_Edit"
+                    data-name="Iconly/Light/Edit"
+                    transform="translate(0.875 1.003)"
+                  >
+                    <g id="Edit">
+                      <path
+                        id="Stroke_1"
+                        data-name="Stroke 1"
+                        d="M0,.5H6.377"
+                        transform="translate(0 15.148)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.75"
+                      />
+                      <path
+                        id="Stroke_3"
+                        data-name="Stroke 3"
+                        d="M8.6.706A1.947,1.947,0,0,1,11.473.553l1.39,1.09A1.946,1.946,0,0,1,13.4,4.464L5.11,15.039a1.481,1.481,0,0,1-1.15.568l-3.2.041L.039,12.533a1.486,1.486,0,0,1,.277-1.252Z"
+                        transform="translate(9.551 0)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.75"
+                      />
+                      <path
+                        id="Stroke_5"
+                        data-name="Stroke 5"
+                        d="M0,0,4.794,3.758"
+                        transform="translate(16.603 2.686)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.75"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <textarea
+                type="text"
+                name="message"
+                required
+                class="h-[115px] mr-2 resize-none w-full outline-none"
+                placeholder="پیام خود را بنویسید..."
+              ></textarea>
+            </label>
+            <button type="submit" class="bf-btn bg-green w-full">
+              ارسال پیام
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Centers -->
+      <div class="col-span-12 md:col-span-7 pr-5 ">
+        <div class="rounded-xl overflow-hidden">
+          <table class="w-full" cellpadding="15px">
+            <thead class="bg-lightgreen2" >
+              <tr>
+                <th>نام مرکز</th>
+                <th>پست الکترونیک</th>
+                <th>تلفن</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>گروه پژوهش،زیرساخت و توسعه فناوری</td>
+                <td>research@biodc.isti.ir</td>
+                <td>۰۲۱۴۱۰۹۸۱۰۱</td>
+              </tr>
+              <tr>
+                <td>گروه پژوهش،زیرساخت و توسعه فناوری</td>
+                <td>research@biodc.isti.ir</td>
+                <td>۰۲۱۴۱۰۹۸۱۰۱</td>
+              </tr>
+              <tr>
+                <td>گروه پژوهش،زیرساخت و توسعه فناوری</td>
+                <td>research@biodc.isti.ir</td>
+                <td>۰۲۱۴۱۰۹۸۱۰۱</td>
+              </tr>
+              <tr>
+                <td>گروه پژوهش،زیرساخت و توسعه فناوری</td>
+                <td>research@biodc.isti.ir</td>
+                <td>۰۲۱۴۱۰۹۸۱۰۱</td>
+              </tr>
+              <tr>
+                <td>گروه پژوهش،زیرساخت و توسعه فناوری</td>
+                <td>research@biodc.isti.ir</td>
+                <td>۰۲۱۴۱۰۹۸۱۰۱</td>
+              </tr>
+              <tr>
+                <td>گروه پژوهش،زیرساخت و توسعه فناوری</td>
+                <td>research@biodc.isti.ir</td>
+                <td>۰۲۱۴۱۰۹۸۱۰۱</td>
+              </tr>
+              <tr>
+                <td>گروه پژوهش،زیرساخت و توسعه فناوری</td>
+                <td>research@biodc.isti.ir</td>
+                <td>۰۲۱۴۱۰۹۸۱۰۱</td>
+              </tr>
+              <tr>
+                <td>گروه پژوهش،زیرساخت و توسعه فناوری</td>
+                <td>research@biodc.isti.ir</td>
+                <td>۰۲۱۴۱۰۹۸۱۰۱</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="flex items-start mt-5 ">
+          <!-- location -->
+          <div class="flex flex-col w-1/2 items-center">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19.857"
+                height="23.846"
+                viewBox="0 0 19.857 23.846"
+              >
+                <g
+                  id="Iconly_Light_Location"
+                  data-name="Iconly/Light/Location"
+                  transform="translate(0.75 0.75)"
+                >
+                  <g id="Location">
+                    <path
+                      id="Path_33958"
+                      d="M0,9.328A9.269,9.269,0,0,1,9.209,0a9.272,9.272,0,0,1,9.147,9.391V9.5c-.062,3.36-1.9,6.466-4.158,8.893a24.233,24.233,0,0,1-4.293,3.6,1.1,1.1,0,0,1-1.455,0,23.882,23.882,0,0,1-6.039-5.766A12.125,12.125,0,0,1,0,9.359Z"
+                      transform="translate(0 0)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                    />
+                    <ellipse
+                      id="Ellipse_740"
+                      cx="2.942"
+                      cy="3"
+                      rx="2.942"
+                      ry="3"
+                      transform="translate(6.237 6.508)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <p class="mt-3">
+              تهران خیابان شیخ بهایی شمالی-میدان پیروزان- خیابان پیروزان نبش
+              کوچه زاهدی- پلاک 15- ستاد توسعه زیست فناوری
+            </p>
+          </div>
+          <!-- phone numbers -->
+          <div class="flex flex-col w-1/4 items-center">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20.508"
+                height="20.689"
+                viewBox="0 0 20.508 20.689"
+              >
+                <g
+                  id="Iconly_Light_Calling"
+                  data-name="Iconly/Light/Calling"
+                  transform="translate(0.752 19.935) rotate(-90)"
+                >
+                  <g id="Calling" transform="translate(-0.5 -0.5)">
+                    <path
+                      id="Stroke_1"
+                      data-name="Stroke 1"
+                      d="M.49,2.374C.806,1.849,2.55-.056,3.793,0A1.642,1.642,0,0,1,4.76.518h0a16.884,16.884,0,0,1,2.467,3.34C7.472,5.026,6.078,5.7,6.5,6.878a9.873,9.873,0,0,0,5.619,5.616c1.177.427,1.851-.965,3.019-.723a16.864,16.864,0,0,1,3.34,2.468h0a1.639,1.639,0,0,1,.517.967c.046,1.309-1.977,3.077-2.371,3.3-.93.666-2.144.654-3.624-.034C8.874,16.757,2.274,10.282.524,6-.146,4.525-.191,3.3.49,2.374Z"
+                      transform="translate(0.5 0.5)"
+                      fill="none"
+                      stroke="#16ae74"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      id="Path"
+                      d="M0,0A7.971,7.971,0,0,1,7.041,7.032"
+                      transform="translate(12.565 0.75)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      id="Path-2"
+                      data-name="Path"
+                      d="M0,0A4.426,4.426,0,0,1,3.5,3.5"
+                      transform="translate(12.565 4.293)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <div class="mt-3">
+              <div class="flex gap-x-2 ">
+                <span>۸۸۶۱۰۹۹۷</span>
+                <span>۴۱۰۹۸۴۱۰</span>
+              </div>
+              <div class="flex gap-x-2">
+                <span>۴۱۰۹۸۴۰۰</span>
+                <span>۸۸۶۱۰۷۴۷</span>
+              </div>
+            </div>
+          </div>
+          <!-- emails -->
+          <div class="flex flex-col w-1/4 items-center">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20.732"
+                height="18.616"
+                viewBox="0 0 20.732 18.616"
+              >
+                <g
+                  id="Iconly_Light_Message"
+                  data-name="Iconly/Light/Message"
+                  transform="translate(0.75 0.75)"
+                >
+                  <g id="Message">
+                    <path
+                      id="Path_445"
+                      d="M11.313,0,7.048,3.434a2.223,2.223,0,0,1-2.746,0L0,0"
+                      transform="translate(3.954 5.561)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      id="Rectangle_511"
+                      d="M4.888,0h9.428A4.957,4.957,0,0,1,17.9,1.59a5.017,5.017,0,0,1,1.326,3.7v6.528a5.017,5.017,0,0,1-1.326,3.7,4.957,4.957,0,0,1-3.58,1.59H4.888C1.968,17.116,0,14.741,0,11.822V5.294C0,2.375,1.968,0,4.888,0Z"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <div class="mt-3">
+              <span>Biofinance@gmail.com</span>
+            <span>Biofinance2@gmail.com</span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-lightgreen2 mt-44">
+      <section
+        class="xl:container grid grid-cols-12 max-md:gap-y-8 py-8 max-xl:px-6"
+      >
+        <section
+          class="col-span-12 md:col-span-3 flex flex-col max-sm:items-center justify-evenly text-[12px] scrollbar-2px"
+        >
+          <div>
+            <a class="inline-block" href="./index.html"
+              ><img src="../assets/images/logo_theme_4.png" alt=""
+            /></a>
+          </div>
+          <p
+            class="max-h-[70px] text-justify overflow-x-hidden overflow-y-auto"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+            رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد
+            کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+            راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+            طراحی اساسا مورد استفاده قرار گیرد.
+          </p>
+          <div class="flex flex-col justify-evenly">
+            <div class="flex items-center mt-2">
+              <span
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16.857"
+                  height="19.836"
+                  viewBox="0 0 16.857 19.836"
+                >
+                  <g
+                    id="Iconly_Light_Location"
+                    data-name="Iconly/Light/Location"
+                    transform="translate(0.75 0.75)"
+                  >
+                    <g id="Location">
+                      <path
+                        id="Path_33958"
+                        d="M0,7.652A7.678,7.678,0,1,1,15.357,7.7v.087a11.338,11.338,0,0,1-3.478,7.3,20.183,20.183,0,0,1-3.591,2.957.93.93,0,0,1-1.217,0,19.817,19.817,0,0,1-5.052-4.73A9.826,9.826,0,0,1,0,7.678Z"
+                        transform="translate(0 0)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                      <circle
+                        id="Ellipse_740"
+                        cx="2.461"
+                        cy="2.461"
+                        r="2.461"
+                        transform="translate(5.217 5.339)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2"
+                >آدرس: تهران . خیابان ملاصدرا . خیابان شیخ بهایی شمالی</span
+              >
+            </div>
+            <div class="flex items-center mt-2">
+              <span
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.505"
+                  height="20.508"
+                  viewBox="0 0 20.505 20.508"
+                >
+                  <g
+                    id="Iconly_Light_Call"
+                    data-name="Iconly/Light/Call"
+                    transform="translate(0.754 0.752)"
+                  >
+                    <g id="Call">
+                      <path
+                        id="Call-2"
+                        data-name="Call"
+                        d="M.49,2.373C.807,1.849,2.549-.056,3.793,0a1.636,1.636,0,0,1,.967.517,16.863,16.863,0,0,1,2.468,3.34C7.471,5.026,6.078,5.7,6.5,6.878a9.873,9.873,0,0,0,5.619,5.616c1.177.426,1.851-.966,3.019-.723a16.894,16.894,0,0,1,3.34,2.468,1.639,1.639,0,0,1,.517.967c.046,1.309-1.977,3.077-2.371,3.3-.93.665-2.144.654-3.624-.034C8.874,16.757,2.274,10.282.524,6-.145,4.525-.192,3.3.49,2.373Z"
+                        transform="translate(0)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2"
+                >تلفن: 88610997 . 88610747 . 41098400 . 41098410</span
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          class="col-span-12 md:col-span-6 flex justify-evenly max-md:text-center"
+        >
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">لینک های دسترسی</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">پیوند های مفید</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">پیوند های مفید</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+        </section>
+        <section class="col-span-12 md:col-span-3">
+          <!-- social networks links -->
+          <p class="text-[18px] font-bold text-center">
+            برگزیده خلاق معاونت علمی<br />
+            فناوری ریاست جمهوری
+          </p>
+          <div class="flex justify-center">
+            <div
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]"
+            >
+              <img class="object-cover w-full h-full" src="" alt="" />
+            </div>
+            <div
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]"
+            >
+              <img class="object-cover w-full h-full" src="" alt="" />
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- footer copy right text -->
+      <div class="bg-green py-4">
+        <div
+          class="xl:container max-xl:px-6 flex max-sm:flex-col justify-between items-center"
+        >
+          <p class="text-white max-sm:text-center">
+            تمامی حقوق متعلق به این سایت و برای معاونت علمی و فناوری ریاست
+            جمهوری محفوظ می باشد.
+          </p>
+          <ul class="flex justify-between max-sm:mt-2">
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
+                href=""
+              >
+                <span>
+                  <svg
+                    class="fill-green"
+                    id="Iconly_Light-outline_Send"
+                    data-name="Iconly/Light-outline/Send"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16.991"
+                    height="16.991"
+                    viewBox="0 0 16.991 16.991"
+                  >
+                    <g id="Send" transform="translate(0)">
+                      <path
+                        id="Send-2"
+                        data-name="Send"
+                        d="M11.261,16.991A1.638,1.638,0,0,1,9.913,16.3l-.077-.116L6.442,10.557.8,7.085a1.684,1.684,0,0,1,.278-3l.132-.043L14.851.068A1.7,1.7,0,0,1,15.323,0a1.681,1.681,0,0,1,1.628,2.041l-.031.122L12.872,15.791A1.67,1.67,0,0,1,11.261,16.991Zm.594-12.528a.647.647,0,0,1,.387.127l.074.063a.658.658,0,0,1,.066.851l-.063.074L7.742,10.183l3.214,5.322a.358.358,0,0,0,.312.179.363.363,0,0,0,.326-.2l.027-.067L15.666,1.791a.373.373,0,0,0-.058-.333.368.368,0,0,0-.293-.15l-.038,0-.064.013L1.574,5.292a.365.365,0,0,0-.256.272.376.376,0,0,0,.109.364l.057.043L6.821,9.255l4.57-4.6A.651.651,0,0,1,11.855,4.463Z"
+                        transform="translate(0)"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
+                href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.114"
+                  height="19.114"
+                  viewBox="0 0 19.114 19.114"
+                >
+                  <path
+                    id="Icon_simple-instagram"
+                    data-name="Icon simple-instagram"
+                    d="M9.557,0c-2.6,0-2.92.012-3.94.057A7.047,7.047,0,0,0,3.3.5,4.68,4.68,0,0,0,1.6,1.6,4.663,4.663,0,0,0,.5,3.3a7.027,7.027,0,0,0-.444,2.32C.01,6.637,0,6.961,0,9.557s.012,2.92.057,3.94A7.052,7.052,0,0,0,.5,15.817,4.687,4.687,0,0,0,1.6,17.51a4.673,4.673,0,0,0,1.693,1.1,7.056,7.056,0,0,0,2.32.444c1.019.048,1.344.057,3.94.057s2.92-.012,3.94-.057a7.072,7.072,0,0,0,2.32-.444,4.884,4.884,0,0,0,2.8-2.8,7.052,7.052,0,0,0,.444-2.32c.048-1.019.057-1.344.057-3.94s-.012-2.92-.057-3.94a7.068,7.068,0,0,0-.444-2.32A4.691,4.691,0,0,0,17.51,1.6,4.657,4.657,0,0,0,15.817.5,7.031,7.031,0,0,0,13.5.057C12.478.01,12.153,0,9.557,0Zm0,1.72c2.551,0,2.855.013,3.863.057a5.266,5.266,0,0,1,1.774.331,3.145,3.145,0,0,1,1.814,1.813,5.277,5.277,0,0,1,.329,1.774c.045,1.008.056,1.311.056,3.863s-.012,2.855-.059,3.863A5.378,5.378,0,0,1,17,15.193a3.035,3.035,0,0,1-.716,1.1,2.982,2.982,0,0,1-1.1.714,5.315,5.315,0,0,1-1.78.329c-1.015.045-1.313.056-3.87.056s-2.856-.012-3.87-.059A5.419,5.419,0,0,1,3.883,17a2.96,2.96,0,0,1-1.1-.716,2.9,2.9,0,0,1-.717-1.1,5.424,5.424,0,0,1-.334-1.78c-.036-1-.049-1.313-.049-3.858s.013-2.856.049-3.871a5.418,5.418,0,0,1,.334-1.779,2.833,2.833,0,0,1,.717-1.1,2.827,2.827,0,0,1,1.1-.715,5.29,5.29,0,0,1,1.769-.335C6.667,1.708,6.966,1.7,9.521,1.7l.036.024Zm0,2.929a4.908,4.908,0,1,0,4.908,4.908A4.907,4.907,0,0,0,9.557,4.65Zm0,8.093a3.186,3.186,0,1,1,3.186-3.186A3.185,3.185,0,0,1,9.557,12.743Zm6.249-8.287A1.147,1.147,0,1,1,14.659,3.31,1.148,1.148,0,0,1,15.806,4.456Z"
+                  /></svg
+              ></a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
+                href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21.385"
+                  height="15.354"
+                  viewBox="0 0 21.385 15.354"
+                >
+                  <g
+                    id="Icon_feather-youtube"
+                    data-name="Icon feather-youtube"
+                    transform="translate(0.55 0.55)"
+                  >
+                    <path
+                      id="Path_79"
+                      data-name="Path 79"
+                      d="M21.359,8.231a2.563,2.563,0,0,0-1.789-1.844A66.4,66.4,0,0,0,11.642,6S5.3,6,3.712,6.424A2.563,2.563,0,0,0,1.924,8.268,26.738,26.738,0,0,0,1.5,13.145a26.738,26.738,0,0,0,.424,4.914,2.563,2.563,0,0,0,1.789,1.77c1.586.424,7.929.424,7.929.424s6.343,0,7.929-.424a2.563,2.563,0,0,0,1.789-1.844,26.738,26.738,0,0,0,.424-4.84,26.737,26.737,0,0,0-.424-4.914Z"
+                      transform="translate(-1.499 -6)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.1"
+                    />
+                    <path
+                      id="Path_80"
+                      data-name="Path 80"
+                      d="M14.625,18.75l5.3-3.015-5.3-3.015Z"
+                      transform="translate(-6.557 -8.589)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.1"
+                    />
+                  </g></svg
+              ></a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
+                href=""
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18.247"
+                  height="18.247"
+                  viewBox="0 0 18.247 18.247"
+                >
+                  <g
+                    id="_1860492_whatsapp_social_media_icon"
+                    data-name="1860492_whatsapp_social media_icon"
+                    transform="translate(0.625 0.625)"
+                  >
+                    <path
+                      id="Path_100"
+                      data-name="Path 100"
+                      d="M5.966,17.438c-.5-.315-2.959,1.511-3.336,1.07-.378-.378,1.259-2.959.944-3.4A8.306,8.306,0,0,1,2,10.2a8.5,8.5,0,1,1,8.5,8.5,7.964,7.964,0,0,1-1.763-.189"
+                      transform="translate(-2 -1.7)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.25"
+                    />
+                    <path
+                      id="Path_101"
+                      data-name="Path 101"
+                      d="M11.445,8.3l.755,1.889a.23.23,0,0,1-.126.315.826.826,0,0,0-.252,1.322c.63.881,2.329,3.085,3.714,1.637a.277.277,0,0,1,.315-.063l2.014.881a.3.3,0,0,1,.126.378c-.441.881-2.14,3.211-6.358-.441-4.281-3.714-1.511-5.54-.567-5.98C11.193,8.044,11.382,8.107,11.445,8.3Z"
+                      transform="translate(-4.709 -4.078)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.25"
+                    />
+                  </g></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Js files -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+      $("document").ready(() => {
+        $(".cat-item").click((e) => {
+          let cat_data = $(e.currentTarget).attr("cat-data");
+          $(".child-cats").each((i, ch) => {
+            if ($(ch).attr("cat-data") == cat_data) {
+              $(ch).slideToggle();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

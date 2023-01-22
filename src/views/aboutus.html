@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بایوفایننس | ارتباط با ما</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../../dist/output.css" />
+    <style>
+      .navbar-div {
+        color: white;
+      }
+      .navbar-div.scrolled {
+        color: unset;
+      }
+    </style>
+  </head>
+  <body class="font-iransans">
+    <div class="-z-10 w-full h-[700px] absolute top-0 left-0 blur-sm">
+      <img
+        class="w-full h-full object-cover"
+        src="../assets/images/3d-render-vintage-medical-background-with-dna-strands.png"
+        alt=""
+      />
+    </div>
+    <!-- scroll top btn -->
+    <button
+      id="back_to_top_btn"
+      class="duration-200 fixed z-[99999] flex items-center justify-center bottom-5 left-5 bg-green fill-white hover:bg-white hover:fill-green w-8 h-8 border-2 rounded-lg"
+      onclick="$('html').scrollTop(0);"
+      style="display: none"
+    >
+      <span>
+        <svg
+          id="Iconly_Bold_Arrow_-_Up_2"
+          data-name="Iconly/Bold/Arrow - Up 2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="10"
+          viewBox="0 0 12 10"
+        >
+          <g id="Arrow_-_Up_2" data-name="Arrow - Up 2">
+            <path
+              id="Arrow_-_Up_2-2"
+              data-name="Arrow - Up 2"
+              d="M7.131.369c.058.057.306.27.51.469a21.69,21.69,0,0,1,4.024,5.8A4.617,4.617,0,0,1,12,7.812a1.933,1.933,0,0,1-.218.9,1.874,1.874,0,0,1-.9.795,9.84,9.84,0,0,1-1.064.256A23.979,23.979,0,0,1,6.008,10a27.724,27.724,0,0,1-3.689-.213A8.495,8.495,0,0,1,.992,9.446,1.785,1.785,0,0,1,0,7.868V7.812A4.879,4.879,0,0,1,.409,6.491,21.69,21.69,0,0,1,4.375.823,5.66,5.66,0,0,1,4.929.341,1.783,1.783,0,0,1,5.993,0,1.875,1.875,0,0,1,7.131.369"
+            />
+          </g>
+        </svg>
+      </span>
+    </button>
+
+    <!-- Mobile Menu Toggler -->
+    <button
+      class="duration-200 hidden fixed z-[99999] top-5 left-5 max-sm:flex items-center justify-center bg-green fill-white hover:bg-white hover:fill-green w-8 h-8 border-2 rounded-lg"
+      onclick="$('.navbar-div').toggleClass('max-sm:hidden');$('.close-icon, .menu-icon').toggleClass('hidden');"
+    >
+      <span class="close-icon hidden duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+          <path
+            d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z"
+          />
+        </svg>
+      </span>
+      <span class="menu-icon duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
+          <path d="M3 14.5V13h14v1.5Zm0-3.75v-1.5h14v1.5ZM3 7V5.5h14V7Z" />
+        </svg>
+      </span>
+    </button>
+    <!-- Nav Bar -->
+    <div
+      class="navbar-div max-sm:bg-white max-sm:text-black z-10 sticky top-0 p-[0px_1.5rem_13px_1.5rem] max-sm:fixed max-sm:w-full max-sm:top-0 max-sm:left-0 max-sm:h-full max-sm:bg-navy max-sm:hidden"
+    >
+      <nav
+        class="xl:container flex max-md:flex-col max-sm:flex-col max-sm:fixed max-sm:top-[calc(50%_-_218px)] max-sm:left-[calc(50%_-_60px)] justify-between items-start items-center pt-3"
+      >
+        <ul class="menu flex flex-row max-sm:flex-col items-center">
+          <li class="navbar-logo">
+            <a href="./index.html">
+              <img src="../assets/images/logo_theme_3.png" />
+            </a>
+          </li>
+          <li class="p-3"><a href="./index.html">صفحه اصلی</a></li>
+          <li class="p-3"><a href="./news.html">اخبار</a></li>
+          <li class="p-3"><a href="./index.html">فراخوان</a></li>
+          <li class="p-3"><a href="./faq.html">سوالات متداول</a></li>
+          <li class="p-3 current"><a href="./aboutus.html">درباره ما</a></li>
+          <li class="p-3"><a href="./contactus.html">تماس با ما</a></li>
+        </ul>
+        <ul
+          class="nav-options flex max-sm:flex-col justify-center items-center"
+        >
+          <li class="p-1 max-sm:mt-4">
+            <a href="" class="bf-btn">سامانه تامین مالی</a>
+          </li>
+          <li
+            class="p-1 relative duration-300 max-sm:mt-4"
+            style="width: 120px"
+            id="search_div"
+          >
+            <form action="">
+              <button
+                id="search_submit"
+                class="absolute duration-500 left-3 top-[9px] p-2 rounded-md stroke-green hover:bg-green hover:stroke-white"
+                type="submit"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12.971"
+                    height="13.429"
+                    viewBox="0 0 12.971 13.429"
+                  >
+                    <ellipse
+                      id="Ellipse_739"
+                      cx="5.635"
+                      cy="5.715"
+                      rx="5.635"
+                      ry="5.715"
+                      transform="translate(0.5 0.5)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1"
+                    />
+                    <path
+                      id="Line_181"
+                      d="M0,0,2.209,2.235"
+                      transform="translate(10.055 10.487)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <input
+                class="duration-500 bg-lightgreen2 rounded-md p-2 pl-10 placeholder:text-green border-[1px] w-full focus:border-green"
+                onfocus="innerWidth > 640 ? $('#search_div').width(200) :null"
+                onfocusout="innerWidth > 640 ? $('#search_div').width(120) : null"
+                type="text"
+                name="search_inp"
+                id="search_inp"
+                placeholder="جستجو"
+              />
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Wrapper -->
+    <div
+      class="wrapper flex-col xl:container mt-16 stroke-green fill-green relative text-center sm:text-right"
+    >
+      <!-- you should know about us -->
+      <section class="flex flex-col">
+        <div class="flex items-start">
+          <h1 class="text-shadow text-white text-[42px] font-bold">
+            هرآنچه که از که از ما باید بدانید
+          </h1>
+        </div>
+        <div class="flex max-sm:flex-col justify-center">
+          <div class="sm:w-1/2 h-1/2 my-auto">
+            <img
+              class="w-full h-full object-cover"
+              src="../assets/images/IMG-8978.png"
+              alt=""
+            />
+          </div>
+          <div class="sm:w-1/2 bg-lightgreen2 p-5 text-right rounded-xl">
+            <h1 class="text-green text-[32px] sm:w-[80%]">
+              هرآنچه که از که از فعالیت های ما در حوزه زیست فناوری باید بدانید
+            </h1>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد
+            </p>
+            <p class="mt-10">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان
+              فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد
+              نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل
+              دنیای موجود طراحی اساسا مورد استفاده قرار گیرد
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- our goals -->
+      <section class="my-32">
+        <div class="flex">
+          <div class="sm:w-1/2">
+            <h2 class="text-[18px] font-bold">درباره اهداف ما بیشتر بدانید</h2>
+            <p class="mt-5">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد
+            </p>
+            <div class="mt-4">
+              <ul class="flex flex-col gap-y-3">
+                <li class="flex">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                    >
+                      <g
+                        id="Group_2355"
+                        data-name="Group 2355"
+                        transform="translate(-664 -956)"
+                      >
+                        <circle
+                          id="Ellipse_205"
+                          data-name="Ellipse 205"
+                          cx="11"
+                          cy="11"
+                          r="11"
+                          transform="translate(664 956)"
+                          fill="#16ae74"
+                        />
+                        <g
+                          id="Iconly_Light-outline_Shield_Done"
+                          data-name="Iconly/Light-outline/Shield Done"
+                          transform="translate(669.603 963.116)"
+                        >
+                          <path
+                            id="Shield_Done"
+                            data-name="Shield Done"
+                            d="M3.249,7.549l-.124-.1L.325,4.723a1.056,1.056,0,0,1,0-1.525,1.134,1.134,0,0,1,1.445-.1l.124.1L3.909,5.158,8.893.316a1.132,1.132,0,0,1,1.569,0,1.056,1.056,0,0,1,.108,1.4l-.108.122-5.767,5.6a1.134,1.134,0,0,1-1.445.1Z"
+                            transform="translate(0)"
+                            fill="#f4faee"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <p class="mr-2">
+                    برای تغییر این متن بر روی دکمه ویرایش کلیک کنید.
+                  </p>
+                </li>
+                <li class="flex">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                    >
+                      <g
+                        id="Group_2355"
+                        data-name="Group 2355"
+                        transform="translate(-664 -956)"
+                      >
+                        <circle
+                          id="Ellipse_205"
+                          data-name="Ellipse 205"
+                          cx="11"
+                          cy="11"
+                          r="11"
+                          transform="translate(664 956)"
+                          fill="#16ae74"
+                        />
+                        <g
+                          id="Iconly_Light-outline_Shield_Done"
+                          data-name="Iconly/Light-outline/Shield Done"
+                          transform="translate(669.603 963.116)"
+                        >
+                          <path
+                            id="Shield_Done"
+                            data-name="Shield Done"
+                            d="M3.249,7.549l-.124-.1L.325,4.723a1.056,1.056,0,0,1,0-1.525,1.134,1.134,0,0,1,1.445-.1l.124.1L3.909,5.158,8.893.316a1.132,1.132,0,0,1,1.569,0,1.056,1.056,0,0,1,.108,1.4l-.108.122-5.767,5.6a1.134,1.134,0,0,1-1.445.1Z"
+                            transform="translate(0)"
+                            fill="#f4faee"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <p class="mr-2">
+                    برای تغییر این متن بر روی دکمه ویرایش کلیک کنید.
+                  </p>
+                </li>
+                <li class="flex">
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                    >
+                      <g
+                        id="Group_2355"
+                        data-name="Group 2355"
+                        transform="translate(-664 -956)"
+                      >
+                        <circle
+                          id="Ellipse_205"
+                          data-name="Ellipse 205"
+                          cx="11"
+                          cy="11"
+                          r="11"
+                          transform="translate(664 956)"
+                          fill="#16ae74"
+                        />
+                        <g
+                          id="Iconly_Light-outline_Shield_Done"
+                          data-name="Iconly/Light-outline/Shield Done"
+                          transform="translate(669.603 963.116)"
+                        >
+                          <path
+                            id="Shield_Done"
+                            data-name="Shield Done"
+                            d="M3.249,7.549l-.124-.1L.325,4.723a1.056,1.056,0,0,1,0-1.525,1.134,1.134,0,0,1,1.445-.1l.124.1L3.909,5.158,8.893.316a1.132,1.132,0,0,1,1.569,0,1.056,1.056,0,0,1,.108,1.4l-.108.122-5.767,5.6a1.134,1.134,0,0,1-1.445.1Z"
+                            transform="translate(0)"
+                            fill="#f4faee"
+                          />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                  <p class="mr-2">
+                    برای تغییر این متن بر روی دکمه ویرایش کلیک کنید.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex justify-end sm:w-1/2 relative">
+            <div class="w-[420px]">
+              <img
+                class="rounded-xl w-full h-full object-cover"
+                src="../assets/images/5282.png"
+                alt=""
+              />
+            </div>
+            <div class="w-[420px] absolute left-44 top-20">
+              <img
+                class="rounded-xl w-full h-full object-cover"
+                src="../assets/images/56fa6d107b4130766627.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- history -->
+      <section class="my-32">
+        <div class="flex justify-end relative items-center">
+          <div class="absolute right-0 w-full sm:w-[35%] h-[330px]">
+            <img
+              class="w-full h-full rounded-lg"
+              src="../assets/images/زیست فناوری.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="w-full sm:w-[70%] p-16 sm:pr-36 bg-lightgreen2 rounded-lg"
+          >
+            <h2 class="text-[18px] font-bold">
+              تاریخچه پژوهشگاه حوزه زیست فناوری
+            </h2>
+            <p class="pl-5 text-justify mt-4">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
+              نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+              کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+              جامعه و متخصصان را می طلبد
+            </p>
+            <div class="my-5">
+              <ul>
+                <li class="my-8">
+                  <p>زیست‌فناوری یا بیوتکنولوژی</p>
+                  <div class="mt-3">
+                    <!-- progress box -->
+                    <div class="bg-silver relative overflow-hidden rounded-xl">
+                      <!-- progress fill -->
+                      <div class="bg-green relative w-[75%] h-4">
+                        <!-- progress value -->
+                        <span class="absolute top-0 -left-10 text-[14px]">
+                          75%
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="my-8">
+                  <p>زیست‌فناوری یا بیوتکنولوژی</p>
+                  <div class="mt-3">
+                    <!-- progress box -->
+                    <div class="bg-silver relative overflow-hidden rounded-xl">
+                      <!-- progress fill -->
+                      <div class="bg-green relative w-[34%] h-4">
+                        <!-- progress value -->
+                        <span class="absolute top-0 -left-10 text-[14px]">
+                          34%
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="my-8">
+                  <p>زیست‌فناوری یا بیوتکنولوژی</p>
+                  <div class="mt-3">
+                    <!-- progress box -->
+                    <div class="bg-silver relative overflow-hidden rounded-xl">
+                      <!-- progress fill -->
+                      <div class="bg-green relative w-[50%] h-4">
+                        <!-- progress value -->
+                        <span class="absolute top-0 -left-10 text-[14px]">
+                          50%
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- staff -->
+      <section class="my-32">
+        <h2>همکاران ما در حوزه زیست فناوری</h2>
+        <p class="h-[100px]">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+          استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+          ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
+          در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+          طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+          الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
+          صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
+          شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+          اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+          قرار گیرد لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+          با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+          ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
+          در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+          طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+          الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
+          صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
+          شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+          اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+          قرار گیرد لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+          با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+          ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+          کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی
+          در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می
+          طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+          الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
+          صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
+          شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+          اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+          قرار گیرد...
+        </p>
+        <div>
+          <div>
+            <img src="../assets/images/avatar.png" alt="" />
+          </div>
+          <h2>دکتر جواد محمدی</h2>
+          <h3>رئیس پژوهشگاه زیست‌فناوری</h3>
+          <p>
+            فوق تخصص ریه از دانشگاه علوم پزشکی تهران؛ بورد تخصصی طب داخلی و
+            دکترای پزشکی از دانشگاه علوم پزشکی اصفهان استاد دانشگاه علوم پزشکی
+            بقیه‌الله(عج)
+          </p>
+        </div>
+        <!-- swiper nav -->
+        <div>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 35 35"
+            >
+              <g
+                id="Iconly_Light_Arrow_-_Left_Circle"
+                data-name="Iconly/Light/Arrow - Left Circle"
+                transform="translate(34.25 34.25) rotate(180)"
+              >
+                <g
+                  id="Arrow_-_Left_Circle"
+                  data-name="Arrow - Left Circle"
+                  transform="translate(33.5) rotate(90)"
+                >
+                  <path
+                    id="Stroke_1"
+                    data-name="Stroke 1"
+                    d="M0,16.75A16.75,16.75,0,1,0,16.75,0,16.75,16.75,0,0,0,0,16.75Z"
+                    transform="translate(0 0)"
+                    fill="#f4faee"
+                    stroke="#16ae74"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    id="Stroke_3"
+                    data-name="Stroke 3"
+                    d="M0,0,6.285,6.312,12.571,0"
+                    transform="translate(10.464 14.138)"
+                    fill="#f4faee"
+                    stroke="#16ae74"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.5"
+                  />
+                </g>
+              </g>
+            </svg>
+          </span>
+          <span class="rotate-180">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 35 35"
+            >
+              <g
+                id="Iconly_Light_Arrow_-_Left_Circle"
+                data-name="Iconly/Light/Arrow - Left Circle"
+                transform="translate(34.25 34.25) rotate(180)"
+              >
+                <g
+                  id="Arrow_-_Left_Circle"
+                  data-name="Arrow - Left Circle"
+                  transform="translate(33.5) rotate(90)"
+                >
+                  <path
+                    id="Stroke_1"
+                    data-name="Stroke 1"
+                    d="M0,16.75A16.75,16.75,0,1,0,16.75,0,16.75,16.75,0,0,0,0,16.75Z"
+                    transform="translate(0 0)"
+                    fill="#f4faee"
+                    stroke="#16ae74"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    id="Stroke_3"
+                    data-name="Stroke 3"
+                    d="M0,0,6.285,6.312,12.571,0"
+                    transform="translate(10.464 14.138)"
+                    fill="#f4faee"
+                    stroke="#16ae74"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.5"
+                  />
+                </g>
+              </g>
+            </svg>
+          </span>
+        </div>
+      </section>
+      <!-- gallery -->
+      <section class="my-32">
+        <div>
+          <h2>گالری تصاویر</h2>
+          <h3>پژوهشگاه حوزه زیست فناوری</h3>
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد
+          </p>
+          <!-- images -->
+          <div>
+            <div>
+              <img
+                class="rounded-lg w-full h-full"
+                src="../assets/images/Capture.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="rounded-lg w-full h-full"
+                src="../assets/images/2525Capture.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="rounded-lg w-full h-full"
+                src="../assets/images/56fa6d107b4130766627.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                class="rounded-lg w-full h-full"
+                src="../assets/images/89789.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-lightgreen2 mt-32">
+      <section
+        class="xl:container grid grid-cols-12 max-md:gap-y-8 py-8 max-xl:px-6"
+      >
+        <section
+          class="col-span-12 md:col-span-3 flex flex-col max-sm:items-center justify-evenly text-[12px] scrollbar-2px"
+        >
+          <div>
+            <a class="inline-block" href="./index.html"
+              ><img src="../assets/images/logo_theme_4.png" alt=""
+            /></a>
+          </div>
+          <p
+            class="max-h-[70px] text-justify overflow-x-hidden overflow-y-auto"
+          >
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+            رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد
+            کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+            راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+            طراحی اساسا مورد استفاده قرار گیرد.
+          </p>
+          <div class="flex flex-col justify-evenly">
+            <div class="flex items-center mt-2">
+              <span
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16.857"
+                  height="19.836"
+                  viewBox="0 0 16.857 19.836"
+                >
+                  <g
+                    id="Iconly_Light_Location"
+                    data-name="Iconly/Light/Location"
+                    transform="translate(0.75 0.75)"
+                  >
+                    <g id="Location">
+                      <path
+                        id="Path_33958"
+                        d="M0,7.652A7.678,7.678,0,1,1,15.357,7.7v.087a11.338,11.338,0,0,1-3.478,7.3,20.183,20.183,0,0,1-3.591,2.957.93.93,0,0,1-1.217,0,19.817,19.817,0,0,1-5.052-4.73A9.826,9.826,0,0,1,0,7.678Z"
+                        transform="translate(0 0)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                      <circle
+                        id="Ellipse_740"
+                        cx="2.461"
+                        cy="2.461"
+                        r="2.461"
+                        transform="translate(5.217 5.339)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2"
+                >آدرس: تهران . خیابان ملاصدرا . خیابان شیخ بهایی شمالی</span
+              >
+            </div>
+            <div class="flex items-center mt-2">
+              <span
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.505"
+                  height="20.508"
+                  viewBox="0 0 20.505 20.508"
+                >
+                  <g
+                    id="Iconly_Light_Call"
+                    data-name="Iconly/Light/Call"
+                    transform="translate(0.754 0.752)"
+                  >
+                    <g id="Call">
+                      <path
+                        id="Call-2"
+                        data-name="Call"
+                        d="M.49,2.373C.807,1.849,2.549-.056,3.793,0a1.636,1.636,0,0,1,.967.517,16.863,16.863,0,0,1,2.468,3.34C7.471,5.026,6.078,5.7,6.5,6.878a9.873,9.873,0,0,0,5.619,5.616c1.177.426,1.851-.966,3.019-.723a16.894,16.894,0,0,1,3.34,2.468,1.639,1.639,0,0,1,.517.967c.046,1.309-1.977,3.077-2.371,3.3-.93.665-2.144.654-3.624-.034C8.874,16.757,2.274,10.282.524,6-.145,4.525-.192,3.3.49,2.373Z"
+                        transform="translate(0)"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="1.5"
+                      />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="mr-2"
+                >تلفن: 88610997 . 88610747 . 41098400 . 41098410</span
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          class="col-span-12 md:col-span-6 flex justify-evenly max-md:text-center"
+        >
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">لینک های دسترسی</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">پیوند های مفید</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+          <ul class="footer-list flex flex-col justify-evenly">
+            <li class="text-[18px] font-bold">پیوند های مفید</li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="" class="footer-list-link">لورم ایپسوم</a>
+            </li>
+          </ul>
+        </section>
+        <section class="col-span-12 md:col-span-3">
+          <!-- social networks links -->
+          <p class="text-[18px] font-bold text-center">
+            برگزیده خلاق معاونت علمی<br />
+            فناوری ریاست جمهوری
+          </p>
+          <div class="flex justify-center">
+            <div
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]"
+            >
+              <img class="object-cover w-full h-full" src="" alt="" />
+            </div>
+            <div
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]"
+            >
+              <img class="object-cover w-full h-full" src="" alt="" />
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- footer copy right text -->
+      <div class="bg-green py-4">
+        <div
+          class="xl:container max-xl:px-6 flex max-sm:flex-col justify-between items-center"
+        >
+          <p class="text-white max-sm:text-center">
+            تمامی حقوق متعلق به این سایت و برای معاونت علمی و فناوری ریاست
+            جمهوری محفوظ می باشد.
+          </p>
+          <ul class="flex justify-between max-sm:mt-2">
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
+                href=""
+              >
+                <span>
+                  <svg
+                    class="fill-green"
+                    id="Iconly_Light-outline_Send"
+                    data-name="Iconly/Light-outline/Send"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16.991"
+                    height="16.991"
+                    viewBox="0 0 16.991 16.991"
+                  >
+                    <g id="Send" transform="translate(0)">
+                      <path
+                        id="Send-2"
+                        data-name="Send"
+                        d="M11.261,16.991A1.638,1.638,0,0,1,9.913,16.3l-.077-.116L6.442,10.557.8,7.085a1.684,1.684,0,0,1,.278-3l.132-.043L14.851.068A1.7,1.7,0,0,1,15.323,0a1.681,1.681,0,0,1,1.628,2.041l-.031.122L12.872,15.791A1.67,1.67,0,0,1,11.261,16.991Zm.594-12.528a.647.647,0,0,1,.387.127l.074.063a.658.658,0,0,1,.066.851l-.063.074L7.742,10.183l3.214,5.322a.358.358,0,0,0,.312.179.363.363,0,0,0,.326-.2l.027-.067L15.666,1.791a.373.373,0,0,0-.058-.333.368.368,0,0,0-.293-.15l-.038,0-.064.013L1.574,5.292a.365.365,0,0,0-.256.272.376.376,0,0,0,.109.364l.057.043L6.821,9.255l4.57-4.6A.651.651,0,0,1,11.855,4.463Z"
+                        transform="translate(0)"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
+                href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.114"
+                  height="19.114"
+                  viewBox="0 0 19.114 19.114"
+                >
+                  <path
+                    id="Icon_simple-instagram"
+                    data-name="Icon simple-instagram"
+                    d="M9.557,0c-2.6,0-2.92.012-3.94.057A7.047,7.047,0,0,0,3.3.5,4.68,4.68,0,0,0,1.6,1.6,4.663,4.663,0,0,0,.5,3.3a7.027,7.027,0,0,0-.444,2.32C.01,6.637,0,6.961,0,9.557s.012,2.92.057,3.94A7.052,7.052,0,0,0,.5,15.817,4.687,4.687,0,0,0,1.6,17.51a4.673,4.673,0,0,0,1.693,1.1,7.056,7.056,0,0,0,2.32.444c1.019.048,1.344.057,3.94.057s2.92-.012,3.94-.057a7.072,7.072,0,0,0,2.32-.444,4.884,4.884,0,0,0,2.8-2.8,7.052,7.052,0,0,0,.444-2.32c.048-1.019.057-1.344.057-3.94s-.012-2.92-.057-3.94a7.068,7.068,0,0,0-.444-2.32A4.691,4.691,0,0,0,17.51,1.6,4.657,4.657,0,0,0,15.817.5,7.031,7.031,0,0,0,13.5.057C12.478.01,12.153,0,9.557,0Zm0,1.72c2.551,0,2.855.013,3.863.057a5.266,5.266,0,0,1,1.774.331,3.145,3.145,0,0,1,1.814,1.813,5.277,5.277,0,0,1,.329,1.774c.045,1.008.056,1.311.056,3.863s-.012,2.855-.059,3.863A5.378,5.378,0,0,1,17,15.193a3.035,3.035,0,0,1-.716,1.1,2.982,2.982,0,0,1-1.1.714,5.315,5.315,0,0,1-1.78.329c-1.015.045-1.313.056-3.87.056s-2.856-.012-3.87-.059A5.419,5.419,0,0,1,3.883,17a2.96,2.96,0,0,1-1.1-.716,2.9,2.9,0,0,1-.717-1.1,5.424,5.424,0,0,1-.334-1.78c-.036-1-.049-1.313-.049-3.858s.013-2.856.049-3.871a5.418,5.418,0,0,1,.334-1.779,2.833,2.833,0,0,1,.717-1.1,2.827,2.827,0,0,1,1.1-.715,5.29,5.29,0,0,1,1.769-.335C6.667,1.708,6.966,1.7,9.521,1.7l.036.024Zm0,2.929a4.908,4.908,0,1,0,4.908,4.908A4.907,4.907,0,0,0,9.557,4.65Zm0,8.093a3.186,3.186,0,1,1,3.186-3.186A3.185,3.185,0,0,1,9.557,12.743Zm6.249-8.287A1.147,1.147,0,1,1,14.659,3.31,1.148,1.148,0,0,1,15.806,4.456Z"
+                  /></svg
+              ></a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
+                href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21.385"
+                  height="15.354"
+                  viewBox="0 0 21.385 15.354"
+                >
+                  <g
+                    id="Icon_feather-youtube"
+                    data-name="Icon feather-youtube"
+                    transform="translate(0.55 0.55)"
+                  >
+                    <path
+                      id="Path_79"
+                      data-name="Path 79"
+                      d="M21.359,8.231a2.563,2.563,0,0,0-1.789-1.844A66.4,66.4,0,0,0,11.642,6S5.3,6,3.712,6.424A2.563,2.563,0,0,0,1.924,8.268,26.738,26.738,0,0,0,1.5,13.145a26.738,26.738,0,0,0,.424,4.914,2.563,2.563,0,0,0,1.789,1.77c1.586.424,7.929.424,7.929.424s6.343,0,7.929-.424a2.563,2.563,0,0,0,1.789-1.844,26.738,26.738,0,0,0,.424-4.84,26.737,26.737,0,0,0-.424-4.914Z"
+                      transform="translate(-1.499 -6)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.1"
+                    />
+                    <path
+                      id="Path_80"
+                      data-name="Path 80"
+                      d="M14.625,18.75l5.3-3.015-5.3-3.015Z"
+                      transform="translate(-6.557 -8.589)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.1"
+                    />
+                  </g></svg
+              ></a>
+            </li>
+            <li class="mx-1">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
+                href=""
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18.247"
+                  height="18.247"
+                  viewBox="0 0 18.247 18.247"
+                >
+                  <g
+                    id="_1860492_whatsapp_social_media_icon"
+                    data-name="1860492_whatsapp_social media_icon"
+                    transform="translate(0.625 0.625)"
+                  >
+                    <path
+                      id="Path_100"
+                      data-name="Path 100"
+                      d="M5.966,17.438c-.5-.315-2.959,1.511-3.336,1.07-.378-.378,1.259-2.959.944-3.4A8.306,8.306,0,0,1,2,10.2a8.5,8.5,0,1,1,8.5,8.5,7.964,7.964,0,0,1-1.763-.189"
+                      transform="translate(-2 -1.7)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.25"
+                    />
+                    <path
+                      id="Path_101"
+                      data-name="Path 101"
+                      d="M11.445,8.3l.755,1.889a.23.23,0,0,1-.126.315.826.826,0,0,0-.252,1.322c.63.881,2.329,3.085,3.714,1.637a.277.277,0,0,1,.315-.063l2.014.881a.3.3,0,0,1,.126.378c-.441.881-2.14,3.211-6.358-.441-4.281-3.714-1.511-5.54-.567-5.98C11.193,8.044,11.382,8.107,11.445,8.3Z"
+                      transform="translate(-4.709 -4.078)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.25"
+                    />
+                  </g></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- Js files -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+      $("document").ready(() => {
+        $(".cat-item").click((e) => {
+          let cat_data = $(e.currentTarget).attr("cat-data");
+          $(".child-cats").each((i, ch) => {
+            if ($(ch).attr("cat-data") == cat_data) {
+              $(ch).slideToggle();
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

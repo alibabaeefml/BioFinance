@@ -30,7 +30,9 @@ input {
 select {
   cursor: pointer;
 }
-
+.text-shadow{
+  text-shadow: 2px 2px 10px black;
+}
 /* cusom scroll bar */
 
 /* width */
@@ -53,6 +55,7 @@ select {
 
 .scrollbar-2px ::-webkit-scrollbar {
   width: 2px!important;
+  height: 2px;
 }
 /* ==== Individuals ==== */
 .wrapper {
@@ -74,6 +77,7 @@ select {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
 .menu li {
   position: relative;
   transition: 0.5s;

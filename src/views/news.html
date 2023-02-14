@@ -7,7 +7,7 @@
     <title>بایوفایننس</title>
     <!-- style -->
     <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/aos.css" />
     <link rel="stylesheet" href="../../dist/output.css" />
   </head>
   <body
@@ -15,19 +15,16 @@
     style="
       background-image: url(../assets/images/bg_0.png);
       background-size: cover;
-    "
-  >
+    ">
     <!-- Nav Bar -->
     <!-- Mobile Menu Toggler -->
     <button
       class="hidden fixed z-[99999] top-5 left-5 max-sm:flex items-center justify-center bg-green fill-white hover:bg-white hover:fill-green w-8 h-8 border-2 rounded-lg"
-      onclick="$('.navbar-div').toggleClass('max-sm:hidden');$('.close-icon, .menu-icon').toggleClass('hidden');$(this).toggleClass('bg-white fill-green')"
-    >
+      onclick="$('.navbar-div').toggleClass('max-sm:hidden');$('.close-icon, .menu-icon').toggleClass('hidden');$(this).toggleClass('bg-white fill-green')">
       <span class="close-icon hidden duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
           <path
-            d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z"
-          />
+            d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z" />
         </svg>
       </span>
       <span class="menu-icon duration-300">
@@ -37,496 +34,479 @@
       </span>
     </button>
 
+    <!-- Nav Bar -->
     <div
-      class="navbar-div max-sm:bg-white z-10 sticky top-0 p-[0px_1.5rem_13px_1.5rem] max-sm:fixed max-sm:w-full max-sm:top-0 max-sm:left-0 max-sm:h-full max-sm:bg-navy max-sm:hidden"
-    >
+      class="navbar-div z-10 fixed w-full top-0 backdrop-blur-sm bg-black/40 text-white max-sm:text-white p-[0px_1.5rem_13px_1.5rem] max-sm:fixed max-sm:top-0 max-sm:left-0 max-sm:h-full max-sm:hidden">
       <nav
-        class="xl:container flex max-md:flex-col max-sm:flex-col max-sm:fixed max-sm:top-[calc(50%_-_218px)] max-sm:left-[calc(50%_-_60px)] justify-between items-start items-center pt-3"
-      >
-        <ul class="menu flex flex-row max-sm:flex-col items-center">
-          <li
-            class="navbar-logo max-sm:w-[95%] flex items-center justify-center"
-          >
+        data-aos="fade-up"
+        class="xl:container duration-300 p-5 flex max-md:flex-col max-sm:flex-col max-sm:fixed max-sm:top-[calc(50%_-_233px)] max-sm:left-[calc(50%_-_160px)] justify-between items-center pt-3">
+        <ul
+          class="menu duration-300 flex flex-row max-sm:flex-col items-center gap-6">
+          <li class="navbar-logo">
             <a href="./index.html">
-              <img src="../assets/images/logo_theme_1.png" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="64.912"
+                height="42.842"
+                viewBox="0 0 64.912 42.842">
+                <defs>
+                  <pattern
+                    id="pattern"
+                    preserveAspectRatio="none"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 430 289">
+                    <image
+                      width="430"
+                      height="289"
+                      xlink:href="data:image/png;base64,iVBORw0K
+       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" />
+                  </pattern>
+                </defs>
+                <rect
+                  id="NoPath"
+                  width="64.912"
+                  height="42.842"
+                  fill="url(#pattern)" />
+              </svg>
             </a>
           </li>
-          <li class="p-3"><a href="./index.html">صفحه اصلی</a></li>
-          <li class="p-3 current"><a href="./news.html">اخبار</a></li>
-          <li class="p-3"><a href="./index.html">فراخوان</a></li>
-          <li class="p-3"><a href="./faq.html">سوالات متداول</a></li>
-          <li class="p-3"><a href="./aboutus.html">درباره ما</a></li>
-          <li class="p-3"><a href="./contactus.html">تماس با ما</a></li>
+          <li class=""><a href="./index.html">صفحه اصلی</a></li>
+          <li class=""><a href="./call.html">فراخوان</a></li>
+          <li class="current"><a href="./news.html">اخبار</a></li>
+          <li class=""><a href="./FAQ.html">سوالات متداول</a></li>
+          <li class=""><a href="">سامانه تامین مالی</a></li>
+          <li class=""><a href="./aboutus.html">درباره ما</a></li>
+          <li class=""><a href="./contactus.html">تماس با ما</a></li>
         </ul>
-        <ul
-          class="nav-options flex max-sm:flex-col justify-center items-center"
-        >
-          <li class="p-1 max-sm:mt-4">
-            <a href="" class="bf-btn">سامانه تامین مالی</a>
-          </li>
-          <li
-            class="p-1 relative duration-300 max-sm:mt-4"
-            style="width: 120px"
-            id="search_div"
-          >
-            <form action="">
-              <button
-                id="search_submit"
-                class="absolute duration-500 left-3 top-[9px] p-2 rounded-md stroke-green hover:bg-green hover:stroke-white"
-                type="submit"
-              >
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12.971"
-                    height="13.429"
-                    viewBox="0 0 12.971 13.429"
-                  >
-                    <ellipse
-                      id="Ellipse_739"
-                      cx="5.635"
-                      cy="5.715"
-                      rx="5.635"
-                      ry="5.715"
-                      transform="translate(0.5 0.5)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="1"
-                    />
-                    <path
-                      id="Line_181"
-                      d="M0,0,2.209,2.235"
-                      transform="translate(10.055 10.487)"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="1"
-                    />
-                  </svg>
-                </span>
-              </button>
-              <input
-                class="duration-500 bg-lightgreen2 rounded-md p-2 pl-10 placeholder:text-green border-[1px] w-full focus:border-green"
-                onfocus="innerWidth > 640 ? $('#search_div').width(200) :null"
-                onfocusout="innerWidth > 640 ? $('#search_div').width(120) : null"
-                type="text"
-                name="search_inp"
-                id="search_inp"
-                placeholder="جستجو"
-              />
-            </form>
-          </li>
-        </ul>
+        <div
+          data-aos="fade-right"
+          data-aos-delay="350"
+          class="p-1 relative duration-300 max-sm:mt-4 max-sm:w-[60%]">
+          <form action="">
+            <button
+              id="search_submit"
+              class="absolute duration-500 left-3 top-[15px]"
+              type="submit">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.173"
+                  height="17.518"
+                  viewBox="0 0 17.173 17.518">
+                  <g
+                    id="Iconly_Light_Search"
+                    data-name="Iconly/Light/Search"
+                    transform="translate(1.25 1.25)">
+                    <g id="Search">
+                      <circle
+                        id="Ellipse_739"
+                        cx="6.78"
+                        cy="6.78"
+                        r="6.78"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2.5" />
+                      <path
+                        id="Line_181"
+                        d="M0,0,2.658,2.651"
+                        transform="translate(11.496 11.849)"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-miterlimit="10"
+                        stroke-width="2.5" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </button>
+            <input
+              class="duration-500 bg-white/40 rounded-md p-2 pl-10 placeholder:text-white border-[1px] w-full"
+              type="text"
+              name="search_inp"
+              id="search_inp"
+              placeholder="جستجو کنید..." />
+          </form>
+        </div>
       </nav>
     </div>
     <!-- Wrapper -->
-    <div class="wrapper xl:container grid grid-cols-12 mt-16 items-start">
+    <div class="wrapper xl:container grid grid-cols-12 sm:mt-32 items-start">
       <aside
-        class="relative p-1 col-span-12 md:col-span-3 gap-y-6 flex flex-col text-right"
-      >
+        data-aos="fade-left"
+        class="relative p-3 col-span-12 md:col-span-3 gap-y-6 flex flex-col text-right">
         <div class="shadow-card_shadow rounded-md p-4 bg-white">
           <h1 class="text-[24px] font-bold">لیست اخبار</h1>
           <span class="bg-gray-200 h-px block mx-auto my-4"></span>
-          <div class="p-4 shadow-md rounded-md">
-            <div class="relative rounded-lg bg-[#FAFAFA]">
-              <span
-                class="absolute duration-500 left-3 top-[5px] p-2 rounded-md stroke-black"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12.971"
-                  height="13.429"
-                  viewBox="0 0 12.971 13.429"
-                >
-                  <ellipse
-                    id="Ellipse_739"
-                    cx="5.635"
-                    cy="5.715"
-                    rx="5.635"
-                    ry="5.715"
-                    transform="translate(0.5 0.5)"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="1"
-                  />
-                  <path
-                    id="Line_181"
-                    d="M0,0,2.209,2.235"
-                    transform="translate(10.055 10.487)"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-miterlimit="10"
-                    stroke-width="1"
-                  />
-                </svg>
-              </span>
-              <input
-                class="duration-500 w-full rounded-md p-2 pl-10"
-                type="text"
-                name="search_inp"
-                id="search_inp"
-                placeholder="جستجو"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="shadow-card_shadow rounded-md p-4 bg-white">
-          <div class="flex justify-between">
-            <h5 class="text-sm tracking-tight text-gray-00">دسته بندی اخبار</h5>
-            <span class="fill-green">
+
+          <div class="relative bg-silver rounded-xl">
+            <span
+              class="absolute duration-500 left-3 top-[5px] p-2 rounded-md stroke-black">
               <svg
-                id="Iconly_Light-outline_Category"
-                data-name="Iconly÷/Light-outline/Category"
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-              >
-                <g id="Category">
-                  <path
-                    id="Category-2"
-                    data-name="Category"
-                    d="M13.986,20a2.989,2.989,0,0,1-2.975-3V13.941a2.989,2.989,0,0,1,2.975-3h3.039a2.988,2.988,0,0,1,2.974,3V17a2.988,2.988,0,0,1-2.974,3Zm-1.58-6.059V17a1.593,1.593,0,0,0,1.58,1.6h3.039A1.592,1.592,0,0,0,18.6,17V13.941a1.592,1.592,0,0,0-1.58-1.6H13.986A1.593,1.593,0,0,0,12.406,13.941ZM2.975,20A2.989,2.989,0,0,1,0,17V13.941a2.989,2.989,0,0,1,2.975-3H6.014a2.989,2.989,0,0,1,2.975,3V17a2.989,2.989,0,0,1-2.975,3Zm-1.58-6.059V17a1.593,1.593,0,0,0,1.58,1.6H6.014A1.593,1.593,0,0,0,7.594,17V13.941a1.593,1.593,0,0,0-1.58-1.6H2.975A1.593,1.593,0,0,0,1.395,13.941ZM13.986,9.055a2.989,2.989,0,0,1-2.975-3V3a2.989,2.989,0,0,1,2.975-3h3.039A2.988,2.988,0,0,1,20,3V6.06a2.988,2.988,0,0,1-2.974,3ZM12.406,3V6.06a1.593,1.593,0,0,0,1.58,1.6h3.039a1.592,1.592,0,0,0,1.58-1.6V3a1.592,1.592,0,0,0-1.58-1.6H13.986A1.593,1.593,0,0,0,12.406,3Zm-9.43,6.06A2.989,2.989,0,0,1,0,6.06V3A2.989,2.989,0,0,1,2.975,0H6.014A2.989,2.989,0,0,1,8.989,3V6.06a2.989,2.989,0,0,1-2.975,3ZM1.395,3V6.06a1.593,1.593,0,0,0,1.58,1.6H6.014a1.593,1.593,0,0,0,1.58-1.6V3a1.593,1.593,0,0,0-1.58-1.6H2.975A1.593,1.593,0,0,0,1.395,3Z"
-                  />
-                </g>
+                width="12.971"
+                height="13.429"
+                viewBox="0 0 12.971 13.429">
+                <ellipse
+                  id="Ellipse_739"
+                  cx="5.635"
+                  cy="5.715"
+                  rx="5.635"
+                  ry="5.715"
+                  transform="translate(0.5 0.5)"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1" />
+                <path
+                  id="Line_181"
+                  d="M0,0,2.209,2.235"
+                  transform="translate(10.055 10.487)"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1" />
               </svg>
             </span>
-          </div>
-          <span class="bg-gray-200 h-px block mx-auto my-4"></span>
-          <div class="">
-            <ul class="parent-cats text-[12px]">
-              <li class="select-none">
-                <div
-                  class="cat-item cursor-pointer flex items-center"
-                  cat-data="5315163"
-                >
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="4.292"
-                      height="7.584"
-                      viewBox="0 0 4.292 7.584"
-                    >
-                      <path
-                        id="Icon_feather-chevron-down"
-                        data-name="Icon feather-chevron-down"
-                        d="M0,0,3.085,3.085,6.17,0"
-                        transform="translate(3.585 0.707) rotate(90)"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1"
-                      />
-                    </svg>
-                  </span>
-                  <span class="mr-3">دسته بندی مادر</span>
-                </div>
-                <ul class="child-cats mr-8 hidden" cat-data="5315163">
-                  <li>
-                    <div
-                      class="cat-item cursor-pointer flex items-center"
-                      cat-data="65183561"
-                    >
-                      <span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="4.292"
-                          height="7.584"
-                          viewBox="0 0 4.292 7.584"
-                        >
-                          <path
-                            id="Icon_feather-chevron-down"
-                            data-name="Icon feather-chevron-down"
-                            d="M0,0,3.085,3.085,6.17,0"
-                            transform="translate(3.585 0.707) rotate(90)"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1"
-                          />
-                        </svg> </span
-                      ><span class="mr-3">دسته بندی فرزند</span>
-                    </div>
-                    <ul class="child-cats mr-12 hidden" cat-data="65183561">
-                      <li>
-                        <div class="flex items-center">
-                          <span class="">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="4.292"
-                              height="7.584"
-                              viewBox="0 0 4.292 7.584"
-                            >
-                              <path
-                                id="Icon_feather-chevron-down"
-                                data-name="Icon feather-chevron-down"
-                                d="M0,0,3.085,3.085,6.17,0"
-                                transform="translate(3.585 0.707) rotate(90)"
-                                fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1"
-                              />
-                            </svg> </span
-                          ><a href="" class="mr-3">دسته بندی فرزند کوچکتر</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="select-none">
-                <div
-                  class="cat-item cursor-pointer flex items-center"
-                  cat-data="8416532"
-                >
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="4.292"
-                      height="7.584"
-                      viewBox="0 0 4.292 7.584"
-                    >
-                      <path
-                        id="Icon_feather-chevron-down"
-                        data-name="Icon feather-chevron-down"
-                        d="M0,0,3.085,3.085,6.17,0"
-                        transform="translate(3.585 0.707) rotate(90)"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1"
-                      />
-                    </svg>
-                  </span>
-                  <span class="mr-3">دسته بندی مادر</span>
-                </div>
-                <ul class="child-cats mr-8 hidden" cat-data="8416532">
-                  <li>
-                    <div
-                      class="cat-item cursor-pointer flex items-center"
-                      cat-data="5428278373"
-                    >
-                      <span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="4.292"
-                          height="7.584"
-                          viewBox="0 0 4.292 7.584"
-                        >
-                          <path
-                            id="Icon_feather-chevron-down"
-                            data-name="Icon feather-chevron-down"
-                            d="M0,0,3.085,3.085,6.17,0"
-                            transform="translate(3.585 0.707) rotate(90)"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1"
-                          />
-                        </svg> </span
-                      ><span class="mr-3">دسته بندی فرزند</span>
-                    </div>
-                    <ul class="child-cats mr-12 hidden" cat-data="5428278373">
-                      <li>
-                        <div class="flex items-center">
-                          <span class="">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="4.292"
-                              height="7.584"
-                              viewBox="0 0 4.292 7.584"
-                            >
-                              <path
-                                id="Icon_feather-chevron-down"
-                                data-name="Icon feather-chevron-down"
-                                d="M0,0,3.085,3.085,6.17,0"
-                                transform="translate(3.585 0.707) rotate(90)"
-                                fill="none"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="1"
-                              />
-                            </svg> </span
-                          ><a href="" class="mr-3">دسته بندی فرزند کوچکتر</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <input
+              class="duration-500 w-full rounded-md p-2 pl-10"
+              type="text"
+              name="search_inp"
+              id="search_inp"
+              placeholder="جستجو" />
           </div>
         </div>
-        <div class="shadow-card_shadow rounded-md p-4 bg-white">
-          <div class="flex justify-between items-center">
-            <h5 class="text-sm tracking-tight text-sm">فیلتر اخبار</h5>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="15.754"
-              height="15.754"
-              viewBox="0 0 14.754 14.754"
-              class="fill-green"
-            >
-              <path
-                id="Filter_2"
-                data-name="Filter 2"
-                d="M5.52,14.754a.515.515,0,0,1-.515-.515V8.852L.406,3.782a1.579,1.579,0,0,1-.4-.928L0,2.723V1.556A1.542,1.542,0,0,1,1.524,0H13.231a1.542,1.542,0,0,1,1.523,1.556V2.7A1.582,1.582,0,0,1,14.3,3.8L9.312,8.864V12.7a.512.512,0,0,1-.231.429l-.065.036L5.739,14.7A.512.512,0,0,1,5.52,14.754Zm-4-13.725a.512.512,0,0,0-.495.527V2.723a.541.541,0,0,0,.139.366L5.9,8.308a.513.513,0,0,1,.134.346v4.774L8.283,12.37V8.654a.513.513,0,0,1,.1-.3l.052-.062,5.141-5.213a.546.546,0,0,0,.153-.382V1.556a.512.512,0,0,0-.494-.527Z"
-              />
-            </svg>
-          </div>
-          <span class="bg-gray-200 h-px block mx-auto my-4"></span>
-
-          <div class="flex flex-col gap-y-6 text-[12px]">
-            <div class="inline-block relative">
-              <select
-                id="default"
-                class="appearance-none bg-silver p-2 rounded-2xl w-full"
-              >
-                <option class="bg-silver" selected>زیست فناوری</option>
-                <option class="bg-silver" value="">اپشن دوم</option>
-                <option class="bg-silver" value="">اپشن سوم</option>
-              </select>
-              <span
-                ><svg
+        <button
+          class="block sm:hidden bg-green text-white rounded-lg p-2"
+          onclick="$('#options').slideToggle()">
+          نمایش گزینه ها
+        </button>
+        <div id="options" class="flex flex-col gap-y-3 max-sm:hidden">
+          <div class="shadow-card_shadow rounded-md p-4 bg-white">
+            <div class="flex justify-between">
+              <h5 class="text-sm tracking-tight text-gray-00">
+                دسته بندی اخبار
+              </h5>
+              <span class="fill-green">
+                <svg
+                  id="Iconly_Light-outline_Category"
+                  data-name="Iconly÷/Light-outline/Category"
                   xmlns="http://www.w3.org/2000/svg"
-                  width="9.072"
-                  height="5.036"
-                  viewBox="0 0 9.072 5.036"
-                  class="stroke-green absolute left-3 top-4 rotate-180"
-                >
-                  <path
-                    id="Icon_feather-chevron-down"
-                    data-name="Icon feather-chevron-down"
-                    d="M0,0,3.829,3.829,7.657,0"
-                    transform="translate(8.364 4.329) rotate(-180)"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1"
-                  />
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20">
+                  <g id="Category">
+                    <path
+                      id="Category-2"
+                      data-name="Category"
+                      d="M13.986,20a2.989,2.989,0,0,1-2.975-3V13.941a2.989,2.989,0,0,1,2.975-3h3.039a2.988,2.988,0,0,1,2.974,3V17a2.988,2.988,0,0,1-2.974,3Zm-1.58-6.059V17a1.593,1.593,0,0,0,1.58,1.6h3.039A1.592,1.592,0,0,0,18.6,17V13.941a1.592,1.592,0,0,0-1.58-1.6H13.986A1.593,1.593,0,0,0,12.406,13.941ZM2.975,20A2.989,2.989,0,0,1,0,17V13.941a2.989,2.989,0,0,1,2.975-3H6.014a2.989,2.989,0,0,1,2.975,3V17a2.989,2.989,0,0,1-2.975,3Zm-1.58-6.059V17a1.593,1.593,0,0,0,1.58,1.6H6.014A1.593,1.593,0,0,0,7.594,17V13.941a1.593,1.593,0,0,0-1.58-1.6H2.975A1.593,1.593,0,0,0,1.395,13.941ZM13.986,9.055a2.989,2.989,0,0,1-2.975-3V3a2.989,2.989,0,0,1,2.975-3h3.039A2.988,2.988,0,0,1,20,3V6.06a2.988,2.988,0,0,1-2.974,3ZM12.406,3V6.06a1.593,1.593,0,0,0,1.58,1.6h3.039a1.592,1.592,0,0,0,1.58-1.6V3a1.592,1.592,0,0,0-1.58-1.6H13.986A1.593,1.593,0,0,0,12.406,3Zm-9.43,6.06A2.989,2.989,0,0,1,0,6.06V3A2.989,2.989,0,0,1,2.975,0H6.014A2.989,2.989,0,0,1,8.989,3V6.06a2.989,2.989,0,0,1-2.975,3ZM1.395,3V6.06a1.593,1.593,0,0,0,1.58,1.6H6.014a1.593,1.593,0,0,0,1.58-1.6V3a1.593,1.593,0,0,0-1.58-1.6H2.975A1.593,1.593,0,0,0,1.395,3Z" />
+                  </g>
                 </svg>
               </span>
             </div>
-
-            <div class="flex flex-col gap-y-3">
-              <label
-                class="relative flex items-center cursor-pointer select-none"
-                for="86416163"
-              >
-                <input
-                  class="appearance-none hover:scale-110 bg-silver p-2 rounded-md peer"
-                  type="checkbox"
-                  value=""
-                  id="86416163"
-                  disabled
-                />
-                <span
-                  class="duration-200 opacity-0 scale-0 peer-checked:opacity-100 peer-checked:scale-100 absolute top-1 right-0 fill-green"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="15.351"
-                    height="11.123"
-                    viewBox="0 0 15.351 11.123"
-                  >
-                    <path
-                      id="Path"
-                      d="M13.071.391A1.336,1.336,0,0,1,15.089,2.13l-.129.15L6.508,10.732a1.336,1.336,0,0,1-1.739.129l-.15-.129L.391,6.506A1.336,1.336,0,0,1,2.13,4.488l.15.129L5.562,7.9Z"
-                      transform="translate(0 0)"
-                    />
-                  </svg>
-                </span>
-                <span class="peer-disabled:opacity-50 mr-1"> موضوعات </span>
-              </label>
-              <label
-                class="relative flex items-center cursor-pointer select-none"
-                for="651613"
-              >
-                <input
-                  class="appearance-none cursor-pointer hover:scale-110 bg-silver p-2 rounded-md peer"
-                  type="checkbox"
-                  value=""
-                  id="651613"
-                />
-                <span
-                  class="duration-200 opacity-0 scale-0 peer-checked:opacity-100 peer-checked:scale-100 absolute top-1 right-0 fill-green"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="15.351"
-                    height="11.123"
-                    viewBox="0 0 15.351 11.123"
-                  >
-                    <path
-                      id="Path"
-                      d="M13.071.391A1.336,1.336,0,0,1,15.089,2.13l-.129.15L6.508,10.732a1.336,1.336,0,0,1-1.739.129l-.15-.129L.391,6.506A1.336,1.336,0,0,1,2.13,4.488l.15.129L5.562,7.9Z"
-                      transform="translate(0 0)"
-                    />
-                  </svg>
-                </span>
-                <span class="peer-disabled:opacity-50 mr-1"> موضوعات </span>
-              </label>
+            <span class="bg-gray-200 h-px block mx-auto my-4"></span>
+            <div class="">
+              <ul class="parent-cats text-[12px]">
+                <li class="select-none">
+                  <div
+                    class="cat-item cursor-pointer flex items-center"
+                    cat-data="5315163">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="4.292"
+                        height="7.584"
+                        viewBox="0 0 4.292 7.584">
+                        <path
+                          id="Icon_feather-chevron-down"
+                          data-name="Icon feather-chevron-down"
+                          d="M0,0,3.085,3.085,6.17,0"
+                          transform="translate(3.585 0.707) rotate(90)"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1" />
+                      </svg>
+                    </span>
+                    <span class="mr-3">دسته بندی مادر</span>
+                  </div>
+                  <ul class="child-cats mr-8 hidden" cat-data="5315163">
+                    <li>
+                      <div
+                        class="cat-item cursor-pointer flex items-center"
+                        cat-data="65183561">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="4.292"
+                            height="7.584"
+                            viewBox="0 0 4.292 7.584">
+                            <path
+                              id="Icon_feather-chevron-down"
+                              data-name="Icon feather-chevron-down"
+                              d="M0,0,3.085,3.085,6.17,0"
+                              transform="translate(3.585 0.707) rotate(90)"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1" />
+                          </svg> </span
+                        ><span class="mr-3">دسته بندی فرزند</span>
+                      </div>
+                      <ul class="child-cats mr-12 hidden" cat-data="65183561">
+                        <li>
+                          <div class="flex items-center">
+                            <span class="">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="4.292"
+                                height="7.584"
+                                viewBox="0 0 4.292 7.584">
+                                <path
+                                  id="Icon_feather-chevron-down"
+                                  data-name="Icon feather-chevron-down"
+                                  d="M0,0,3.085,3.085,6.17,0"
+                                  transform="translate(3.585 0.707) rotate(90)"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1" />
+                              </svg> </span
+                            ><a href="" class="mr-3">دسته بندی فرزند کوچکتر</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="select-none">
+                  <div
+                    class="cat-item cursor-pointer flex items-center"
+                    cat-data="8416532">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="4.292"
+                        height="7.584"
+                        viewBox="0 0 4.292 7.584">
+                        <path
+                          id="Icon_feather-chevron-down"
+                          data-name="Icon feather-chevron-down"
+                          d="M0,0,3.085,3.085,6.17,0"
+                          transform="translate(3.585 0.707) rotate(90)"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1" />
+                      </svg>
+                    </span>
+                    <span class="mr-3">دسته بندی مادر</span>
+                  </div>
+                  <ul class="child-cats mr-8 hidden" cat-data="8416532">
+                    <li>
+                      <div
+                        class="cat-item cursor-pointer flex items-center"
+                        cat-data="5428278373">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="4.292"
+                            height="7.584"
+                            viewBox="0 0 4.292 7.584">
+                            <path
+                              id="Icon_feather-chevron-down"
+                              data-name="Icon feather-chevron-down"
+                              d="M0,0,3.085,3.085,6.17,0"
+                              transform="translate(3.585 0.707) rotate(90)"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1" />
+                          </svg> </span
+                        ><span class="mr-3">دسته بندی فرزند</span>
+                      </div>
+                      <ul class="child-cats mr-12 hidden" cat-data="5428278373">
+                        <li>
+                          <div class="flex items-center">
+                            <span class="">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="4.292"
+                                height="7.584"
+                                viewBox="0 0 4.292 7.584">
+                                <path
+                                  id="Icon_feather-chevron-down"
+                                  data-name="Icon feather-chevron-down"
+                                  d="M0,0,3.085,3.085,6.17,0"
+                                  transform="translate(3.585 0.707) rotate(90)"
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="1" />
+                              </svg> </span
+                            ><a href="" class="mr-3">دسته بندی فرزند کوچکتر</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-        <div class="shadow-card_shadow rounded-md p-4 bg-white">
-          <div class="flex justify-between items-center">
-            <h5 class="tracking-tight text-sm">عضویت در خبرنامه</h5>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="19.795"
-              viewBox="0 0 20 19.795"
-              class="fill-green"
-            >
-              <g id="Add_User" data-name="Add User" transform="translate(0 0)">
+          <div class="shadow-card_shadow rounded-md p-4 bg-white">
+            <div class="flex justify-between items-center">
+              <h5 class="text-sm tracking-tight text-sm">فیلتر اخبار</h5>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15.754"
+                height="15.754"
+                viewBox="0 0 14.754 14.754"
+                class="fill-green">
                 <path
-                  id="Add_User-2"
-                  data-name="Add User"
-                  d="M2.056,18.97a3,3,0,0,1,0-5.7,15.466,15.466,0,0,1,5.825-.815l.324,0a14.406,14.406,0,0,1,5.583.861,2.93,2.93,0,0,1,1.97,2.817A2.888,2.888,0,0,1,13.873,18.9a13.622,13.622,0,0,1-5.352.886l-.643.005A15.309,15.309,0,0,1,2.056,18.97ZM7.54,13.957c-4.008.04-6.04.765-6.04,2.158,0,.716.543,1.264,1.613,1.63a15.681,15.681,0,0,0,4.764.55c4.232,0,6.377-.726,6.377-2.159,0-.716-.543-1.265-1.613-1.63a15.717,15.717,0,0,0-4.765-.55Zm8.92-3.176-.006-.1V9.424H15.16a.75.75,0,0,1-.1-1.493l.1-.006h1.294V6.669a.75.75,0,0,1,1.493-.1l.007.1V7.924h1.3a.75.75,0,0,1,.1,1.493l-.1.006h-1.3v1.255a.751.751,0,0,1-1.494.1ZM4.112,9.083A5.318,5.318,0,0,1,7.877,0a5.3,5.3,0,0,1,5.318,5.318A5.324,5.324,0,0,1,4.112,9.083Zm1.06-6.469A3.842,3.842,0,1,0,7.877,1.5,3.8,3.8,0,0,0,5.172,2.614Z"
-                  transform="translate(0 0)"
-                />
-              </g>
-            </svg>
+                  id="Filter_2"
+                  data-name="Filter 2"
+                  d="M5.52,14.754a.515.515,0,0,1-.515-.515V8.852L.406,3.782a1.579,1.579,0,0,1-.4-.928L0,2.723V1.556A1.542,1.542,0,0,1,1.524,0H13.231a1.542,1.542,0,0,1,1.523,1.556V2.7A1.582,1.582,0,0,1,14.3,3.8L9.312,8.864V12.7a.512.512,0,0,1-.231.429l-.065.036L5.739,14.7A.512.512,0,0,1,5.52,14.754Zm-4-13.725a.512.512,0,0,0-.495.527V2.723a.541.541,0,0,0,.139.366L5.9,8.308a.513.513,0,0,1,.134.346v4.774L8.283,12.37V8.654a.513.513,0,0,1,.1-.3l.052-.062,5.141-5.213a.546.546,0,0,0,.153-.382V1.556a.512.512,0,0,0-.494-.527Z" />
+              </svg>
+            </div>
+            <span class="bg-gray-200 h-px block mx-auto my-4"></span>
+
+            <div class="flex flex-col gap-y-6 text-[12px]">
+              <div class="inline-block relative">
+                <select
+                  id="default"
+                  class="appearance-none bg-silver p-2 rounded-2xl w-full">
+                  <option class="bg-silver" selected>زیست فناوری</option>
+                  <option class="bg-silver" value="">اپشن دوم</option>
+                  <option class="bg-silver" value="">اپشن سوم</option>
+                </select>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="9.072"
+                    height="5.036"
+                    viewBox="0 0 9.072 5.036"
+                    class="stroke-green absolute left-3 top-4 rotate-180">
+                    <path
+                      id="Icon_feather-chevron-down"
+                      data-name="Icon feather-chevron-down"
+                      d="M0,0,3.829,3.829,7.657,0"
+                      transform="translate(8.364 4.329) rotate(-180)"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1" />
+                  </svg>
+                </span>
+              </div>
+
+              <div class="flex flex-col gap-y-3">
+                <label
+                  class="relative flex items-center cursor-pointer select-none"
+                  for="86416163">
+                  <input
+                    class="appearance-none hover:scale-110 bg-silver p-2 rounded-md peer"
+                    type="checkbox"
+                    value=""
+                    id="86416163"
+                    disabled />
+                  <span
+                    class="duration-200 opacity-0 scale-0 peer-checked:opacity-100 peer-checked:scale-100 absolute top-1 right-0 fill-green">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15.351"
+                      height="11.123"
+                      viewBox="0 0 15.351 11.123">
+                      <path
+                        id="Path"
+                        d="M13.071.391A1.336,1.336,0,0,1,15.089,2.13l-.129.15L6.508,10.732a1.336,1.336,0,0,1-1.739.129l-.15-.129L.391,6.506A1.336,1.336,0,0,1,2.13,4.488l.15.129L5.562,7.9Z"
+                        transform="translate(0 0)" />
+                    </svg>
+                  </span>
+                  <span class="peer-disabled:opacity-50 mr-1"> موضوعات </span>
+                </label>
+                <label
+                  class="relative flex items-center cursor-pointer select-none"
+                  for="651613">
+                  <input
+                    class="appearance-none cursor-pointer hover:scale-110 bg-silver p-2 rounded-md peer"
+                    type="checkbox"
+                    value=""
+                    id="651613" />
+                  <span
+                    class="duration-200 opacity-0 scale-0 peer-checked:opacity-100 peer-checked:scale-100 absolute top-1 right-0 fill-green">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15.351"
+                      height="11.123"
+                      viewBox="0 0 15.351 11.123">
+                      <path
+                        id="Path"
+                        d="M13.071.391A1.336,1.336,0,0,1,15.089,2.13l-.129.15L6.508,10.732a1.336,1.336,0,0,1-1.739.129l-.15-.129L.391,6.506A1.336,1.336,0,0,1,2.13,4.488l.15.129L5.562,7.9Z"
+                        transform="translate(0 0)" />
+                    </svg>
+                  </span>
+                  <span class="peer-disabled:opacity-50 mr-1"> موضوعات </span>
+                </label>
+              </div>
+            </div>
           </div>
-          <span class="bg-gray-200 h-px block mx-auto my-4"></span>
-          <div class="text-[12px]">
-            <input
-              class="w-full bg-silver invalid:border-2 invalid:border-red-500 rounded-md p-2 pl-10"
-              type="email"
-              name="search_inp"
-              placeholder="ایمیل خود را وارد کنید"
-            />
-            <a href="" class="bf-btn text-center block mt-2">عضویت</a>
+          <div class="shadow-card_shadow rounded-md p-4 bg-white">
+            <div class="flex justify-between items-center">
+              <h5 class="tracking-tight text-sm">عضویت در خبرنامه</h5>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="19.795"
+                viewBox="0 0 20 19.795"
+                class="fill-green">
+                <g
+                  id="Add_User"
+                  data-name="Add User"
+                  transform="translate(0 0)">
+                  <path
+                    id="Add_User-2"
+                    data-name="Add User"
+                    d="M2.056,18.97a3,3,0,0,1,0-5.7,15.466,15.466,0,0,1,5.825-.815l.324,0a14.406,14.406,0,0,1,5.583.861,2.93,2.93,0,0,1,1.97,2.817A2.888,2.888,0,0,1,13.873,18.9a13.622,13.622,0,0,1-5.352.886l-.643.005A15.309,15.309,0,0,1,2.056,18.97ZM7.54,13.957c-4.008.04-6.04.765-6.04,2.158,0,.716.543,1.264,1.613,1.63a15.681,15.681,0,0,0,4.764.55c4.232,0,6.377-.726,6.377-2.159,0-.716-.543-1.265-1.613-1.63a15.717,15.717,0,0,0-4.765-.55Zm8.92-3.176-.006-.1V9.424H15.16a.75.75,0,0,1-.1-1.493l.1-.006h1.294V6.669a.75.75,0,0,1,1.493-.1l.007.1V7.924h1.3a.75.75,0,0,1,.1,1.493l-.1.006h-1.3v1.255a.751.751,0,0,1-1.494.1ZM4.112,9.083A5.318,5.318,0,0,1,7.877,0a5.3,5.3,0,0,1,5.318,5.318A5.324,5.324,0,0,1,4.112,9.083Zm1.06-6.469A3.842,3.842,0,1,0,7.877,1.5,3.8,3.8,0,0,0,5.172,2.614Z"
+                    transform="translate(0 0)" />
+                </g>
+              </svg>
+            </div>
+            <span class="bg-gray-200 h-px block mx-auto my-4"></span>
+            <div class="text-[12px]">
+              <input
+                class="w-full bg-silver invalid:border-2 invalid:border-red-500 rounded-md p-2 pl-10"
+                type="email"
+                name="search_inp"
+                placeholder="ایمیل خود را وارد کنید" />
+              <a href="" class="bf-btn text-center block mt-2">عضویت</a>
+            </div>
           </div>
         </div>
       </aside>
       <section
-        class="relative p-1 col-span-12 md:col-span-9 md:pr-6 mt-8 md:mt-0"
-      >
+        data-aos="fade-right"
+        class="relative p-1 col-span-12 md:col-span-9 md:pr-6 mt-8 md:mt-0">
         <ul
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stroke-green"
-        >
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 stroke-green">
           <li
-            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
-          >
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white">
             <div class="rounded-xl h-1/2">
               <img
                 class="rounded-xl object-cover w-full h-full"
                 src="../assets/images/e6db638a712313891ed504572e328519.png"
-                alt=""
-              />
+                alt="" />
             </div>
             <div
-              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
-            >
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between">
               <span
                 class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
                 >زیست فناوری</span
@@ -538,13 +518,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="13"
                       height="15"
-                      viewBox="0 0 13 15"
-                    >
+                      viewBox="0 0 13 15">
                       <g
                         id="Iconly_Light_Calendar"
                         data-name="Iconly/Light/Calendar"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Calendar">
                           <path
                             id="Line_200"
@@ -554,8 +532,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_201"
                             d="M.459.473H.465"
@@ -564,8 +541,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_202"
                             d="M.459.473H.465"
@@ -574,8 +550,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_203"
                             d="M.459.473H.465"
@@ -584,8 +559,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_204"
                             d="M.459.473H.465"
@@ -594,8 +568,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_205"
                             d="M.459.473H.465"
@@ -604,8 +577,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_206"
                             d="M.459.473H.465"
@@ -614,8 +586,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_207"
                             d="M.463,0V2.3"
@@ -624,8 +595,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_208"
                             d="M.463,0V2.3"
@@ -634,8 +604,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Path"
                             d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
@@ -644,8 +613,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -660,20 +628,17 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Chat"
                         data-name="Iconly/Light/Chat"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Chat">
                           <path
                             id="Combined_Shape"
                             data-name="Combined Shape"
                             d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
-                            transform="translate(3.169 6.339)"
-                          />
+                            transform="translate(3.169 6.339)" />
                           <path
                             id="Stroke_7"
                             data-name="Stroke 7"
@@ -682,8 +647,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -715,13 +679,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Time_Circle"
                         data-name="Iconly/Light/Time Circle"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Time_Circle" data-name="Time Circle">
                           <path
                             id="Stroke_1"
@@ -731,8 +693,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Stroke_3"
                             data-name="Stroke 3"
@@ -742,8 +703,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -755,26 +715,22 @@
                 <div class="flex">
                   <a
                     class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
-                    href="./singlenews.html"
-                  >
+                    href="./singlenews.html">
                     <span class="text-[12px]">ادامه مطلب</span>
                     <span class="mr-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"
                         height="11.464"
-                        viewBox="0 0 14 11.464"
-                      >
+                        viewBox="0 0 14 11.464">
                         <g
                           id="Iconly_Light_Arrow_-_Left"
                           data-name="Iconly/Light/Arrow - Left"
-                          transform="translate(0.5 0.707)"
-                        >
+                          transform="translate(0.5 0.707)">
                           <g
                             id="Arrow_-_Left"
                             data-name="Arrow - Left"
-                            transform="translate(13) rotate(90)"
-                          >
+                            transform="translate(13) rotate(90)">
                             <path
                               id="Stroke_1"
                               data-name="Stroke 1"
@@ -784,8 +740,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                             <path
                               id="Stroke_3"
                               data-name="Stroke 3"
@@ -795,8 +750,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                           </g>
                         </g>
                       </svg>
@@ -807,18 +761,15 @@
             </div>
           </li>
           <li
-            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
-          >
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white">
             <div class="rounded-xl h-1/2">
               <img
                 class="rounded-xl object-cover w-full h-full"
                 src="../assets/images/e6db638a712313891ed504572e328519.png"
-                alt=""
-              />
+                alt="" />
             </div>
             <div
-              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
-            >
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between">
               <span
                 class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
                 >زیست فناوری</span
@@ -830,13 +781,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="13"
                       height="15"
-                      viewBox="0 0 13 15"
-                    >
+                      viewBox="0 0 13 15">
                       <g
                         id="Iconly_Light_Calendar"
                         data-name="Iconly/Light/Calendar"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Calendar">
                           <path
                             id="Line_200"
@@ -846,8 +795,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_201"
                             d="M.459.473H.465"
@@ -856,8 +804,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_202"
                             d="M.459.473H.465"
@@ -866,8 +813,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_203"
                             d="M.459.473H.465"
@@ -876,8 +822,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_204"
                             d="M.459.473H.465"
@@ -886,8 +831,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_205"
                             d="M.459.473H.465"
@@ -896,8 +840,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_206"
                             d="M.459.473H.465"
@@ -906,8 +849,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_207"
                             d="M.463,0V2.3"
@@ -916,8 +858,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_208"
                             d="M.463,0V2.3"
@@ -926,8 +867,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Path"
                             d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
@@ -936,8 +876,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -952,20 +891,17 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Chat"
                         data-name="Iconly/Light/Chat"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Chat">
                           <path
                             id="Combined_Shape"
                             data-name="Combined Shape"
                             d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
-                            transform="translate(3.169 6.339)"
-                          />
+                            transform="translate(3.169 6.339)" />
                           <path
                             id="Stroke_7"
                             data-name="Stroke 7"
@@ -974,8 +910,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1007,13 +942,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Time_Circle"
                         data-name="Iconly/Light/Time Circle"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Time_Circle" data-name="Time Circle">
                           <path
                             id="Stroke_1"
@@ -1023,8 +956,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Stroke_3"
                             data-name="Stroke 3"
@@ -1034,8 +966,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1047,26 +978,22 @@
                 <div class="flex">
                   <a
                     class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
-                    href="./singlenews.html"
-                  >
+                    href="./singlenews.html">
                     <span class="text-[12px]">ادامه مطلب</span>
                     <span class="mr-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"
                         height="11.464"
-                        viewBox="0 0 14 11.464"
-                      >
+                        viewBox="0 0 14 11.464">
                         <g
                           id="Iconly_Light_Arrow_-_Left"
                           data-name="Iconly/Light/Arrow - Left"
-                          transform="translate(0.5 0.707)"
-                        >
+                          transform="translate(0.5 0.707)">
                           <g
                             id="Arrow_-_Left"
                             data-name="Arrow - Left"
-                            transform="translate(13) rotate(90)"
-                          >
+                            transform="translate(13) rotate(90)">
                             <path
                               id="Stroke_1"
                               data-name="Stroke 1"
@@ -1076,8 +1003,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                             <path
                               id="Stroke_3"
                               data-name="Stroke 3"
@@ -1087,8 +1013,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                           </g>
                         </g>
                       </svg>
@@ -1099,18 +1024,15 @@
             </div>
           </li>
           <li
-            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
-          >
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white">
             <div class="rounded-xl h-1/2">
               <img
                 class="rounded-xl object-cover w-full h-full"
                 src="../assets/images/e6db638a712313891ed504572e328519.png"
-                alt=""
-              />
+                alt="" />
             </div>
             <div
-              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
-            >
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between">
               <span
                 class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
                 >زیست فناوری</span
@@ -1122,13 +1044,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="13"
                       height="15"
-                      viewBox="0 0 13 15"
-                    >
+                      viewBox="0 0 13 15">
                       <g
                         id="Iconly_Light_Calendar"
                         data-name="Iconly/Light/Calendar"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Calendar">
                           <path
                             id="Line_200"
@@ -1138,8 +1058,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_201"
                             d="M.459.473H.465"
@@ -1148,8 +1067,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_202"
                             d="M.459.473H.465"
@@ -1158,8 +1076,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_203"
                             d="M.459.473H.465"
@@ -1168,8 +1085,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_204"
                             d="M.459.473H.465"
@@ -1178,8 +1094,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_205"
                             d="M.459.473H.465"
@@ -1188,8 +1103,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_206"
                             d="M.459.473H.465"
@@ -1198,8 +1112,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_207"
                             d="M.463,0V2.3"
@@ -1208,8 +1121,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_208"
                             d="M.463,0V2.3"
@@ -1218,8 +1130,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Path"
                             d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
@@ -1228,8 +1139,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1244,20 +1154,17 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Chat"
                         data-name="Iconly/Light/Chat"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Chat">
                           <path
                             id="Combined_Shape"
                             data-name="Combined Shape"
                             d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
-                            transform="translate(3.169 6.339)"
-                          />
+                            transform="translate(3.169 6.339)" />
                           <path
                             id="Stroke_7"
                             data-name="Stroke 7"
@@ -1266,8 +1173,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1299,13 +1205,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Time_Circle"
                         data-name="Iconly/Light/Time Circle"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Time_Circle" data-name="Time Circle">
                           <path
                             id="Stroke_1"
@@ -1315,8 +1219,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Stroke_3"
                             data-name="Stroke 3"
@@ -1326,8 +1229,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1339,26 +1241,22 @@
                 <div class="flex">
                   <a
                     class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
-                    href="./singlenews.html"
-                  >
+                    href="./singlenews.html">
                     <span class="text-[12px]">ادامه مطلب</span>
                     <span class="mr-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"
                         height="11.464"
-                        viewBox="0 0 14 11.464"
-                      >
+                        viewBox="0 0 14 11.464">
                         <g
                           id="Iconly_Light_Arrow_-_Left"
                           data-name="Iconly/Light/Arrow - Left"
-                          transform="translate(0.5 0.707)"
-                        >
+                          transform="translate(0.5 0.707)">
                           <g
                             id="Arrow_-_Left"
                             data-name="Arrow - Left"
-                            transform="translate(13) rotate(90)"
-                          >
+                            transform="translate(13) rotate(90)">
                             <path
                               id="Stroke_1"
                               data-name="Stroke 1"
@@ -1368,8 +1266,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                             <path
                               id="Stroke_3"
                               data-name="Stroke 3"
@@ -1379,8 +1276,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                           </g>
                         </g>
                       </svg>
@@ -1391,18 +1287,15 @@
             </div>
           </li>
           <li
-            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
-          >
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white">
             <div class="rounded-xl h-1/2">
               <img
                 class="rounded-xl object-cover w-full h-full"
                 src="../assets/images/e6db638a712313891ed504572e328519.png"
-                alt=""
-              />
+                alt="" />
             </div>
             <div
-              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
-            >
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between">
               <span
                 class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
                 >زیست فناوری</span
@@ -1414,13 +1307,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="13"
                       height="15"
-                      viewBox="0 0 13 15"
-                    >
+                      viewBox="0 0 13 15">
                       <g
                         id="Iconly_Light_Calendar"
                         data-name="Iconly/Light/Calendar"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Calendar">
                           <path
                             id="Line_200"
@@ -1430,8 +1321,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_201"
                             d="M.459.473H.465"
@@ -1440,8 +1330,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_202"
                             d="M.459.473H.465"
@@ -1450,8 +1339,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_203"
                             d="M.459.473H.465"
@@ -1460,8 +1348,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_204"
                             d="M.459.473H.465"
@@ -1470,8 +1357,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_205"
                             d="M.459.473H.465"
@@ -1480,8 +1366,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_206"
                             d="M.459.473H.465"
@@ -1490,8 +1375,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_207"
                             d="M.463,0V2.3"
@@ -1500,8 +1384,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_208"
                             d="M.463,0V2.3"
@@ -1510,8 +1393,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Path"
                             d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
@@ -1520,8 +1402,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1536,20 +1417,17 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Chat"
                         data-name="Iconly/Light/Chat"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Chat">
                           <path
                             id="Combined_Shape"
                             data-name="Combined Shape"
                             d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
-                            transform="translate(3.169 6.339)"
-                          />
+                            transform="translate(3.169 6.339)" />
                           <path
                             id="Stroke_7"
                             data-name="Stroke 7"
@@ -1558,8 +1436,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1591,13 +1468,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Time_Circle"
                         data-name="Iconly/Light/Time Circle"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Time_Circle" data-name="Time Circle">
                           <path
                             id="Stroke_1"
@@ -1607,8 +1482,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Stroke_3"
                             data-name="Stroke 3"
@@ -1618,8 +1492,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1631,26 +1504,22 @@
                 <div class="flex">
                   <a
                     class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
-                    href="./singlenews.html"
-                  >
+                    href="./singlenews.html">
                     <span class="text-[12px]">ادامه مطلب</span>
                     <span class="mr-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"
                         height="11.464"
-                        viewBox="0 0 14 11.464"
-                      >
+                        viewBox="0 0 14 11.464">
                         <g
                           id="Iconly_Light_Arrow_-_Left"
                           data-name="Iconly/Light/Arrow - Left"
-                          transform="translate(0.5 0.707)"
-                        >
+                          transform="translate(0.5 0.707)">
                           <g
                             id="Arrow_-_Left"
                             data-name="Arrow - Left"
-                            transform="translate(13) rotate(90)"
-                          >
+                            transform="translate(13) rotate(90)">
                             <path
                               id="Stroke_1"
                               data-name="Stroke 1"
@@ -1660,8 +1529,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                             <path
                               id="Stroke_3"
                               data-name="Stroke 3"
@@ -1671,8 +1539,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                           </g>
                         </g>
                       </svg>
@@ -1683,18 +1550,15 @@
             </div>
           </li>
           <li
-            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
-          >
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white">
             <div class="rounded-xl h-1/2">
               <img
                 class="rounded-xl object-cover w-full h-full"
                 src="../assets/images/e6db638a712313891ed504572e328519.png"
-                alt=""
-              />
+                alt="" />
             </div>
             <div
-              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
-            >
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between">
               <span
                 class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
                 >زیست فناوری</span
@@ -1706,13 +1570,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="13"
                       height="15"
-                      viewBox="0 0 13 15"
-                    >
+                      viewBox="0 0 13 15">
                       <g
                         id="Iconly_Light_Calendar"
                         data-name="Iconly/Light/Calendar"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Calendar">
                           <path
                             id="Line_200"
@@ -1722,8 +1584,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_201"
                             d="M.459.473H.465"
@@ -1732,8 +1593,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_202"
                             d="M.459.473H.465"
@@ -1742,8 +1602,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_203"
                             d="M.459.473H.465"
@@ -1752,8 +1611,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_204"
                             d="M.459.473H.465"
@@ -1762,8 +1620,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_205"
                             d="M.459.473H.465"
@@ -1772,8 +1629,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_206"
                             d="M.459.473H.465"
@@ -1782,8 +1638,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_207"
                             d="M.463,0V2.3"
@@ -1792,8 +1647,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_208"
                             d="M.463,0V2.3"
@@ -1802,8 +1656,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Path"
                             d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
@@ -1812,8 +1665,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1828,20 +1680,17 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Chat"
                         data-name="Iconly/Light/Chat"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Chat">
                           <path
                             id="Combined_Shape"
                             data-name="Combined Shape"
                             d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
-                            transform="translate(3.169 6.339)"
-                          />
+                            transform="translate(3.169 6.339)" />
                           <path
                             id="Stroke_7"
                             data-name="Stroke 7"
@@ -1850,8 +1699,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1883,13 +1731,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Time_Circle"
                         data-name="Iconly/Light/Time Circle"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Time_Circle" data-name="Time Circle">
                           <path
                             id="Stroke_1"
@@ -1899,8 +1745,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Stroke_3"
                             data-name="Stroke 3"
@@ -1910,8 +1755,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -1923,26 +1767,22 @@
                 <div class="flex">
                   <a
                     class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
-                    href="./singlenews.html"
-                  >
+                    href="./singlenews.html">
                     <span class="text-[12px]">ادامه مطلب</span>
                     <span class="mr-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"
                         height="11.464"
-                        viewBox="0 0 14 11.464"
-                      >
+                        viewBox="0 0 14 11.464">
                         <g
                           id="Iconly_Light_Arrow_-_Left"
                           data-name="Iconly/Light/Arrow - Left"
-                          transform="translate(0.5 0.707)"
-                        >
+                          transform="translate(0.5 0.707)">
                           <g
                             id="Arrow_-_Left"
                             data-name="Arrow - Left"
-                            transform="translate(13) rotate(90)"
-                          >
+                            transform="translate(13) rotate(90)">
                             <path
                               id="Stroke_1"
                               data-name="Stroke 1"
@@ -1952,8 +1792,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                             <path
                               id="Stroke_3"
                               data-name="Stroke 3"
@@ -1963,8 +1802,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                           </g>
                         </g>
                       </svg>
@@ -1975,18 +1813,15 @@
             </div>
           </li>
           <li
-            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white"
-          >
+            class="news-card scrollbar-2px relative h-[350px] duration-300 p-3 rounded-lg shadow-card_shadow hover:scale-[1.01] hover:shadow-card_shadow_hover bg-white">
             <div class="rounded-xl h-1/2">
               <img
                 class="rounded-xl object-cover w-full h-full"
                 src="../assets/images/e6db638a712313891ed504572e328519.png"
-                alt=""
-              />
+                alt="" />
             </div>
             <div
-              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between"
-            >
+              class="news-card scrollbar-2px-content mt-1 text-right h-1/2 flex flex-col justify-between">
               <span
                 class="absolute top-7 left-7 text-[12px] py-1 px-2 rounded-lg bg-white70"
                 >زیست فناوری</span
@@ -1998,13 +1833,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="13"
                       height="15"
-                      viewBox="0 0 13 15"
-                    >
+                      viewBox="0 0 13 15">
                       <g
                         id="Iconly_Light_Calendar"
                         data-name="Iconly/Light/Calendar"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Calendar">
                           <path
                             id="Line_200"
@@ -2014,8 +1847,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_201"
                             d="M.459.473H.465"
@@ -2024,8 +1856,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_202"
                             d="M.459.473H.465"
@@ -2034,8 +1865,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_203"
                             d="M.459.473H.465"
@@ -2044,8 +1874,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_204"
                             d="M.459.473H.465"
@@ -2054,8 +1883,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_205"
                             d="M.459.473H.465"
@@ -2064,8 +1892,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_206"
                             d="M.459.473H.465"
@@ -2074,8 +1901,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_207"
                             d="M.463,0V2.3"
@@ -2084,8 +1910,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Line_208"
                             d="M.463,0V2.3"
@@ -2094,8 +1919,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Path"
                             d="M8.826,0H3.181A2.938,2.938,0,0,0,0,3.25V9.585a2.969,2.969,0,0,0,3.181,3.31H8.819A2.94,2.94,0,0,0,12,9.638V3.25A2.928,2.928,0,0,0,8.826,0Z"
@@ -2104,8 +1928,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -2120,20 +1943,17 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Chat"
                         data-name="Iconly/Light/Chat"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Chat">
                           <path
                             id="Combined_Shape"
                             data-name="Combined Shape"
                             d="M6.36.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,6.36.816Zm-3.18,0A.818.818,0,1,1,4,1.635.818.818,0,0,1,3.18.816ZM0,.816a.818.818,0,1,1,.818.818A.818.818,0,0,1,0,.816Z"
-                            transform="translate(3.169 6.339)"
-                          />
+                            transform="translate(3.169 6.339)" />
                           <path
                             id="Stroke_7"
                             data-name="Stroke 7"
@@ -2142,8 +1962,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -2175,13 +1994,11 @@
                       xmlns="http://www.w3.org/2000/svg"
                       width="15"
                       height="15"
-                      viewBox="0 0 15 15"
-                    >
+                      viewBox="0 0 15 15">
                       <g
                         id="Iconly_Light_Time_Circle"
                         data-name="Iconly/Light/Time Circle"
-                        transform="translate(0.5 0.5)"
-                      >
+                        transform="translate(0.5 0.5)">
                         <g id="Time_Circle" data-name="Time Circle">
                           <path
                             id="Stroke_1"
@@ -2191,8 +2008,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                           <path
                             id="Stroke_3"
                             data-name="Stroke 3"
@@ -2202,8 +2018,7 @@
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-miterlimit="10"
-                            stroke-width="1"
-                          />
+                            stroke-width="1" />
                         </g>
                       </g>
                     </svg>
@@ -2215,26 +2030,22 @@
                 <div class="flex">
                   <a
                     class="flex items-center p-1 rounded-lg duration-300 stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
-                    href="./singlenews.html"
-                  >
+                    href="./singlenews.html">
                     <span class="text-[12px]">ادامه مطلب</span>
                     <span class="mr-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="14"
                         height="11.464"
-                        viewBox="0 0 14 11.464"
-                      >
+                        viewBox="0 0 14 11.464">
                         <g
                           id="Iconly_Light_Arrow_-_Left"
                           data-name="Iconly/Light/Arrow - Left"
-                          transform="translate(0.5 0.707)"
-                        >
+                          transform="translate(0.5 0.707)">
                           <g
                             id="Arrow_-_Left"
                             data-name="Arrow - Left"
-                            transform="translate(13) rotate(90)"
-                          >
+                            transform="translate(13) rotate(90)">
                             <path
                               id="Stroke_1"
                               data-name="Stroke 1"
@@ -2244,8 +2055,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                             <path
                               id="Stroke_3"
                               data-name="Stroke 3"
@@ -2255,8 +2065,7 @@
                               stroke-linecap="round"
                               stroke-linejoin="round"
                               stroke-miterlimit="10"
-                              stroke-width="1"
-                            />
+                              stroke-width="1" />
                           </g>
                         </g>
                       </svg>
@@ -2268,33 +2077,29 @@
           </li>
         </ul>
         <!-- page-navigation -->
-        <nav class="w-full my-20">
+        <nav class="pagination w-full my-20">
           <ul class="flex flex-row-reverse justify-center items-center">
             <li class="mx-1">
               <a
                 href=""
-                class="next-page-btn p-[2px_9px] rounded-md duration-300 border-[1px] bg-green stroke-white text-white flex items-center disabled"
-              >
+                class="next-page-btn p-[2px_9px] rounded-md duration-300 border-[1px] bg-green stroke-white text-white flex items-center disabled">
                 <span class="">قبل</span>
                 <svg
                   class="mr-2"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="10.667"
-                  viewBox="0 0 6 10.667"
-                >
+                  viewBox="0 0 6 10.667">
                   <g
                     id="Iconly_Light-outline_Arrow_-_Right_2"
                     data-name="Iconly/Light-outline/Arrow - Right 2"
-                    transform="translate(6 10.667) rotate(180)"
-                  >
+                    transform="translate(6 10.667) rotate(180)">
                     <g id="Arrow_-_Right_2" data-name="Arrow - Right 2">
                       <path
                         id="Arrow_-_Right_2-2"
                         data-name="Arrow - Right 2"
                         d="M.164,10.506A.541.541,0,0,1,.11,9.792L.164,9.73l4.485-4.4L.164.937A.541.541,0,0,1,.11.222L.164.161A.568.568,0,0,1,.893.108L.955.161,5.836,4.945a.541.541,0,0,1,.054.714l-.054.062L.955,10.506A.568.568,0,0,1,.164,10.506Z"
-                        transform="translate(0 0)"
-                      />
+                        transform="translate(0 0)" />
                     </g>
                   </g>
                 </svg>
@@ -2303,7 +2108,7 @@
             <!-- start page numbers -->
             <li class="nav-item mx-1">
               <a
-                class="p-[0px_9px] rounded-md duration-300 border-[1px] border-green stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
+                class="active p-[0px_9px] rounded-md duration-300 border-[1px] border-green stroke-green text-green hover:text-white hover:stroke-white hover:bg-green"
                 href=""
                 >۱</a
               >
@@ -2349,27 +2154,23 @@
             <li class="mx-1">
               <a
                 href=""
-                class="next-page-btn p-[2px_9px] rounded-md duration-300 border-[1px] bg-green stroke-white text-white flex items-center"
-              >
+                class="next-page-btn p-[2px_9px] rounded-md duration-300 border-[1px] bg-green stroke-white text-white flex items-center">
                 <svg
                   class="ml-2 rotate-180"
                   xmlns="http://www.w3.org/2000/svg"
                   width="6"
                   height="10.667"
-                  viewBox="0 0 6 10.667"
-                >
+                  viewBox="0 0 6 10.667">
                   <g
                     id="Iconly_Light-outline_Arrow_-_Right_2"
                     data-name="Iconly/Light-outline/Arrow - Right 2"
-                    transform="translate(6 10.667) rotate(180)"
-                  >
+                    transform="translate(6 10.667) rotate(180)">
                     <g id="Arrow_-_Right_2" data-name="Arrow - Right 2">
                       <path
                         id="Arrow_-_Right_2-2"
                         data-name="Arrow - Right 2"
                         d="M.164,10.506A.541.541,0,0,1,.11,9.792L.164,9.73l4.485-4.4L.164.937A.541.541,0,0,1,.11.222L.164.161A.568.568,0,0,1,.893.108L.955.161,5.836,4.945a.541.541,0,0,1,.054.714l-.054.062L.955,10.506A.568.568,0,0,1,.164,10.506Z"
-                        transform="translate(0 0)"
-                      />
+                        transform="translate(0 0)" />
                     </g>
                   </g>
                 </svg>
@@ -2383,19 +2184,16 @@
     <!-- Footer -->
     <footer class="bg-lightgreen2">
       <section
-        class="xl:container grid grid-cols-12 max-md:gap-y-8 py-8 max-xl:px-6"
-      >
+        class="xl:container grid grid-cols-12 max-md:gap-y-8 py-8 max-xl:px-6">
         <section
-          class="col-span-12 md:col-span-3 flex flex-col max-sm:items-center justify-evenly text-[12px] scrollbar-2px"
-        >
+          class="col-span-12 md:col-span-3 flex flex-col max-sm:items-center justify-evenly text-[12px] scrollbar-2px">
           <div>
             <a class="inline-block" href="./index.html"
               ><img src="../assets/images/logo_theme_4.png" alt=""
             /></a>
           </div>
           <p
-            class="max-h-[70px] text-justify overflow-x-hidden overflow-y-auto"
-          >
+            class="max-h-[70px] text-justify overflow-x-hidden overflow-y-auto">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
             استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
             ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
@@ -2416,13 +2214,11 @@
                   xmlns="http://www.w3.org/2000/svg"
                   width="16.857"
                   height="19.836"
-                  viewBox="0 0 16.857 19.836"
-                >
+                  viewBox="0 0 16.857 19.836">
                   <g
                     id="Iconly_Light_Location"
                     data-name="Iconly/Light/Location"
-                    transform="translate(0.75 0.75)"
-                  >
+                    transform="translate(0.75 0.75)">
                     <g id="Location">
                       <path
                         id="Path_33958"
@@ -2432,8 +2228,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-miterlimit="10"
-                        stroke-width="1.5"
-                      />
+                        stroke-width="1.5" />
                       <circle
                         id="Ellipse_740"
                         cx="2.461"
@@ -2444,8 +2239,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-miterlimit="10"
-                        stroke-width="1.5"
-                      />
+                        stroke-width="1.5" />
                     </g>
                   </g>
                 </svg>
@@ -2456,19 +2250,16 @@
             </div>
             <div class="flex items-center mt-2">
               <span
-                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green"
-              >
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20.505"
                   height="20.508"
-                  viewBox="0 0 20.505 20.508"
-                >
+                  viewBox="0 0 20.505 20.508">
                   <g
                     id="Iconly_Light_Call"
                     data-name="Iconly/Light/Call"
-                    transform="translate(0.754 0.752)"
-                  >
+                    transform="translate(0.754 0.752)">
                     <g id="Call">
                       <path
                         id="Call-2"
@@ -2479,8 +2270,7 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-miterlimit="10"
-                        stroke-width="1.5"
-                      />
+                        stroke-width="1.5" />
                     </g>
                   </g>
                 </svg>
@@ -2492,8 +2282,7 @@
           </div>
         </section>
         <section
-          class="col-span-12 md:col-span-6 flex justify-evenly max-md:text-center"
-        >
+          class="col-span-12 md:col-span-6 flex justify-evenly max-md:text-center">
           <ul class="footer-list flex flex-col justify-evenly">
             <li class="text-[18px] font-bold">لینک های دسترسی</li>
             <li class="footer-list-item">
@@ -2557,13 +2346,11 @@
           </p>
           <div class="flex justify-center">
             <div
-              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]"
-            >
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]">
               <img class="object-cover w-full h-full" src="" alt="" />
             </div>
             <div
-              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]"
-            >
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]">
               <img class="object-cover w-full h-full" src="" alt="" />
             </div>
           </div>
@@ -2572,8 +2359,7 @@
       <!-- footer copy right text -->
       <div class="bg-green py-4">
         <div
-          class="xl:container max-xl:px-6 flex max-sm:flex-col justify-between items-center"
-        >
+          class="xl:container max-xl:px-6 flex max-sm:flex-col justify-between items-center">
           <p class="text-white max-sm:text-center">
             تمامی حقوق متعلق به این سایت و برای معاونت علمی و فناوری ریاست
             جمهوری محفوظ می باشد.
@@ -2582,8 +2368,7 @@
             <li class="mx-1">
               <a
                 class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
-                href=""
-              >
+                href="">
                 <span>
                   <svg
                     class="fill-green"
@@ -2592,15 +2377,13 @@
                     xmlns="http://www.w3.org/2000/svg"
                     width="16.991"
                     height="16.991"
-                    viewBox="0 0 16.991 16.991"
-                  >
+                    viewBox="0 0 16.991 16.991">
                     <g id="Send" transform="translate(0)">
                       <path
                         id="Send-2"
                         data-name="Send"
                         d="M11.261,16.991A1.638,1.638,0,0,1,9.913,16.3l-.077-.116L6.442,10.557.8,7.085a1.684,1.684,0,0,1,.278-3l.132-.043L14.851.068A1.7,1.7,0,0,1,15.323,0a1.681,1.681,0,0,1,1.628,2.041l-.031.122L12.872,15.791A1.67,1.67,0,0,1,11.261,16.991Zm.594-12.528a.647.647,0,0,1,.387.127l.074.063a.658.658,0,0,1,.066.851l-.063.074L7.742,10.183l3.214,5.322a.358.358,0,0,0,.312.179.363.363,0,0,0,.326-.2l.027-.067L15.666,1.791a.373.373,0,0,0-.058-.333.368.368,0,0,0-.293-.15l-.038,0-.064.013L1.574,5.292a.365.365,0,0,0-.256.272.376.376,0,0,0,.109.364l.057.043L6.821,9.255l4.57-4.6A.651.651,0,0,1,11.855,4.463Z"
-                        transform="translate(0)"
-                      />
+                        transform="translate(0)" />
                     </g>
                   </svg>
                 </span>
@@ -2614,13 +2397,11 @@
                   xmlns="http://www.w3.org/2000/svg"
                   width="19.114"
                   height="19.114"
-                  viewBox="0 0 19.114 19.114"
-                >
+                  viewBox="0 0 19.114 19.114">
                   <path
                     id="Icon_simple-instagram"
                     data-name="Icon simple-instagram"
-                    d="M9.557,0c-2.6,0-2.92.012-3.94.057A7.047,7.047,0,0,0,3.3.5,4.68,4.68,0,0,0,1.6,1.6,4.663,4.663,0,0,0,.5,3.3a7.027,7.027,0,0,0-.444,2.32C.01,6.637,0,6.961,0,9.557s.012,2.92.057,3.94A7.052,7.052,0,0,0,.5,15.817,4.687,4.687,0,0,0,1.6,17.51a4.673,4.673,0,0,0,1.693,1.1,7.056,7.056,0,0,0,2.32.444c1.019.048,1.344.057,3.94.057s2.92-.012,3.94-.057a7.072,7.072,0,0,0,2.32-.444,4.884,4.884,0,0,0,2.8-2.8,7.052,7.052,0,0,0,.444-2.32c.048-1.019.057-1.344.057-3.94s-.012-2.92-.057-3.94a7.068,7.068,0,0,0-.444-2.32A4.691,4.691,0,0,0,17.51,1.6,4.657,4.657,0,0,0,15.817.5,7.031,7.031,0,0,0,13.5.057C12.478.01,12.153,0,9.557,0Zm0,1.72c2.551,0,2.855.013,3.863.057a5.266,5.266,0,0,1,1.774.331,3.145,3.145,0,0,1,1.814,1.813,5.277,5.277,0,0,1,.329,1.774c.045,1.008.056,1.311.056,3.863s-.012,2.855-.059,3.863A5.378,5.378,0,0,1,17,15.193a3.035,3.035,0,0,1-.716,1.1,2.982,2.982,0,0,1-1.1.714,5.315,5.315,0,0,1-1.78.329c-1.015.045-1.313.056-3.87.056s-2.856-.012-3.87-.059A5.419,5.419,0,0,1,3.883,17a2.96,2.96,0,0,1-1.1-.716,2.9,2.9,0,0,1-.717-1.1,5.424,5.424,0,0,1-.334-1.78c-.036-1-.049-1.313-.049-3.858s.013-2.856.049-3.871a5.418,5.418,0,0,1,.334-1.779,2.833,2.833,0,0,1,.717-1.1,2.827,2.827,0,0,1,1.1-.715,5.29,5.29,0,0,1,1.769-.335C6.667,1.708,6.966,1.7,9.521,1.7l.036.024Zm0,2.929a4.908,4.908,0,1,0,4.908,4.908A4.907,4.907,0,0,0,9.557,4.65Zm0,8.093a3.186,3.186,0,1,1,3.186-3.186A3.185,3.185,0,0,1,9.557,12.743Zm6.249-8.287A1.147,1.147,0,1,1,14.659,3.31,1.148,1.148,0,0,1,15.806,4.456Z"
-                  /></svg
+                    d="M9.557,0c-2.6,0-2.92.012-3.94.057A7.047,7.047,0,0,0,3.3.5,4.68,4.68,0,0,0,1.6,1.6,4.663,4.663,0,0,0,.5,3.3a7.027,7.027,0,0,0-.444,2.32C.01,6.637,0,6.961,0,9.557s.012,2.92.057,3.94A7.052,7.052,0,0,0,.5,15.817,4.687,4.687,0,0,0,1.6,17.51a4.673,4.673,0,0,0,1.693,1.1,7.056,7.056,0,0,0,2.32.444c1.019.048,1.344.057,3.94.057s2.92-.012,3.94-.057a7.072,7.072,0,0,0,2.32-.444,4.884,4.884,0,0,0,2.8-2.8,7.052,7.052,0,0,0,.444-2.32c.048-1.019.057-1.344.057-3.94s-.012-2.92-.057-3.94a7.068,7.068,0,0,0-.444-2.32A4.691,4.691,0,0,0,17.51,1.6,4.657,4.657,0,0,0,15.817.5,7.031,7.031,0,0,0,13.5.057C12.478.01,12.153,0,9.557,0Zm0,1.72c2.551,0,2.855.013,3.863.057a5.266,5.266,0,0,1,1.774.331,3.145,3.145,0,0,1,1.814,1.813,5.277,5.277,0,0,1,.329,1.774c.045,1.008.056,1.311.056,3.863s-.012,2.855-.059,3.863A5.378,5.378,0,0,1,17,15.193a3.035,3.035,0,0,1-.716,1.1,2.982,2.982,0,0,1-1.1.714,5.315,5.315,0,0,1-1.78.329c-1.015.045-1.313.056-3.87.056s-2.856-.012-3.87-.059A5.419,5.419,0,0,1,3.883,17a2.96,2.96,0,0,1-1.1-.716,2.9,2.9,0,0,1-.717-1.1,5.424,5.424,0,0,1-.334-1.78c-.036-1-.049-1.313-.049-3.858s.013-2.856.049-3.871a5.418,5.418,0,0,1,.334-1.779,2.833,2.833,0,0,1,.717-1.1,2.827,2.827,0,0,1,1.1-.715,5.29,5.29,0,0,1,1.769-.335C6.667,1.708,6.966,1.7,9.521,1.7l.036.024Zm0,2.929a4.908,4.908,0,1,0,4.908,4.908A4.907,4.907,0,0,0,9.557,4.65Zm0,8.093a3.186,3.186,0,1,1,3.186-3.186A3.185,3.185,0,0,1,9.557,12.743Zm6.249-8.287A1.147,1.147,0,1,1,14.659,3.31,1.148,1.148,0,0,1,15.806,4.456Z" /></svg
               ></a>
             </li>
             <li class="mx-1">
@@ -2631,13 +2412,11 @@
                   xmlns="http://www.w3.org/2000/svg"
                   width="21.385"
                   height="15.354"
-                  viewBox="0 0 21.385 15.354"
-                >
+                  viewBox="0 0 21.385 15.354">
                   <g
                     id="Icon_feather-youtube"
                     data-name="Icon feather-youtube"
-                    transform="translate(0.55 0.55)"
-                  >
+                    transform="translate(0.55 0.55)">
                     <path
                       id="Path_79"
                       data-name="Path 79"
@@ -2646,8 +2425,7 @@
                       fill="none"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="1.1"
-                    />
+                      stroke-width="1.1" />
                     <path
                       id="Path_80"
                       data-name="Path 80"
@@ -2656,27 +2434,23 @@
                       fill="none"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="1.1"
-                    />
+                      stroke-width="1.1" />
                   </g></svg
               ></a>
             </li>
             <li class="mx-1">
               <a
                 class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
-                href=""
-              >
+                href="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18.247"
                   height="18.247"
-                  viewBox="0 0 18.247 18.247"
-                >
+                  viewBox="0 0 18.247 18.247">
                   <g
                     id="_1860492_whatsapp_social_media_icon"
                     data-name="1860492_whatsapp_social media_icon"
-                    transform="translate(0.625 0.625)"
-                  >
+                    transform="translate(0.625 0.625)">
                     <path
                       id="Path_100"
                       data-name="Path 100"
@@ -2686,8 +2460,7 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-miterlimit="10"
-                      stroke-width="1.25"
-                    />
+                      stroke-width="1.25" />
                     <path
                       id="Path_101"
                       data-name="Path 101"
@@ -2697,8 +2470,7 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-miterlimit="10"
-                      stroke-width="1.25"
-                    />
+                      stroke-width="1.25" />
                   </g></svg
               ></a>
             </li>
@@ -2708,6 +2480,7 @@
     </footer>
     <!-- Js files -->
     <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/main.js"></script>
     <script>
       $("document").ready(() => {

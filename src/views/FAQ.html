@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>بایوفایننس | درباره ما</title>
+    <title>بایوفایننس | سوالات متداول</title>
     <!-- style -->
+    <link rel="stylesheet" href="../assets/css/flowbite.min.css" />
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/aos.css" />
@@ -20,18 +21,18 @@
       .swiper-slide {
         background-color: #fbfdf8;
         transition: 0.5s;
-        max-height: 400px;
       }
-
       .swiper-slide-active {
         background-color: var(--lightgreen2);
-        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
   <body class="font-iransans">
     <div class="-z-10 w-full h-[700px] absolute top-0 left-0 blur-sm">
-      <img class="w-full h-full object-cover" src="../assets/images/3d-render-vintage-medical-background-with-dna-strands.png" alt="" />
+      <img
+        class="w-full h-full object-cover"
+        src="../assets/images/638351f970140971633330.png"
+        alt="" />
     </div>
     <!-- scroll top btn -->
     <button
@@ -63,7 +64,8 @@
       onclick="$('.navbar-div').toggleClass('max-sm:hidden');$('.close-icon, .menu-icon').toggleClass('hidden');">
       <span class="close-icon hidden duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20">
-          <path d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z" />
+          <path
+            d="M6.062 15 5 13.938 8.938 10 5 6.062 6.062 5 10 8.938 13.938 5 15 6.062 11.062 10 15 13.938 13.938 15 10 11.062Z" />
         </svg>
       </span>
       <span class="menu-icon duration-300">
@@ -78,7 +80,8 @@
       <nav
         data-aos="fade-up"
         class="xl:container duration-300 p-5 flex max-md:flex-col max-sm:flex-col max-sm:fixed max-sm:top-[calc(50%_-_233px)] max-sm:left-[calc(50%_-_160px)] justify-between items-center pt-3">
-        <ul class="menu duration-300 flex flex-row max-sm:flex-col items-center gap-6">
+        <ul
+          class="menu duration-300 flex flex-row max-sm:flex-col items-center gap-6">
           <li class="navbar-logo">
             <a href="./index.html">
               <svg
@@ -88,7 +91,12 @@
                 height="42.842"
                 viewBox="0 0 64.912 42.842">
                 <defs>
-                  <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 430 289">
+                  <pattern
+                    id="pattern"
+                    preserveAspectRatio="none"
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 430 289">
                     <image
                       width="430"
                       height="289"
@@ -96,24 +104,41 @@
             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" />
                   </pattern>
                 </defs>
-                <rect id="NoPath" width="64.912" height="42.842" fill="url(#pattern)" />
+                <rect
+                  id="NoPath"
+                  width="64.912"
+                  height="42.842"
+                  fill="url(#pattern)" />
               </svg>
             </a>
           </li>
           <li class=""><a href="./index.html">صفحه اصلی</a></li>
           <li class=""><a href="./call.html">فراخوان</a></li>
           <li class=""><a href="./news.html">اخبار</a></li>
-          <li class=""><a href="./FAQ.html">سوالات متداول</a></li>
+          <li class="current"><a href="./FAQ.html">سوالات متداول</a></li>
           <li class=""><a href="">سامانه تامین مالی</a></li>
-          <li class="current"><a href="./aboutus.html">درباره ما</a></li>
+          <li class=""><a href="./aboutus.html">درباره ما</a></li>
           <li class=""><a href="./contactus.html">تماس با ما</a></li>
         </ul>
-        <div data-aos="fade-right" data-aos-delay="350" class="p-1 relative duration-300 max-sm:mt-4 max-sm:w-[60%]">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="350"
+          class="p-1 relative duration-300 max-sm:mt-4 max-sm:w-[60%]">
           <form action="">
-            <button id="search_submit" class="absolute duration-500 left-3 top-[15px]" type="submit">
+            <button
+              id="search_submit"
+              class="absolute duration-500 left-3 top-[15px]"
+              type="submit">
               <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="17.173" height="17.518" viewBox="0 0 17.173 17.518">
-                  <g id="Iconly_Light_Search" data-name="Iconly/Light/Search" transform="translate(1.25 1.25)">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="17.173"
+                  height="17.518"
+                  viewBox="0 0 17.173 17.518">
+                  <g
+                    id="Iconly_Light_Search"
+                    data-name="Iconly/Light/Search"
+                    transform="translate(1.25 1.25)">
                     <g id="Search">
                       <circle
                         id="Ellipse_739"
@@ -152,315 +177,262 @@
       </nav>
     </div>
     <!-- Wrapper -->
-    <div class="wrapper xl:container sm:mt-32 stroke-green fill-green relative text-center sm:text-right">
-      <!-- you should know about us -->
-      <section class="flex flex-col">
-        <div data-aos="fade-left" class="flex max-xl:justify-center">
-          <h1 class="text-shadow text-white text-[42px] max-lg:text-[34px] lg:font-bold">هرآنچه که از که از ما باید بدانید</h1>
-        </div>
-        <div class="mt-32 max-xl:mx-8 flex max-sm:flex-col justify-center">
-          <div data-aos="fade-left" class="sm:w-1/2 h-1/2 xl:my-auto">
-            <img class="w-full h-full object-cover" src="../assets/images/IMG-8978.png" alt="" />
-          </div>
-          <div data-aos="fade-right" class="sm:w-1/2 bg-lightgreen2 p-5 max-sm:mt-5 sm:text-right rounded-xl">
-            <h1 class="text-green text-[18px] font-bold xl:text-[32px] sm:w-[80%]">
-              هرآنچه که از که از فعالیت های ما در حوزه زیست فناوری باید بدانید
-            </h1>
-            <p>
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
-              و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
-              شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-              الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
-              شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
-              استفاده قرار گیرد
-            </p>
-            <p class="mt-10">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
-              و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
-              شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-              الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و
-              شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد
-              استفاده قرار گیرد
-            </p>
-          </div>
+    <div
+      class="wrapper xl:container sm:mt-32 stroke-green fill-green relative text-center sm:text-right">
+      <!-- FAQ -->
+      <section class="flex flex-col mb-16">
+        <div class="text-shadow text-white text-center">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="350"
+            class="text-[42px] max-lg:text-[34px] lg:font-bold">
+            سوالات متداول
+          </h1>
+          <p data-aos="fade-up" data-aos-delay="450">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است
+          </p>
         </div>
       </section>
-      <!-- our goals -->
-      <section class="my-32">
-        <div class="flex max-md:flex-col">
-          <div data-aos="fade-left" class="md:w-1/2 max-md:p-3">
-            <h2 class="text-[18px] font-bold">درباره اهداف ما بیشتر بدانید</h2>
-            <p class="mt-5">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
-              و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
-              شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-            </p>
-            <div class="mt-4">
-              <ul class="flex flex-col gap-y-3">
-                <li class="flex">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                      <g id="Group_2355" data-name="Group 2355" transform="translate(-664 -956)">
-                        <circle id="Ellipse_205" data-name="Ellipse 205" cx="11" cy="11" r="11" transform="translate(664 956)" fill="#16ae74" />
-                        <g id="Iconly_Light-outline_Shield_Done" data-name="Iconly/Light-outline/Shield Done" transform="translate(669.603 963.116)">
-                          <path
-                            id="Shield_Done"
-                            data-name="Shield Done"
-                            d="M3.249,7.549l-.124-.1L.325,4.723a1.056,1.056,0,0,1,0-1.525,1.134,1.134,0,0,1,1.445-.1l.124.1L3.909,5.158,8.893.316a1.132,1.132,0,0,1,1.569,0,1.056,1.056,0,0,1,.108,1.4l-.108.122-5.767,5.6a1.134,1.134,0,0,1-1.445.1Z"
-                            transform="translate(0)"
-                            fill="#f4faee" />
-                        </g>
-                      </g>
-                    </svg>
-                  </span>
-                  <p class="mr-2">برای تغییر این متن بر روی دکمه ویرایش کلیک کنید.</p>
-                </li>
-                <li class="flex">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                      <g id="Group_2355" data-name="Group 2355" transform="translate(-664 -956)">
-                        <circle id="Ellipse_205" data-name="Ellipse 205" cx="11" cy="11" r="11" transform="translate(664 956)" fill="#16ae74" />
-                        <g id="Iconly_Light-outline_Shield_Done" data-name="Iconly/Light-outline/Shield Done" transform="translate(669.603 963.116)">
-                          <path
-                            id="Shield_Done"
-                            data-name="Shield Done"
-                            d="M3.249,7.549l-.124-.1L.325,4.723a1.056,1.056,0,0,1,0-1.525,1.134,1.134,0,0,1,1.445-.1l.124.1L3.909,5.158,8.893.316a1.132,1.132,0,0,1,1.569,0,1.056,1.056,0,0,1,.108,1.4l-.108.122-5.767,5.6a1.134,1.134,0,0,1-1.445.1Z"
-                            transform="translate(0)"
-                            fill="#f4faee" />
-                        </g>
-                      </g>
-                    </svg>
-                  </span>
-                  <p class="mr-2">برای تغییر این متن بر روی دکمه ویرایش کلیک کنید.</p>
-                </li>
-                <li class="flex">
-                  <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                      <g id="Group_2355" data-name="Group 2355" transform="translate(-664 -956)">
-                        <circle id="Ellipse_205" data-name="Ellipse 205" cx="11" cy="11" r="11" transform="translate(664 956)" fill="#16ae74" />
-                        <g id="Iconly_Light-outline_Shield_Done" data-name="Iconly/Light-outline/Shield Done" transform="translate(669.603 963.116)">
-                          <path
-                            id="Shield_Done"
-                            data-name="Shield Done"
-                            d="M3.249,7.549l-.124-.1L.325,4.723a1.056,1.056,0,0,1,0-1.525,1.134,1.134,0,0,1,1.445-.1l.124.1L3.909,5.158,8.893.316a1.132,1.132,0,0,1,1.569,0,1.056,1.056,0,0,1,.108,1.4l-.108.122-5.767,5.6a1.134,1.134,0,0,1-1.445.1Z"
-                            transform="translate(0)"
-                            fill="#f4faee" />
-                        </g>
-                      </g>
-                    </svg>
-                  </span>
-                  <p class="mr-2">برای تغییر این متن بر روی دکمه ویرایش کلیک کنید.</p>
-                </li>
-              </ul>
-            </div>
+      <section>
+        <div
+          data-aos="zoom-in"
+          data-aos-delay="350"
+          class="bg-white rounded-lg p-5 shadow-card_shadow_hover">
+          <div class="flex max-sm:flex-col gap-3 w-full">
+            <!-- FAQ Tabs -->
+            <button
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              class="tab-btn hover:bg-lightgreen2 flex flex-col shadow-card_shadow items-center text-green p-5 fill-green w-full rounded-lg"
+              id="515163">
+              <span>
+                <svg
+                  id="huge-icon_education_outline_test_tube"
+                  data-name="huge-icon/education/outline/test tube"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23.125"
+                  height="36.792"
+                  viewBox="0 0 23.125 36.792">
+                  <path
+                    id="Vector"
+                    d="M4.711,1.283V0A1.284,1.284,0,0,0,3.426,1.283Zm13.7,0H19.7A1.284,1.284,0,0,0,18.414,0ZM1.285,0a1.283,1.283,0,1,0,0,2.567ZM21.84,2.567A1.283,1.283,0,1,0,21.84,0Zm-17.13,7.7a1.283,1.283,0,1,0,0,2.567Zm13.7,2.567a1.283,1.283,0,1,0,0-2.567ZM4.711,2.567h13.7V0H4.711ZM17.13,1.283v27.38H19.7V1.283ZM6,28.663V1.283H3.426v27.38Zm5.567,5.562A5.564,5.564,0,0,1,6,28.663H3.426a8.132,8.132,0,0,0,8.137,8.128Zm5.567-5.562a5.564,5.564,0,0,1-5.567,5.562v2.567A8.132,8.132,0,0,0,19.7,28.663ZM1.285,2.567H21.84V0H1.285ZM4.711,12.834h13.7V10.267H4.711Z" />
+                </svg>
+              </span>
+              <span>زیست فناوری</span>
+            </button>
+            <button
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              class="active-tab tab-btn hover:bg-lightgreen2 flex flex-col shadow-card_shadow items-center text-green p-5 fill-green w-full rounded-lg"
+              id="515313163">
+              <span>
+                <svg
+                  id="huge-icon_education_outline_test_tube"
+                  data-name="huge-icon/education/outline/test tube"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23.125"
+                  height="36.792"
+                  viewBox="0 0 23.125 36.792">
+                  <path
+                    id="Vector"
+                    d="M4.711,1.283V0A1.284,1.284,0,0,0,3.426,1.283Zm13.7,0H19.7A1.284,1.284,0,0,0,18.414,0ZM1.285,0a1.283,1.283,0,1,0,0,2.567ZM21.84,2.567A1.283,1.283,0,1,0,21.84,0Zm-17.13,7.7a1.283,1.283,0,1,0,0,2.567Zm13.7,2.567a1.283,1.283,0,1,0,0-2.567ZM4.711,2.567h13.7V0H4.711ZM17.13,1.283v27.38H19.7V1.283ZM6,28.663V1.283H3.426v27.38Zm5.567,5.562A5.564,5.564,0,0,1,6,28.663H3.426a8.132,8.132,0,0,0,8.137,8.128Zm5.567-5.562a5.564,5.564,0,0,1-5.567,5.562v2.567A8.132,8.132,0,0,0,19.7,28.663ZM1.285,2.567H21.84V0H1.285ZM4.711,12.834h13.7V10.267H4.711Z" />
+                </svg>
+              </span>
+              <span>زیست فناوری</span>
+            </button>
+            <button
+              data-aos="zoom-in"
+              data-aos-delay="700"
+              class="tab-btn flex flex-col hover:bg-lightgreen2 shadow-card_shadow items-center text-green p-5 fill-green w-full rounded-lg"
+              id="515163">
+              <span>
+                <svg
+                  id="huge-icon_education_outline_test_tube"
+                  data-name="huge-icon/education/outline/test tube"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23.125"
+                  height="36.792"
+                  viewBox="0 0 23.125 36.792">
+                  <path
+                    id="Vector"
+                    d="M4.711,1.283V0A1.284,1.284,0,0,0,3.426,1.283Zm13.7,0H19.7A1.284,1.284,0,0,0,18.414,0ZM1.285,0a1.283,1.283,0,1,0,0,2.567ZM21.84,2.567A1.283,1.283,0,1,0,21.84,0Zm-17.13,7.7a1.283,1.283,0,1,0,0,2.567Zm13.7,2.567a1.283,1.283,0,1,0,0-2.567ZM4.711,2.567h13.7V0H4.711ZM17.13,1.283v27.38H19.7V1.283ZM6,28.663V1.283H3.426v27.38Zm5.567,5.562A5.564,5.564,0,0,1,6,28.663H3.426a8.132,8.132,0,0,0,8.137,8.128Zm5.567-5.562a5.564,5.564,0,0,1-5.567,5.562v2.567A8.132,8.132,0,0,0,19.7,28.663ZM1.285,2.567H21.84V0H1.285ZM4.711,12.834h13.7V10.267H4.711Z" />
+                </svg>
+              </span>
+              <span>زیست فناوری</span>
+            </button>
+            <button
+              data-aos="zoom-in"
+              data-aos-delay="800"
+              class="tab-btn flex flex-col hover:bg-lightgreen2 shadow-card_shadow items-center text-green p-5 fill-green w-full rounded-lg"
+              id="515163">
+              <span>
+                <svg
+                  id="huge-icon_education_outline_test_tube"
+                  data-name="huge-icon/education/outline/test tube"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23.125"
+                  height="36.792"
+                  viewBox="0 0 23.125 36.792">
+                  <path
+                    id="Vector"
+                    d="M4.711,1.283V0A1.284,1.284,0,0,0,3.426,1.283Zm13.7,0H19.7A1.284,1.284,0,0,0,18.414,0ZM1.285,0a1.283,1.283,0,1,0,0,2.567ZM21.84,2.567A1.283,1.283,0,1,0,21.84,0Zm-17.13,7.7a1.283,1.283,0,1,0,0,2.567Zm13.7,2.567a1.283,1.283,0,1,0,0-2.567ZM4.711,2.567h13.7V0H4.711ZM17.13,1.283v27.38H19.7V1.283ZM6,28.663V1.283H3.426v27.38Zm5.567,5.562A5.564,5.564,0,0,1,6,28.663H3.426a8.132,8.132,0,0,0,8.137,8.128Zm5.567-5.562a5.564,5.564,0,0,1-5.567,5.562v2.567A8.132,8.132,0,0,0,19.7,28.663ZM1.285,2.567H21.84V0H1.285ZM4.711,12.834h13.7V10.267H4.711Z" />
+                </svg>
+              </span>
+              <span>زیست فناوری</span>
+            </button>
           </div>
-          <div data-aos="fade-right" class="flex max-md:flex-col max-md:p-8 justify-end md:w-1/2 relative">
-            <div class="w-full md:w-[300px] h-max xl:w-[420px]">
-              <img class="rounded-xl w-full h-full object-cover" src="../assets/images/5282.png" alt="" />
-            </div>
-            <div
-              data-aos="fade-right"
-              data-aos-delay="350"
-              class="w-full md:w-[300px] h-max max-md:mt-4 xl:w-[420px] md:absolute md:left-44 md:top-20">
-              <img class="rounded-xl w-full h-full object-cover" src="../assets/images/56fa6d107b4130766627.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- history -->
-      <section class="my-32">
-        <div class="flex max-sm:flex-col justify-end relative items-center">
-          <div data-aos="zoom-in" class="sm:absolute z-10 right-0 w-full sm:w-[35%] h-[330px]">
-            <img class="object-cover w-full h-full rounded-lg" src="../assets/images/زیست فناوری.png" alt="" />
-          </div>
-          <div data-aos="fade-right" class="w-full sm:w-[70%] p-3 sm:p-16 lg:pr-36 bg-lightgreen2 rounded-lg">
-            <h2 class="text-[18px] font-bold">تاریخچه پژوهشگاه حوزه زیست فناوری</h2>
-            <p class="text-justify mt-4">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
-              و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
-              شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-            </p>
-            <div class="my-5">
-              <ul id="progresses">
-                <li class="my-8">
-                  <p>زیست‌فناوری یا بیوتکنولوژی</p>
-                  <div class="mt-3">
-                    <!-- progress box -->
-                    <div class="bg-silver relative overflow-hidden rounded-xl">
-                      <!-- progress fill -->
-                      <div data-progress="75" class="duration-[2s] bg-green relative w-0 h-4">
-                        <!-- progress value -->
-                        <span id="616513" class="absolute bg-lightgreen2 top-0 -left-10 text-[14px]">0%</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="my-8">
-                  <p>زیست‌فناوری یا بیوتکنولوژی</p>
-                  <div class="mt-3">
-                    <!-- progress box -->
-                    <div class="bg-silver relative overflow-hidden rounded-xl">
-                      <!-- progress fill -->
-                      <div data-progress="34" class="duration-[2s] bg-green relative w-0 h-4">
-                        <!-- progress value -->
-                        <span id="5264163" class="absolute top-0 -left-10 text-[14px]">0%</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="my-8">
-                  <p>زیست‌فناوری یا بیوتکنولوژی</p>
-                  <div class="mt-3">
-                    <!-- progress box -->
-                    <div class="bg-silver relative overflow-hidden rounded-xl">
-                      <!-- progress fill -->
-                      <div data-progress="50" class="duration-[2s] w-0 bg-green relative h-4">
-                        <!-- progress value -->
-                        <span id="5641613" class="absolute top-0 -left-10 text-[14px]">0%</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- staff -->
-      <section class="my-32 text-center relative">
-        <div class="flex flex-col">
-          <div>
-            <h2 class="text-[18px] font-bold" data-aos="fade-up">همکاران ما در حوزه زیست فناوری</h2>
-            <p class="sm:max-h-[100px] max-sm:p-2 sm:w-1/2 mx-auto" data-aos="fade-up" data-aos-delay="400">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
-              و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
-              شصت و سه درصد گذشته حال و آینده،
-            </p>
-          </div>
-          <!-- swiper -->
-          <div class="w-[80%] lg:h-[500px] mx-auto" data-aos="zoom-in" data-aos-delay="450">
-            <div class="swiper mt-10 staff-swiper w-full h-full">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide scrollbar-2px flex flex-col items-center justify-between p-3 md:p-10 w-[340px] rounded-xl">
-                  <div class="w-[80px] md:w-[150px]">
-                    <img class="rounded-full object-cover w-full h-full" src="../assets/images/avatar.png" alt="" />
-                  </div>
-                  <h2 class="text-[20px] mt-3 text-green font-bold">دکتر جواد محمدی</h2>
-                  <h3 class="text-[17px] mt-1">رئیس پژوهشگاه زیست‌ فناوری</h3>
-                  <p class="text-[12px] h-[95px] overflow-auto mt-5">
-                    فوق تخصص ریه از دانشگاه علوم پزشکی تهران؛ بورد تخصصی طب داخلی و دکترای پزشکی از دانشگاه علوم پزشکی اصفهان استاد دانشگاه علوم پزشکی
-                    بقیه‌الله(عج)
-                  </p>
+          <!-- FAQ Tabs Content -->
+          <div data-aos="zoom-out" data-aos-delay="900">
+            <div tab-data="515163" class="mt-5 hidden">
+              <button
+                class="accordion-btn w-full shadow-card_shadow hover:shadow-card_shadow_hover p-4 rounded-lg flex items-center justify-between bg-white"
+                id="5131313">
+                <div class="flex items-center">
+                  <span
+                    class="w-[40px] h-[40px] rounded-lg block bg-silver font-bold text-gray-400 text-[27px]"
+                    >؟</span
+                  >
+                  <p class="mr-3">زیست‌فناوری یا بیوتکنولوژی چیست؟</p>
                 </div>
-                <div class="swiper-slide scrollbar-2px flex flex-col items-center justify-between p-3 md:p-10 w-[340px] rounded-xl">
-                  <div class="w-[80px] md:w-[150px]">
-                    <img class="rounded-full object-cover w-full h-full" src="../assets/images/avatar.png" alt="" />
-                  </div>
-                  <h2 class="text-[20px] mt-3 text-green font-bold">دکتر جواد محمدی</h2>
-                  <h3 class="text-[17px] mt-1">رئیس پژوهشگاه زیست‌ فناوری</h3>
-                  <p class="text-[12px] h-[95px] overflow-auto mt-5">
-                    فوق تخصص ریه از دانشگاه علوم پزشکی تهران؛ بورد تخصصی طب داخلی و دکترای پزشکی از دانشگاه علوم پزشکی اصفهان استاد دانشگاه علوم پزشکی
-                    بقیه‌الله(عج)
-                  </p>
-                </div>
-                <div class="swiper-slide scrollbar-2px flex flex-col items-center justify-between p-3 md:p-10 w-[340px] rounded-xl">
-                  <div class="w-[80px] md:w-[150px]">
-                    <img class="rounded-full object-cover w-full h-full" src="../assets/images/avatar.png" alt="" />
-                  </div>
-                  <h2 class="text-[20px] mt-3 text-green font-bold">دکتر جواد محمدی</h2>
-                  <h3 class="text-[17px] mt-1">رئیس پژوهشگاه زیست‌ فناوری</h3>
-                  <p class="text-[12px] h-[95px] overflow-auto mt-5">
-                    فوق تخصص ریه از دانشگاه علوم پزشکی تهران؛ بورد تخصصی طب داخلی و دکترای پزشکی از دانشگاه علوم پزشکی اصفهان استاد دانشگاه علوم پزشکی
-                    بقیه‌الله(عج)
-                  </p>
-                </div>
+                <span
+                  type="icon"
+                  class="duration-200 stroke-gray-500"
+                  accordion-data="5131313">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8.811"
+                    height="16.121"
+                    viewBox="0 0 8.811 16.121">
+                    <g
+                      id="Iconly_Light_Arrow_-_Left_2"
+                      data-name="Iconly/Light/Arrow - Left 2"
+                      transform="translate(0.75 1.061)">
+                      <g
+                        id="Arrow_-_Left_2"
+                        data-name="Arrow - Left 2"
+                        transform="translate(7) rotate(90)">
+                        <path
+                          id="Stroke_1"
+                          data-name="Stroke 1"
+                          d="M14,0,7,7,0,0"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="1.5" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="accordion-body hidden mt-3 bg-white rounded-lg p-3 border-2 border-gray-100"
+                accordion-data="5131313"
+                type="view">
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                  تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                  کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                  آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم
+                  افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
+                  طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
+                  صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                  راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                  حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای
+                  موجود طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                  ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                  طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
+                  و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+                  و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                  کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                  جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                  برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو
+                  در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام
+                  و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان
+                  رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی
+                  سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                  گیرد.
+                </p>
               </div>
             </div>
-          </div>
+            <div tab-data="515313163" class="mt-5">
+              <button
+                class="accordion-btn w-full shadow-card_shadow hover:shadow-card_shadow_hover p-4 rounded-lg flex items-center justify-between bg-white"
+                id="515313163">
+                <div class="flex items-center">
+                  <span
+                    class="w-[40px] h-[40px] rounded-lg block bg-silver font-bold text-gray-400 text-[27px]"
+                    >؟</span
+                  >
+                  <p class="mr-3">لورم ایپسوم چیست؟</p>
+                </div>
 
-          <!-- swiper navigation -->
-          <div class="max-sm:flex p-3 gap-x-3 justify-center">
-            <span class="swiper-next sm:absolute top-1/2 right-3 duration-150 fill-lightgreen2 hover:fill-green hover:stroke-lightgreen2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" class="">
-                <g id="Iconly_Light_Arrow_-_Left_Circle" data-name="Iconly/Light/Arrow - Left Circle" transform="translate(34.25 34.25) rotate(180)">
-                  <g id="Arrow_-_Left_Circle" data-name="Arrow - Left Circle" transform="translate(33.5) rotate(90)">
-                    <path
-                      id="Stroke_1"
-                      data-name="Stroke 1"
-                      d="M0,16.75A16.75,16.75,0,1,0,16.75,0,16.75,16.75,0,0,0,0,16.75Z"
-                      transform="translate(0 0)"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="1.5" />
-                    <path
-                      id="Stroke_3"
-                      data-name="Stroke 3"
-                      d="M0,0,6.285,6.312,12.571,0"
-                      transform="translate(10.464 14.138)"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="1.5" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-            <span
-              class="swiper-prev rotate-180 sm:absolute sm:top-1/2 left-3 duration-150 fill-lightgreen2 hover:fill-green hover:stroke-lightgreen2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
-                <g id="Iconly_Light_Arrow_-_Left_Circle" data-name="Iconly/Light/Arrow - Left Circle" transform="translate(34.25 34.25) rotate(180)">
-                  <g id="Arrow_-_Left_Circle" data-name="Arrow - Left Circle" transform="translate(33.5) rotate(90)">
-                    <path
-                      id="Stroke_1"
-                      data-name="Stroke 1"
-                      d="M0,16.75A16.75,16.75,0,1,0,16.75,0,16.75,16.75,0,0,0,0,16.75Z"
-                      transform="translate(0 0)"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="1.5" />
-                    <path
-                      id="Stroke_3"
-                      data-name="Stroke 3"
-                      d="M0,0,6.285,6.312,12.571,0"
-                      transform="translate(10.464 14.138)"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-miterlimit="10"
-                      stroke-width="1.5" />
-                  </g>
-                </g>
-              </svg>
-            </span>
-          </div>
-        </div>
-      </section>
-      <!-- gallery -->
-      <section class="my-32">
-        <div class="flex max-sm:flex-col items-center gap-3 p-3">
-          <div class="flex flex-col sm:w-1/2 items-start max-sm:items-center gap-3 scrollbar-2px">
-            <h2 data-aos="fade-left" class="text-[18px] font-bold">گالری تصاویر</h2>
-            <h3 data-aos="fade-left" data-aos-delay="400" class="text-[18px] font-bold">پژوهشگاه حوزه زیست فناوری</h3>
-            <p data-aos="fade-up" data-aos-delay="500" class="text-[14px] mt-4 h-[50px] overflow-auto">
-              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
-              و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در
-              شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد
-            </p>
-            <div data-aos="fade-left" data-aos-delay="600" class="sm:self-end sm:w-1/2 w-full">
-              <img class="rounded-lg w-full h-full" src="../assets/images/56fa6d107b4130766627.png" alt="" />
-            </div>
-            <div data-aos="fade-left" data-aos-delay="600" class="w-full self-end">
-              <img class="rounded-lg w-full h-full" src="../assets/images/89789.png" alt="" />
-            </div>
-          </div>
-          <!-- images -->
-          <div class="flex flex-col sm:w-1/2 items-center gap-3">
-            <div data-aos="fade-right" data-aos-delay="600" class="w-full">
-              <img class="rounded-lg w-full h-full object-cover" src="../assets/images/Capture.png" alt="" />
-            </div>
-            <div data-aos="fade-right" data-aos-delay="600" class="w-full">
-              <img class="rounded-lg w-full h-full object-cover" src="../assets/images/2525Capture.png" alt="" />
+                <span
+                  type="icon"
+                  class="duration-200 stroke-gray-500"
+                  accordion-data="515313163">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="8.811"
+                    height="16.121"
+                    viewBox="0 0 8.811 16.121">
+                    <g
+                      id="Iconly_Light_Arrow_-_Left_2"
+                      data-name="Iconly/Light/Arrow - Left 2"
+                      transform="translate(0.75 1.061)">
+                      <g
+                        id="Arrow_-_Left_2"
+                        data-name="Arrow - Left 2"
+                        transform="translate(7) rotate(90)">
+                        <path
+                          id="Stroke_1"
+                          data-name="Stroke 1"
+                          d="M14,0,7,7,0,0"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="1.5" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="accordion-body hidden mt-3 bg-white rounded-lg p-3 border-2 border-gray-100"
+                accordion-data="515313163"
+                type="view">
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+                  تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای
+                  کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و
+                  آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم
+                  افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
+                  طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این
+                  صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+                  راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+                  حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای
+                  موجود طراحی اساسا مورد استفاده قرار گیرد.لورم ایپسوم متن
+                  ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+                  طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
+                  و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+                  و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد،
+                  کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
+                  جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را
+                  برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو
+                  در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام
+                  و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان
+                  رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی
+                  سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
+                  گیرد.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -468,24 +440,42 @@
     </div>
     <!-- Footer -->
     <footer class="bg-lightgreen2 mt-32">
-      <section class="xl:container grid grid-cols-12 max-md:gap-y-8 py-8 max-xl:px-6">
-        <section class="col-span-12 md:col-span-3 flex flex-col max-sm:items-center justify-evenly text-[12px] scrollbar-2px">
+      <section
+        class="xl:container grid grid-cols-12 max-md:gap-y-8 py-8 max-xl:px-6">
+        <section
+          class="col-span-12 md:col-span-3 flex flex-col max-sm:items-center justify-evenly text-[12px] scrollbar-2px">
           <div>
-            <a class="inline-block" href="./index.html"><img src="../assets/images/logo_theme_4.png" alt="" /></a>
+            <a class="inline-block" href="./index.html"
+              ><img src="../assets/images/logo_theme_4.png" alt=""
+            /></a>
           </div>
-          <p class="max-h-[70px] text-justify overflow-x-hidden overflow-y-auto">
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
-            سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت
-            و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص
-            طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت
-            تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
-            گیرد.
+          <p
+            class="max-h-[70px] text-justify overflow-x-hidden overflow-y-auto">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای
+            زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و
+            متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان
+            رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد
+            کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
+            راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+            حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود
+            طراحی اساسا مورد استفاده قرار گیرد.
           </p>
           <div class="flex flex-col justify-evenly">
             <div class="flex items-center mt-2">
-              <span class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16.857" height="19.836" viewBox="0 0 16.857 19.836">
-                  <g id="Iconly_Light_Location" data-name="Iconly/Light/Location" transform="translate(0.75 0.75)">
+              <span
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16.857"
+                  height="19.836"
+                  viewBox="0 0 16.857 19.836">
+                  <g
+                    id="Iconly_Light_Location"
+                    data-name="Iconly/Light/Location"
+                    transform="translate(0.75 0.75)">
                     <g id="Location">
                       <path
                         id="Path_33958"
@@ -511,12 +501,22 @@
                   </g>
                 </svg>
               </span>
-              <span class="mr-2">آدرس: تهران . خیابان ملاصدرا . خیابان شیخ بهایی شمالی</span>
+              <span class="mr-2"
+                >آدرس: تهران . خیابان ملاصدرا . خیابان شیخ بهایی شمالی</span
+              >
             </div>
             <div class="flex items-center mt-2">
-              <span class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20.505" height="20.508" viewBox="0 0 20.505 20.508">
-                  <g id="Iconly_Light_Call" data-name="Iconly/Light/Call" transform="translate(0.754 0.752)">
+              <span
+                class="stroke-white w-[35px] h-[35px] flex items-center justify-center rounded-lg bg-green">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20.505"
+                  height="20.508"
+                  viewBox="0 0 20.505 20.508">
+                  <g
+                    id="Iconly_Light_Call"
+                    data-name="Iconly/Light/Call"
+                    transform="translate(0.754 0.752)">
                     <g id="Call">
                       <path
                         id="Call-2"
@@ -532,11 +532,14 @@
                   </g>
                 </svg>
               </span>
-              <span class="mr-2">تلفن: 88610997 . 88610747 . 41098400 . 41098410</span>
+              <span class="mr-2"
+                >تلفن: 88610997 . 88610747 . 41098400 . 41098410</span
+              >
             </div>
           </div>
         </section>
-        <section class="col-span-12 md:col-span-6 flex justify-evenly max-md:text-center">
+        <section
+          class="col-span-12 md:col-span-6 flex justify-evenly max-md:text-center">
           <ul class="footer-list flex flex-col justify-evenly">
             <li class="text-[18px] font-bold">لینک های دسترسی</li>
             <li class="footer-list-item">
@@ -595,15 +598,16 @@
         <section class="col-span-12 md:col-span-3">
           <!-- social networks links -->
           <p class="text-[18px] font-bold text-center">
-            برگزیده خلاق معاونت علمی
-            <br />
+            برگزیده خلاق معاونت علمی<br />
             فناوری ریاست جمهوری
           </p>
           <div class="flex justify-center">
-            <div class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]">
+            <div
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]">
               <img class="object-cover w-full h-full" src="" alt="" />
             </div>
-            <div class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]">
+            <div
+              class="m-2 rounded-xl border-2 border-green w-[109px] h-[150px]">
               <img class="object-cover w-full h-full" src="" alt="" />
             </div>
           </div>
@@ -611,11 +615,17 @@
       </section>
       <!-- footer copy right text -->
       <div class="bg-green py-4">
-        <div class="xl:container max-xl:px-6 flex max-sm:flex-col justify-between items-center">
-          <p class="text-white max-sm:text-center">تمامی حقوق متعلق به این سایت و برای معاونت علمی و فناوری ریاست جمهوری محفوظ می باشد.</p>
+        <div
+          class="xl:container max-xl:px-6 flex max-sm:flex-col justify-between items-center">
+          <p class="text-white max-sm:text-center">
+            تمامی حقوق متعلق به این سایت و برای معاونت علمی و فناوری ریاست
+            جمهوری محفوظ می باشد.
+          </p>
           <ul class="flex justify-between max-sm:mt-2">
             <li class="mx-1">
-              <a class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green" href="">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
+                href="">
                 <span>
                   <svg
                     class="fill-green"
@@ -637,19 +647,33 @@
               </a>
             </li>
             <li class="mx-1">
-              <a class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green" href="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="19.114" height="19.114" viewBox="0 0 19.114 19.114">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md fill-green"
+                href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19.114"
+                  height="19.114"
+                  viewBox="0 0 19.114 19.114">
                   <path
                     id="Icon_simple-instagram"
                     data-name="Icon simple-instagram"
-                    d="M9.557,0c-2.6,0-2.92.012-3.94.057A7.047,7.047,0,0,0,3.3.5,4.68,4.68,0,0,0,1.6,1.6,4.663,4.663,0,0,0,.5,3.3a7.027,7.027,0,0,0-.444,2.32C.01,6.637,0,6.961,0,9.557s.012,2.92.057,3.94A7.052,7.052,0,0,0,.5,15.817,4.687,4.687,0,0,0,1.6,17.51a4.673,4.673,0,0,0,1.693,1.1,7.056,7.056,0,0,0,2.32.444c1.019.048,1.344.057,3.94.057s2.92-.012,3.94-.057a7.072,7.072,0,0,0,2.32-.444,4.884,4.884,0,0,0,2.8-2.8,7.052,7.052,0,0,0,.444-2.32c.048-1.019.057-1.344.057-3.94s-.012-2.92-.057-3.94a7.068,7.068,0,0,0-.444-2.32A4.691,4.691,0,0,0,17.51,1.6,4.657,4.657,0,0,0,15.817.5,7.031,7.031,0,0,0,13.5.057C12.478.01,12.153,0,9.557,0Zm0,1.72c2.551,0,2.855.013,3.863.057a5.266,5.266,0,0,1,1.774.331,3.145,3.145,0,0,1,1.814,1.813,5.277,5.277,0,0,1,.329,1.774c.045,1.008.056,1.311.056,3.863s-.012,2.855-.059,3.863A5.378,5.378,0,0,1,17,15.193a3.035,3.035,0,0,1-.716,1.1,2.982,2.982,0,0,1-1.1.714,5.315,5.315,0,0,1-1.78.329c-1.015.045-1.313.056-3.87.056s-2.856-.012-3.87-.059A5.419,5.419,0,0,1,3.883,17a2.96,2.96,0,0,1-1.1-.716,2.9,2.9,0,0,1-.717-1.1,5.424,5.424,0,0,1-.334-1.78c-.036-1-.049-1.313-.049-3.858s.013-2.856.049-3.871a5.418,5.418,0,0,1,.334-1.779,2.833,2.833,0,0,1,.717-1.1,2.827,2.827,0,0,1,1.1-.715,5.29,5.29,0,0,1,1.769-.335C6.667,1.708,6.966,1.7,9.521,1.7l.036.024Zm0,2.929a4.908,4.908,0,1,0,4.908,4.908A4.907,4.907,0,0,0,9.557,4.65Zm0,8.093a3.186,3.186,0,1,1,3.186-3.186A3.185,3.185,0,0,1,9.557,12.743Zm6.249-8.287A1.147,1.147,0,1,1,14.659,3.31,1.148,1.148,0,0,1,15.806,4.456Z" />
-                </svg>
-              </a>
+                    d="M9.557,0c-2.6,0-2.92.012-3.94.057A7.047,7.047,0,0,0,3.3.5,4.68,4.68,0,0,0,1.6,1.6,4.663,4.663,0,0,0,.5,3.3a7.027,7.027,0,0,0-.444,2.32C.01,6.637,0,6.961,0,9.557s.012,2.92.057,3.94A7.052,7.052,0,0,0,.5,15.817,4.687,4.687,0,0,0,1.6,17.51a4.673,4.673,0,0,0,1.693,1.1,7.056,7.056,0,0,0,2.32.444c1.019.048,1.344.057,3.94.057s2.92-.012,3.94-.057a7.072,7.072,0,0,0,2.32-.444,4.884,4.884,0,0,0,2.8-2.8,7.052,7.052,0,0,0,.444-2.32c.048-1.019.057-1.344.057-3.94s-.012-2.92-.057-3.94a7.068,7.068,0,0,0-.444-2.32A4.691,4.691,0,0,0,17.51,1.6,4.657,4.657,0,0,0,15.817.5,7.031,7.031,0,0,0,13.5.057C12.478.01,12.153,0,9.557,0Zm0,1.72c2.551,0,2.855.013,3.863.057a5.266,5.266,0,0,1,1.774.331,3.145,3.145,0,0,1,1.814,1.813,5.277,5.277,0,0,1,.329,1.774c.045,1.008.056,1.311.056,3.863s-.012,2.855-.059,3.863A5.378,5.378,0,0,1,17,15.193a3.035,3.035,0,0,1-.716,1.1,2.982,2.982,0,0,1-1.1.714,5.315,5.315,0,0,1-1.78.329c-1.015.045-1.313.056-3.87.056s-2.856-.012-3.87-.059A5.419,5.419,0,0,1,3.883,17a2.96,2.96,0,0,1-1.1-.716,2.9,2.9,0,0,1-.717-1.1,5.424,5.424,0,0,1-.334-1.78c-.036-1-.049-1.313-.049-3.858s.013-2.856.049-3.871a5.418,5.418,0,0,1,.334-1.779,2.833,2.833,0,0,1,.717-1.1,2.827,2.827,0,0,1,1.1-.715,5.29,5.29,0,0,1,1.769-.335C6.667,1.708,6.966,1.7,9.521,1.7l.036.024Zm0,2.929a4.908,4.908,0,1,0,4.908,4.908A4.907,4.907,0,0,0,9.557,4.65Zm0,8.093a3.186,3.186,0,1,1,3.186-3.186A3.185,3.185,0,0,1,9.557,12.743Zm6.249-8.287A1.147,1.147,0,1,1,14.659,3.31,1.148,1.148,0,0,1,15.806,4.456Z" /></svg
+              ></a>
             </li>
             <li class="mx-1">
-              <a class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green" href="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21.385" height="15.354" viewBox="0 0 21.385 15.354">
-                  <g id="Icon_feather-youtube" data-name="Icon feather-youtube" transform="translate(0.55 0.55)">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
+                href=""
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21.385"
+                  height="15.354"
+                  viewBox="0 0 21.385 15.354">
+                  <g
+                    id="Icon_feather-youtube"
+                    data-name="Icon feather-youtube"
+                    transform="translate(0.55 0.55)">
                     <path
                       id="Path_79"
                       data-name="Path 79"
@@ -668,14 +692,22 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="1.1" />
-                  </g>
-                </svg>
-              </a>
+                  </g></svg
+              ></a>
             </li>
             <li class="mx-1">
-              <a class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green" href="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18.247" height="18.247" viewBox="0 0 18.247 18.247">
-                  <g id="_1860492_whatsapp_social_media_icon" data-name="1860492_whatsapp_social media_icon" transform="translate(0.625 0.625)">
+              <a
+                class="bg-lightgreen2 w-[35px] h-[35px] flex justify-center items-center rounded-md stroke-green"
+                href="">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18.247"
+                  height="18.247"
+                  viewBox="0 0 18.247 18.247">
+                  <g
+                    id="_1860492_whatsapp_social_media_icon"
+                    data-name="1860492_whatsapp_social media_icon"
+                    transform="translate(0.625 0.625)">
                     <path
                       id="Path_100"
                       data-name="Path 100"
@@ -696,60 +728,18 @@
                       stroke-linejoin="round"
                       stroke-miterlimit="10"
                       stroke-width="1.25" />
-                  </g>
-                </svg>
-              </a>
+                  </g></svg
+              ></a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
+
     <!-- Js files -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/swiper-bundle.min.js"></script>
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script>
-      let staff_swiper = new Swiper(".staff-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        centeredSlides: true,
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 3,
-          },
-          640: {
-            slidesPerView: 2,
-          },
-        },
-        autoplay: true,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      });
-      $("document").ready(() => {
-        $(".cat-item").click((e) => {
-          let cat_data = $(e.currentTarget).attr("cat-data");
-          $(".child-cats").each((i, ch) => {
-            if ($(ch).attr("cat-data") == cat_data) {
-              $(ch).slideToggle();
-            }
-          });
-        });
-
-        const progress_observer = new window.IntersectionObserver(([entry, num]) => {
-          $("[data-progress]").each((i, e) => {
-            let data = Number(e.getAttribute("data-progress"));
-            counter(0, data, 30, "#" + e.children[0].id, "%");
-            $(e).width(data + "%");
-          });
-        });
-        progress_observer.observe($("#progresses").get(0));
-      });
-    </script>
   </body>
 </html>

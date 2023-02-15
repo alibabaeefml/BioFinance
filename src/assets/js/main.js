@@ -4,7 +4,11 @@ $("document").ready(() => {
   } catch (e) {
     console.error(e);
   }
-
+   // center absolute elements
+   $("[center]").each((i, e) => {
+    
+    $(e).css('left', `calc(50% - ${$(e).width() / 2}px)` );
+  });
   //  on scroll
   if ($(window).scrollTop() > 80) {
     if (!$(".navbar-div.scrolled").length) {

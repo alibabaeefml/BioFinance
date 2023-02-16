@@ -6,10 +6,13 @@ $("document").ready(() => {
   }
    // center absolute elements
    $("[center]").each((i, e) => {
-    
     $(e).css('left', `calc(50% - ${$(e).width() / 2}px)` );
   });
-  //  on scroll
+
+  // justify p tags
+  $('p').addClass('text-justify')
+
+  // nav onscroll
   if ($(window).scrollTop() > 80) {
     if (!$(".navbar-div.scrolled").length) {
       $(".navbar-div").addClass("scrolled");

@@ -24,6 +24,9 @@
 
   .rule {
     transition: 0.5s;
+    width: 260px;
+    height:270px;
+    margin-inline: auto;
   }
 
   .swiper-slide:not(.swiper-slide-active) .rule {
@@ -44,4 +47,11 @@
   .call-swiper .swiper-slide-active a{
     color: white;
     background-color: var(--green);
+  }
+  @media screen and (max-width:640px) {
+    [video-container]{
+      -webkit-mask:unset!important;
+      padding-block: 10px!important;
+      }
+     
   }

@@ -9,8 +9,7 @@ $("document").ready(() => {
     $(e).css('left', `calc(50% - ${$(e).width() / 2}px)` );
   });
 
-  // justify p tags
-  $('p').addClass('text-justify')
+  
 
   // nav onscroll
   if ($(window).scrollTop() > 80) {

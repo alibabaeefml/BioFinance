@@ -290,7 +290,10 @@
                       <!-- progress fill -->
                       <div data-progress="75" class="duration-[2s] bg-green relative w-0 h-4">
                         <!-- progress value -->
-                        <span id="616513" class="absolute bg-lightgreen2 top-0 -left-10 text-[14px]">0%</span>
+                        <span class="absolute top-0 -left-10 text-[14px]">
+                          <span data-count data-count-to="75" data-count-step="2"></span>
+                          %
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -303,7 +306,10 @@
                       <!-- progress fill -->
                       <div data-progress="34" class="duration-[2s] bg-green relative w-0 h-4">
                         <!-- progress value -->
-                        <span id="5264163" class="absolute top-0 -left-10 text-[14px]">0%</span>
+                        <span class="absolute top-0 -left-10 text-[14px]">
+                          <span data-count data-count-to="34"></span>
+                          %
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -316,7 +322,10 @@
                       <!-- progress fill -->
                       <div data-progress="50" class="duration-[2s] w-0 bg-green relative h-4">
                         <!-- progress value -->
-                        <span id="5641613" class="absolute top-0 -left-10 text-[14px]">0%</span>
+                        <span class="absolute top-0 -left-10 text-[14px]">
+                          <span data-count data-count-to="50"></span>
+                          %
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -741,11 +750,17 @@
           });
         });
 
-        const progress_observer = new window.IntersectionObserver(([entry, num]) => {
+        const progress_observer = new window.IntersectionObserver((entries, observer) => {
+          let isVisible = entries[0].intersectionRatio;
+          
           $("[data-progress]").each((i, e) => {
-            let data = Number(e.getAttribute("data-progress"));
-            counter(0, data, 30, "#" + e.children[0].id, "%");
-            $(e).width(data + "%");
+            const percentage = $(e).find("[data-count]").attr("data-count-to");
+            counter(); 
+            $(e).width(percentage + "%");
+            if (isVisible == 0 ) {
+              $(e).width(0 + "%");
+              $('[data-count]').text(0)
+            }
           });
         });
         progress_observer.observe($("#progresses").get(0));

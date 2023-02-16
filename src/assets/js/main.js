@@ -4,12 +4,12 @@ $("document").ready(() => {
   } catch (e) {
     console.error(e);
   }
-   // center absolute elements
-   $("[center]").each((i, e) => {
-    $(e).css('left', `calc(50% - ${$(e).width() / 2}px)` );
+  // center absolute elements
+  $("[center]").each((i, e) => {
+    $(e).css("left", `calc(50% - ${$(e).width() / 2}px)`);
   });
 
-  
+  $("[data-aos]").attr("data-aos-duration", "1000");
 
   // nav onscroll
   if ($(window).scrollTop() > 80) {

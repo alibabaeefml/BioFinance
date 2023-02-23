@@ -1,5 +1,19 @@
+
+@keyframes map_loading {
+  from{
+  scale: 1.05;
+  opacity: 0;
+  }
+  to{
+  scale: 1;
+  opacity: 1;
+  }
+}
+
+
 .thumb button {
-  width: 100%;
+  width: max-content;
+  min-width: 100%;
   user-select: none;
   background-color: white;
   padding: 10px;
@@ -80,10 +94,16 @@ margin-left: 20px;
   opacity: 1;
   pointer-events:unset;
 }
-.article-thumbs .swiper-slide{
-width: max-content!important;
+.article-thumbs{
+background-color: var(--lightgreen2);
+border-radius: 20px;
+padding: 10px;
 }
-.article-thumbs .swiper-slide-active{
+.article-thumbs .swiper-slide button{
+width: max-content;
+font-size: 14px;
+}
+.article-thumbs .swiper-slide-active,.article-thumbs .swiper-slide:hover{
 color: var(--green);
 background-color: var(--lightgreen2);
 }

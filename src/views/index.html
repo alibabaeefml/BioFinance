@@ -54,7 +54,7 @@
     </button>
     <!-- Nav Bar -->
     <div
-      class="navbar-div z-10 fixed w-full top-0 backdrop-blur-sm max-sm:bg-black/40 text-white max-sm:text-white p-[0px_1.5rem_13px_1.5rem] max-sm:fixed max-sm:top-0 max-sm:left-0 max-sm:h-full max-sm:hidden">
+      class="navbar-div z-20 fixed w-full top-0 backdrop-blur-sm max-sm:bg-black/40 text-white max-sm:text-white p-[0px_1.5rem_13px_1.5rem] max-sm:fixed max-sm:top-0 max-sm:left-0 max-sm:h-full max-sm:hidden">
       <nav
         data-aos="fade-up"
         class="xl:container max-lg:text-[12px] duration-300 p-5 flex max-md:flex-col max-sm:flex-col max-sm:fixed max-sm:top-[calc(50%_-_233px)] max-sm:left-[calc(50%_-_160px)] justify-between items-center pt-3">
@@ -268,7 +268,7 @@
           </svg>
         </span>
         <div class="flex max-xl:flex-col justify-between items-center">
-          <div class="flex flex-col gap-y-2 p-10">
+          <div class="flex flex-col gap-y-2 p-10" data-aos="fade-left">
             <h2 class="text-green text-[32px]">ستاد توسعه زیست فناوری</h2>
             <h1 class="font-bold text-[42px]">ثمره تلاش ما در این مدت دیدنیست!</h1>
             <p class="sm:w-1/2">
@@ -303,7 +303,7 @@
               </svg>
             </span>
           </div>
-          <div class="stats flex max-sm:flex-col sm:gap-x-3 max-sm:gap-y-5 p-5">
+          <div class="stats flex max-sm:flex-col sm:gap-x-3 max-sm:gap-y-5 p-5" data-aos="fade-right">
             <div class="flex flex-col gap-y-3 max-sm:gap-y-5">
               <div class="duration-500 stat active stroke-green bg-lightgreen2 p-5 rounded-xl flex items-center">
                 <span class="fill-none w-10">
@@ -382,7 +382,7 @@
       <section class="mt-16" map>
         <div>
           <!-- title -->
-          <div class="scrollbar-2px xl:w-1/3 mx-auto p-10 text-center">
+          <div data-aos="fade-up" class="scrollbar-2px xl:w-1/3 mx-auto p-10 text-center">
             <h1 class="text-[24px] font-bold">حوزه های زیست فناوری</h1>
             <p class="mt-5">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
@@ -394,7 +394,7 @@
             <span class="flex justify-center stroke-none">
               <!-- map data -->
               <div>
-                <div class="absolute shadow">
+                <div class="absolute ">
                   <div class="relative flex flex-col items-center">
                     <span class="font-bold text-[36px] absolute -top-10" data-count="as" data-count-from="0" data-count-to="80">0</span>
                     <span class="mt-2 text-[12px] p-3 backdrop-blur-5 rounded-md bg-white/40">قاره آسیا</span>
@@ -404,7 +404,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="absolute shadow">
+                <div class="absolute ">
                   <div class="relative flex flex-col items-center">
                     <span class="font-bold text-[36px] absolute -top-10" data-count="eu" data-count-from="0" data-count-to="230">0</span>
                     <span class="mt-2 text-[12px] p-3 backdrop-blur-5 rounded-md bg-white/40">قاره اروپا</span>
@@ -414,7 +414,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="absolute shadow">
+                <div class="absolute ">
                   <div class="relative flex flex-col items-center">
                     <span class="font-bold text-[36px] absolute -top-10" data-count="af" data-count-from="0" data-count-to="85">0</span>
                     <span class="mt-2 text-[12px] p-3 backdrop-blur-5 rounded-md bg-white/40">قاره آفریقا</span>
@@ -424,7 +424,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="absolute shadow">
+                <div class="absolute ">
                   <div class="relative flex flex-col items-center">
                     <span class="font-bold text-[36px] absolute -top-10" data-count="au" data-count-from="0" data-count-to="120">0</span>
                     <span class="mt-2 text-[12px] p-3 backdrop-blur-5 rounded-md bg-white/40">قاره استرالیا</span>
@@ -434,7 +434,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="absolute shadow">
+                <div class="absolute ">
                   <div class="relative flex flex-col items-center">
                     <span class="font-bold text-[36px] absolute -top-10" data-count="us">0</span>
                     <span class="mt-2 text-[12px] p-3 backdrop-blur-5 rounded-md bg-white/40">قاره آمریکا</span>
@@ -702,7 +702,7 @@
             </span>
           </div>
           <!-- map data thumbs -->
-          <div class="xl:container relative">
+          <div class="xl:container relative" data-aos="zoom-in">
             <div class="swiper w-[90%] p-5 map-thumbs">
               <div class="swiper-wrapper">
                 <div class="swiper-slide thumb">
@@ -957,8 +957,8 @@
           <span class="absolute -top-24 left-0 max-h-[400px] w-full z-10">
             <img class="w-full h-full object-cover select-none" src="../assets/images/65161.png" alt="" />
           </span>
-          <div class="flex gap-3 max-xl:flex-col items-center absolute top-0 right-0 z-10 p-5 xl:p-10">
-            <div class="scrollbar-2px xl:w-1/2">
+          <div class="flex gap-3 max-xl:flex-col items-center absolute top-0 right-0 z-10 p-5 xl:p-10" >
+            <div class="scrollbar-2px xl:w-1/2" data-aos="fade-left">
               <h1 class="text-[24px] font-bold">ابزارهای تامین مالی</h1>
               <p class="text-[14px] sm:h-[160px] overflow-hidden">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
@@ -970,8 +970,8 @@
               </p>
             </div>
             <!-- tools tiles -->
-            <div class="xl:w-1/2 max-sm:p-5 text-white flex max-xl:justify-center flex-wrap gap-3">
-              <div class="relative w-full duration-300 sm:w-[300px] hover:p-2 group h-[190px] p-5 rounded-xl flex">
+            <div class="xl:w-1/2 max-sm:p-5 text-white flex max-xl:justify-center flex-wrap gap-3" >
+              <div class="relative w-full duration-300 sm:w-[300px] hover:p-2 group h-[190px] p-5 rounded-xl flex" data-aos="zoom-in" >
                 <div
                   class="bg-white/20 duration-300 backdrop-blur-md group-hover:bg-transparent group-hover:backdrop-blur-0 rounded-xl flex flex-col items-center gap-1 p-3">
                   <span class="stroke-white fill-none">
@@ -997,7 +997,7 @@
                   src="../assets/images/78547.png"
                   alt="" />
               </div>
-              <div class="relative w-full duration-300 sm:w-[300px] hover:p-2 group h-[190px] p-5 rounded-xl flex">
+              <div class="relative w-full duration-300 sm:w-[300px] hover:p-2 group h-[190px] p-5 rounded-xl flex" data-aos="zoom-in" data-aos-delay="500">
                 <div
                   class="bg-white/20 duration-300 backdrop-blur-md group-hover:bg-transparent group-hover:backdrop-blur-0 rounded-xl flex flex-col items-center gap-1 p-3">
                   <span class="stroke-white fill-none">
@@ -1023,7 +1023,7 @@
                   src="../assets/images/2525Capture.png"
                   alt="" />
               </div>
-              <div class="relative w-full duration-300 sm:w-[300px] hover:p-2 group h-[190px] p-5 rounded-xl flex">
+              <div class="relative w-full duration-300 sm:w-[300px] hover:p-2 group h-[190px] p-5 rounded-xl flex" data-aos="zoom-in" data-aos-delay="600">
                 <div
                   class="bg-white/20 duration-300 backdrop-blur-md group-hover:bg-transparent group-hover:backdrop-blur-0 rounded-xl flex flex-col items-center gap-1 p-3">
                   <span class="stroke-white fill-none">
@@ -1046,7 +1046,7 @@
                 </div>
                 <img class="absolute -z-10 top-0 left-0 object-cover w-full h-full brightness-50 rounded-xl" src="../assets/images/gen.png" alt="" />
               </div>
-              <div class="relative w-full duration-300 sm:w-[300px] hover:p-2 group h-[190px] p-5 rounded-xl flex">
+              <div class="relative w-full duration-300 sm:w-[300px] hover:p-2 group h-[190px] p-5 rounded-xl flex" data-aos="zoom-in" data-aos-delay="700">
                 <div
                   class="bg-white/20 duration-300 backdrop-blur-md group-hover:bg-transparent group-hover:backdrop-blur-0 rounded-xl flex flex-col items-center gap-1 p-3">
                   <span class="stroke-white fill-none">
@@ -1079,7 +1079,7 @@
       <!-- biofinance calls -->
       <section class="mt-16">
         <div class="xl:container relative grid grid-cols-12 gap-3 items-center p-10 rounded-tr-3xl bg-lightgreen2">
-          <div class="col-span-3 max-sm:col-span-12">
+          <div class="col-span-3 max-sm:col-span-12" data-aos="fade-left">
             <h1 class="text-[18px] font-bold">فراخوان های حوزه زیست فناوری</h1>
             <p class="h-14 overflow-hidden text-[12px]">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
@@ -1091,13 +1091,11 @@
             </p>
           </div>
 
-          <div class="col-span-9 max-sm:col-span-12">
+          <div class="col-span-9 max-sm:col-span-12" data-aos="fade-right">
             <div class="swiper call-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide p-3">
-                  <div
-                    class="w-[270px] h-[360px] mx-auto relative rounded-xl  flex flex-col items-center shadow-md"
-                    >
+                  <div class="w-[270px] h-[360px] mx-auto relative rounded-xl flex flex-col items-center shadow-md">
                     <span class="text-[12px] absolute top-3 right-3 bg-white70 p-1 rounded-md" title>فراخوان حمایت از حوزه بذر و نهال</span>
 
                     <h1 class="p-5 text-white text-[27px] w-[80%] text-center opacity-0" title-active>فراخوان حمایت از حوزه بذر و نهال</h1>
@@ -1111,9 +1109,7 @@
                   </div>
                 </div>
                 <div class="swiper-slide p-3">
-                  <div
-                    class="w-[270px] h-[360px] mx-auto relative rounded-xl  flex flex-col items-center shadow-md"
-                    >
+                  <div class="w-[270px] h-[360px] mx-auto relative rounded-xl flex flex-col items-center shadow-md">
                     <span class="text-[12px] absolute top-3 right-3 bg-white70 p-1 rounded-md duration-200" title>
                       فراخوان حمایت از حوزه بذر و نهال
                     </span>
@@ -1129,9 +1125,7 @@
                   </div>
                 </div>
                 <div class="swiper-slide p-3">
-                  <div
-                    class="w-[270px] h-[360px] mx-auto relative rounded-xl  flex flex-col items-center shadow-md"
-                    >
+                  <div class="w-[270px] h-[360px] mx-auto relative rounded-xl flex flex-col items-center shadow-md">
                     <span class="text-[12px] absolute top-3 right-3 bg-white70 p-1 rounded-md" title>فراخوان حمایت از حوزه بذر و نهال</span>
 
                     <h1 class="p-5 text-white text-[27px] w-[80%] text-center opacity-0" title-active>فراخوان حمایت از حوزه بذر و نهال</h1>
@@ -1216,9 +1210,14 @@
       <section class="mt-16">
         <div
           class="bg-lightgreen2 xl:container px-5 md:px-20 py-36 flex max-sm:flex-col items-center gap-3"
-          style="-webkit-mask: url(../assets/images/video_mask6351355.png); -webkit-mask-repeat: no-repeat"
+          style="
+            -webkit-mask: url(../assets/images/video_mask.png);
+            -webkit-mask-repeat: no-repeat;
+            mask: url(../assets/images/video_mask.png);
+            mask-repeat: no-repeat;
+          "
           video-container>
-          <div class="sm:w-1/2">
+          <div class="sm:w-1/2" data-aos="fade-left">
             <h1 class="text-[32px] font-bold">عنوان ویدیو</h1>
             <p class="h-[211px] overflow-hidden mt-5">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون
@@ -1234,7 +1233,7 @@
               طراحی اساسا مورد استفاده قرار گیرد.
             </p>
           </div>
-          <div class="sm:w-1/2">
+          <div class="sm:w-1/2" data-aos="fade-right">
             <div class="">
               <video
                 class="object-cover w-full h-full rounded-2xl"
@@ -1248,8 +1247,8 @@
       <!-- recent news -->
       <section class="mt-16">
         <div class="xl:container flex max-sm:flex-col p-5 items-center gap-3">
-          <div class="sm:w-1/3 flex flex-col items-center">
-            <div>
+          <div class="sm:w-1/3 flex flex-col items-center" data-aos="fade-left">
+            <div >
               <h1 class="text-[24px] font-bold">آخرین اخبار حوزه زیست فناوری</h1>
               <p class="mt-5 text-[16px] h-[146px] overflow-hidden">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
@@ -1257,7 +1256,7 @@
                 زیادی در شصت و سه درصد گذشته حال و آینده
               </p>
             </div>
-            <div class="flex flex-wrap gap-3 text-[14px] max-sm:justify-center">
+            <div  class="flex flex-wrap gap-3 text-[14px] max-sm:justify-center">
               <a href="" class="sm:w-fit px-6 py-1 duration-200 text-green border-green border-2 rounded-md hover:bg-green hover:text-lightgreen2">
                 بیوتکنولوژی
               </a>
@@ -1276,8 +1275,8 @@
             </div>
           </div>
           <!-- swiper -->
-          <div class="w-full sm:w-2/3 text-center">
-            <div class="swiper top-news">
+          <div  class="w-full sm:w-2/3 text-center">
+            <div class="swiper top-news" data-aos="fade-right">
               <div class="swiper-wrapper">
                 <div class="swiper-slide p-3">
                   <a href="">
@@ -1329,7 +1328,7 @@
                 </div>
               </div>
             </div>
-            <div class="swiper bottom-news">
+            <div class="swiper bottom-news" data-aos="fade-left">
               <div class="swiper-wrapper">
                 <div class="swiper-slide p-3">
                   <a href="">
@@ -1448,18 +1447,27 @@
       <!-- Artiles -->
       <section class="mt-16">
         <div class="xl:container p-5">
-          <h1 class="text-[24px] font-bold text-center">مقالات حوزه زیست فناوری</h1>
-          <div class="swiper w-[70%] article-thumbs mt-10">
-            <div class="swiper-wrapper  rounded-full text-center">
-              <button class="swiper-slide p-3 bg-white rounded-full">زیست فناوری کشاورزی</button>
-              <button class="swiper-slide p-3 bg-white rounded-full">صنایع کشاورزی دارویی</button>
-              <button class="swiper-slide p-3 bg-white rounded-full">زیست فناوری دارویی</button>
-              <button class="swiper-slide p-3 bg-white rounded-full">زیست فناوری غذایی</button>
-              <button class="swiper-slide p-3 bg-white rounded-full">زیست فناوری غذایی</button>
-
+          <h1 class="text-[24px] font-bold text-center" data-aos="fade-up">مقالات حوزه زیست فناوری</h1>
+          <div class="swiper w-4/6 article-thumbs mt-10" data-aos="fade-down">
+            <div class="swiper-wrapper rounded-full text-center">
+              <div class="swiper-slide">
+                <button class="p-3 bg-white rounded-full">زیست فناوری کشاورزی</button>
+              </div>
+              <div class="swiper-slide">
+                <button class="p-3 bg-white rounded-full">زیست فناوری کشاورزی</button>
+              </div>
+              <div class="swiper-slide">
+                <button class="p-3 bg-white rounded-full">زیست فناوری کشاورزی</button>
+              </div>
+              <div class="swiper-slide">
+                <button class="p-3 bg-white rounded-full">زیست فناوری کشاورزی</button>
+              </div>
+              <div class="swiper-slide">
+                <button class="p-3 bg-white rounded-full">زیست فناوری کشاورزی</button>
+              </div>
             </div>
           </div>
-          <div class="swiper w-[70%] relative article-swiper mt-10">
+          <div class="swiper relative article-swiper mt-10" data-aos="zoom-in">
             <div class="swiper-wrapper">
               <div class="swiper-slide p-3">
                 <div class="article text-white relative bg-cover rounded-xl overflow-hidden">
@@ -1666,30 +1674,46 @@
                 </div>
               </div>
             </div>
-            <div class="flex items-center justify-between p-5">
+            <div class="sm:absolute top-[40%] z-10 flex items-center sm:justify-between justify-center gap-3 p-5 w-full">
               <span class="article-next-slide">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                   <g id="Group_2193" data-name="Group 2193" transform="translate(0.326 -0.287)">
-                    <circle id="Ellipse_170" data-name="Ellipse 170" cx="15" cy="15" r="15" transform="translate(-0.326 0.287)" fill="#f4faee"/>
+                    <circle id="Ellipse_170" data-name="Ellipse 170" cx="15" cy="15" r="15" transform="translate(-0.326 0.287)" fill="#f4faee" />
                     <g id="Iconly_Light_Arrow_-_Left_2" data-name="Iconly/Light/Arrow - Left 2" transform="translate(17.34 19.62) rotate(180)">
                       <g id="Arrow_-_Left_2" data-name="Arrow - Left 2" transform="translate(4.667) rotate(90)">
-                        <path id="Stroke_1" data-name="Stroke 1" d="M9.333,0,4.667,4.667,0,0" fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+                        <path
+                          id="Stroke_1"
+                          data-name="Stroke 1"
+                          d="M9.333,0,4.667,4.667,0,0"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="1.5" />
                       </g>
                     </g>
                   </g>
-                </svg>                
+                </svg>
               </span>
               <span class="article-prev-slide">
                 <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                   <g id="Group_2193" data-name="Group 2193" transform="translate(0.326 -0.287)">
-                    <circle id="Ellipse_170" data-name="Ellipse 170" cx="15" cy="15" r="15" transform="translate(-0.326 0.287)" fill="#f4faee"/>
+                    <circle id="Ellipse_170" data-name="Ellipse 170" cx="15" cy="15" r="15" transform="translate(-0.326 0.287)" fill="#f4faee" />
                     <g id="Iconly_Light_Arrow_-_Left_2" data-name="Iconly/Light/Arrow - Left 2" transform="translate(17.34 19.62) rotate(180)">
                       <g id="Arrow_-_Left_2" data-name="Arrow - Left 2" transform="translate(4.667) rotate(90)">
-                        <path id="Stroke_1" data-name="Stroke 1" d="M9.333,0,4.667,4.667,0,0" fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"/>
+                        <path
+                          id="Stroke_1"
+                          data-name="Stroke 1"
+                          d="M9.333,0,4.667,4.667,0,0"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-miterlimit="10"
+                          stroke-width="1.5" />
                       </g>
                     </g>
                   </g>
-                </svg> 
+                </svg>
               </span>
             </div>
           </div>
@@ -2097,7 +2121,7 @@
               slidesPerView: 3,
             },
             1024: {
-              slidesPerView: 6,
+              slidesPerView: 5,
             },
           },
 
@@ -2125,30 +2149,45 @@
             },
           },
         });
+
+        // map counters responsive positioning
+        function counter_positioner(continent = "", top = 0, left = 0) {
+          $(`.absolute:has([data-count=${continent}])`).css({
+            top: $(`.continent#${continent == "eu" ? "as" : continent}`).offset().top + top,
+            left: $(`.continent#${continent == "eu" ? "as" : continent}`).offset().left + left,
+          });
+        }
         if (innerWidth > 640) {
           counter_positioner("us", 50, 120);
           counter_positioner("af", 30, 70);
-          counter_positioner("as", 100, 300);
+          counter_positioner("as", 150, 300);
           counter_positioner("au", 0, 60);
           counter_positioner("eu", 50, 150);
         } else {
-          counter_positioner("us", 0, 0);
-          counter_positioner("af", 0, 0);
-          counter_positioner("as", 0, 0);
-          counter_positioner("au", 0, 0);
-          counter_positioner("eu", 0, 0);
+          counter_positioner("us", 0, 50);
+          counter_positioner("af", 10, 50);
+          counter_positioner("as", 20, 150);
+          counter_positioner("au", 10, 10);
+          counter_positioner("eu", 10, 50);
         }
-      });
 
-      // map counters responsive positioning
-      function counter_positioner(con = "us", top = 0, left = 0) {
-        $(`.absolute:has([data-count=${con}])`).css({
-          top: $(`.continent#${con == "eu" ? "as" : con}`).offset().top + top,
-          left: $(`.continent#${con == "eu" ? "as" : con}`).offset().left + left,
+        // map thumbs autoplay control
+
+        const map_observer = new window.IntersectionObserver((entries, observer) => {
+          let isVisible = entries[0].intersectionRatio;
+          map_thumbs.autoplay.run();
+          $('[map] path').css("animation","map_loading 2s  forwards");
+          $('[map] [data-count]').parent().fadeIn(2000)
+          if (isVisible == 0) {
+            map_thumbs.autoplay.pause();
+            $('[map] path').css("animation","unset");
+            $('[map] [data-count]').parent().fadeOut(2000)
+          }
         });
-      }
+        map_observer.observe($("section[map]").get(0));
+      });
     </script>
-    <!-- Rules Swiper js -->
+    <!-- Rules Swiper -->
     <script>
       var rules_swiper = new Swiper(".rules-swiper", {
         effect: "coverflow",
@@ -2255,25 +2294,21 @@
     <script>
       $(() => {
         let article_thumbs = new Swiper(".article-thumbs", {
+          spaceBetween: 20,
+          slidesPerView: 5,
+          loop: true,
+          slideToClickedSlide: true,
           autoplay: {
-            delay:2000,
-            pauseOnMouseEnter:true,
+            delay: 2000,
+            pauseOnMouseEnter: true,
             disableOnInteraction: false,
-          },
-          loop:true,
-          spaceBetween:20,
-          slidesPerView: 1,
-          breakpoints: {
-            640: {
-              slidesPerView: 5,
-            },
           },
         });
         let article_swiper = new Swiper(".article-swiper", {
           loop: true,
           autoplay: {
-            delay:2000,
-            pauseOnMouseEnter:true,
+            delay: 2000,
+            pauseOnMouseEnter: true,
             disableOnInteraction: false,
           },
           slidesPerView: 1,
@@ -2287,7 +2322,6 @@
             nextEl: ".article-next-slide",
             prevEl: ".article-prev-slide",
           },
-          
         });
       });
     </script>

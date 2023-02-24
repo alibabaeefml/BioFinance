@@ -166,6 +166,7 @@ footer {
 .continent {
   transition: 0.5s;
   cursor: pointer;
+  fill: var(--green);
 }
 .continent.active {
   margin: 10px;

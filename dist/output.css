@@ -611,8 +611,8 @@ video {
   bottom: 0px;
 }
 
-.bottom-10 {
-  bottom: 2.5rem;
+.bottom-20 {
+  bottom: 5rem;
 }
 
 .bottom-44 {
@@ -659,6 +659,10 @@ video {
   right: 0px;
 }
 
+.right-16 {
+  right: 4rem;
+}
+
 .right-3 {
   right: 0.75rem;
 }
@@ -691,10 +695,6 @@ video {
   top: 1rem;
 }
 
-.top-44 {
-  top: 11rem;
-}
-
 .top-5 {
   top: 1.25rem;
 }
@@ -723,8 +723,28 @@ video {
   top: 700px;
 }
 
-.bottom-20 {
-  bottom: 5rem;
+.top-2\/3 {
+  top: 66.666667%;
+}
+
+.right-20 {
+  right: 5rem;
+}
+
+.right-24 {
+  right: 6rem;
+}
+
+.right-32 {
+  right: 8rem;
+}
+
+.top-3\/4 {
+  top: 75%;
+}
+
+.top-\[60\%\] {
+  top: 60%;
 }
 
 .-z-10 {
@@ -761,6 +781,10 @@ video {
 
 .col-span-9 {
   grid-column: span 9 / span 9;
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
 
 .m-1 {
@@ -2160,8 +2184,8 @@ video {
     position: fixed;
   }
 
-  .max-sm\:bottom-\[560px\] {
-    bottom: 560px;
+  .max-sm\:bottom-\[500px\] {
+    bottom: 500px;
   }
 
   .max-sm\:left-0 {
@@ -2180,16 +2204,8 @@ video {
     top: calc(50% - 233px);
   }
 
-  .max-sm\:bottom-\[200px\] {
-    bottom: 200px;
-  }
-
-  .max-sm\:bottom-\[400px\] {
-    bottom: 400px;
-  }
-
-  .max-sm\:bottom-\[500px\] {
-    bottom: 500px;
+  .max-sm\:left-\[calc\(50\%_-_120px\)\] {
+    left: calc(50% - 120px);
   }
 
   .max-sm\:col-span-12 {
@@ -2243,6 +2259,12 @@ video {
   .max-sm\:scale-75 {
     --tw-scale-x: .75;
     --tw-scale-y: .75;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .max-sm\:scale-50 {
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -2301,20 +2323,8 @@ video {
     position: absolute;
   }
 
-  .sm\:right-\[10\%\] {
-    right: 10%;
-  }
-
-  .sm\:right-\[14\%\] {
-    right: 14%;
-  }
-
   .sm\:top-1\/2 {
     top: 50%;
-  }
-
-  .sm\:top-\[60\%\] {
-    top: 60%;
   }
 
   .sm\:-mr-20 {
@@ -2513,10 +2523,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:right-\[13\%\] {
-    right: 13%;
-  }
-
   .lg\:mr-24 {
     margin-right: 6rem;
   }

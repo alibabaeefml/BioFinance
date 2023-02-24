@@ -111,3 +111,4 @@ const counter = (current) => {
         cb(e);
       });
 };
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);

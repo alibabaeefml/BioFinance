@@ -1863,7 +1863,7 @@
             </div>
           </div>
         </section>
-        <span class="absolute bottom-20 max-sm:bottom-[560px] left-0 -z-10">
+        <span class="absolute bottom-20 max-sm:bottom-[500px] left-0 -z-10">
           <svg xmlns="http://www.w3.org/2000/svg" width="3284.639" height="400.666" viewBox="0 0 3284.639 400.666">
             <path
               class="fill-green"
@@ -2295,7 +2295,7 @@
       $(() => {
         let article_thumbs = new Swiper(".article-thumbs", {
           spaceBetween: 20,
-          slidesPerView: 5,
+          slidesPerView: 1,
           loop: true,
           slideToClickedSlide: true,
           autoplay: {
@@ -2303,6 +2303,11 @@
             pauseOnMouseEnter: true,
             disableOnInteraction: false,
           },
+        breakpoints:{
+          640:{
+            slidesPerView: 5,
+          }
+        }
         });
         let article_swiper = new Swiper(".article-swiper", {
           loop: true,
